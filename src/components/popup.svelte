@@ -249,17 +249,26 @@
 		padding: 0;
 	}
 
+	.notice[open] p {
+		padding: 5px 0;
+	}
+
 	.notice[open] h1 {
 		line-height: 1;
 		margin: 0;
 	}
 
+	.notice p {
+		margin: 10px 0;
+	}
+
 	.notice[open] form button {
 		appearance: none;
-		border: none;
-		background-color: var(--main-color);
+		background-color: var(--secondary-color);
 		padding: 10px;
-		border-radius: 5px;
+		cursor: pointer;
+		border: none;
+		border-radius: 4px;
 	}
 
 	.info {
@@ -296,7 +305,7 @@
 		flex-direction: row;
 	}
 
-	form button {
+	.info form button {
 		position: absolute;
 		top: 0;
 		right: 0;
