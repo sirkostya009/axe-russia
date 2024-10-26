@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Cut the pie!</title>
+		%sveltekit.head%
+		<style>
+			:root {
+				--sidebar-width: 200px;
+				--water-color: #c8ebff;
+				--land-color: gainsboro;
+				--russia-color: azure;
+				--foreign-border-color: gray;
+				--color-new-republic-of-russia: #4d4dff;
+				--color-komi-republic: #f96b6b;
+				--color-khakassia-republic: #ff9292;
+				--color-sakha-republic: #5f39ff;
+				--color-buryat-republic: #fff936;
+				--color-altai-republic: #5fd9ff;
+				--color-tuva-republic: #a5a000;
+				--color-bashkortostan-republic: #fffdb3;
+				--color-mordovia-republic: #ff2cfa;
+				--color-chuvashia-republic: #00a82b;
+				--color-mari-el-republic: #40ffe8;
+				--color-udmurtia-republic: #fffc8f;
+				--color-tatarstan-republic: #ffaa39;
+				--color-karachay-cherkess-republic: #6c77ff;
+				--color-kabardino-balkar-republic: #ff333d;
+				--color-alania-republic: #3eb6ff;
+				--color-ingushetia-republic: #b57400;
+				--color-ichkeria-republic: #b50079;
+				--color-kalmykia-republic: #22f;
+				--color-dagestan-republic: #2cff59;
+				--color-karelia: #fffb5c;
+				--color-nenets-state: #a9fff9;
+				--color-ural-republic: #9bff66;
+				--color-siberian-republic: #ccae00;
+				--color-far-eastern-republic: #ff0808;
+				--color-kralovec-republic: #00ff12;
+				--color-adygea-republic: red;
+				--main-color: #dfe7f5;
+				--secondary-color: #b6c9e8;
+				--text-color: #243060;
+			}
+
+			.light-theme {
+				--water-color: #c8ebff;
+				--land-color: gainsboro;
+				--russia-color: azure;
+				--foreign-border-color: gray;
+				--color-new-republic-of-russia: #4d4dff;
+				--color-komi-republic: #f96b6b;
+				--color-khakassia-republic: #ff9292;
+				--color-sakha-republic: #5f39ff;
+				--color-buryat-republic: #fff936;
+				--color-altai-republic: #5fd9ff;
+				--color-tuva-republic: #a5a000;
+				--color-bashkortostan-republic: #fffdb3;
+				--color-mordovia-republic: #ff2cfa;
+				--color-chuvashia-republic: #00a82b;
+				--color-mari-el-republic: #40ffe8;
+				--color-udmurtia-republic: #fffc8f;
+				--color-tatarstan-republic: #ffaa39;
+				--color-karachay-cherkess-republic: #6c77ff;
+				--color-kabardino-balkar-republic: #ff333d;
+				--color-alania-republic: #3eb6ff;
+				--color-ingushetia-republic: #b57400;
+				--color-ichkeria-republic: #b50079;
+				--color-kalmykia-republic: #22f;
+				--color-dagestan-republic: #2cff59;
+				--color-karelia: #fffb5c;
+				--color-nenets-state: #a9fff9;
+				--color-ural-republic: #9bff66;
+				--color-siberian-republic: #ccae00;
+				--color-far-eastern-republic: #ff0808;
+				--color-kralovec-republic: #00ff12;
+				--color-adygea-republic: red;
+				--main-color: #dfe7f5;
+				--secondary-color: #b6c9e8;
+				--text-color: #243060;
+			}
+
+			.dark-theme {
+				--water-color: #306481;
+				--land-color: rgb(21, 31, 31);
+				--russia-color: rgb(31, 63, 63);
+				--foreign-border-color: rgb(180, 180, 180);
+				--color-new-republic-of-russia: #4d4dff;
+				--color-komi-republic: #f96b6b;
+				--color-khakassia-republic: #ff9292;
+				--color-sakha-republic: #5f39ff;
+				--color-buryat-republic: #fff936;
+				--color-altai-republic: #5fd9ff;
+				--color-tuva-republic: #a5a000;
+				--color-bashkortostan-republic: #fffdb3;
+				--color-mordovia-republic: #ff2cfa;
+				--color-chuvashia-republic: #00a82b;
+				--color-mari-el-republic: #40ffe8;
+				--color-udmurtia-republic: #fffc8f;
+				--color-tatarstan-republic: #ffaa39;
+				--color-karachay-cherkess-republic: #6c77ff;
+				--color-kabardino-balkar-republic: #ff333d;
+				--color-alania-republic: #3eb6ff;
+				--color-ingushetia-republic: #b57400;
+				--color-ichkeria-republic: #b50079;
+				--color-kalmykia-republic: #22f;
+				--color-dagestan-republic: #2cff59;
+				--color-karelia: #fffb5c;
+				--color-nenets-state: #a9fff9;
+				--color-ural-republic: #9bff66;
+				--color-siberian-republic: #ccae00;
+				--color-far-eastern-republic: #ff0808;
+				--color-kralovec-republic: #00ff12;
+				--color-adygea-republic: red;
+				--main-color: #0e1123;
+				--secondary-color: #253060;
+				--text-color: rgb(230, 230, 230);
+			}
+
+			@media (prefers-color-scheme: dark) {
+				:root {
+					--water-color: #306481;
+					--land-color: rgb(21, 31, 31);
+					--russia-color: rgb(31, 63, 63);
+					--foreign-border-color: rgb(180, 180, 180);
+					--color-new-republic-of-russia: #4d4dff;
+					--color-komi-republic: #f96b6b;
+					--color-khakassia-republic: #ff9292;
+					--color-sakha-republic: #5f39ff;
+					--color-buryat-republic: #fff936;
+					--color-altai-republic: #5fd9ff;
+					--color-tuva-republic: #a5a000;
+					--color-bashkortostan-republic: #fffdb3;
+					--color-mordovia-republic: #ff2cfa;
+					--color-chuvashia-republic: #00a82b;
+					--color-mari-el-republic: #40ffe8;
+					--color-udmurtia-republic: #fffc8f;
+					--color-tatarstan-republic: #ffaa39;
+					--color-karachay-cherkess-republic: #6c77ff;
+					--color-kabardino-balkar-republic: #ff333d;
+					--color-alania-republic: #3eb6ff;
+					--color-ingushetia-republic: #b57400;
+					--color-ichkeria-republic: #b50079;
+					--color-kalmykia-republic: #22f;
+					--color-dagestan-republic: #2cff59;
+					--color-karelia: #fffb5c;
+					--color-nenets-state: #a9fff9;
+					--color-ural-republic: #9bff66;
+					--color-siberian-republic: #ccae00;
+					--color-far-eastern-republic: #ff0808;
+					--color-kralovec-republic: #00ff12;
+					--color-adygea-republic: red;
+					--main-color: #0e1123;
+					--secondary-color: #253060;
+					--text-color: rgb(230, 230, 230);
+				}
+			}
+
+			body,
+			html {
+				margin: 0;
+				padding: 0;
+				background-color: var(--water-color);
+				overflow: hidden;
+				font-family: Ubuntu, Helvetica, "Noto Sans", Roboto, Arial, sans-serif;
+			}
+
+			* {
+				color: var(--text-color);
+			}
+
+			*::-webkit-scrollbar {
+				background-color: var(--main-color);
+				width: 8px;
+			}
+
+			*::-webkit-scrollbar-thumb {
+				background-color: var(--secondary-color);
+			}
+
+			.hidden {
+				display: none;
+			}
+
+			path, polygon, polyline {
+				stroke-width: .5pt;
+			}
+
+			@media (max-width: 1024px) {
+				body, html {
+					overflow-x: scroll;
+					font-size: 18pt;
+				}
+
+				:root {
+					--sidebar-width: 100px;
+				}
+
+				*::-webkit-scrollbar {
+					width: 12px;
+				}
+			}
+
+			noscript {
+				margin-left: var(--sidebar-width);
+			}
+		</style>
+	</head>
+	<body>
+		<noscript>
+			<style>
+				dialog {
+					inset: 0;
+					z-index: 100;
+				}
+
+				div {
+					z-index: 99;
+					position: fixed;
+					inset: 0;
+					min-width: 100%;
+					min-height: 100%;
+					background-color: rgba(0,0,0,.5);
+				}
+			</style>
+			<div></div>
+			<dialog open>
+				This website uses JavaScript to function. Please enable it or switch to a browser that supports it.
+			</dialog>
+		</noscript>
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
