@@ -12,9 +12,9 @@
 	let ack = $state(isNoticeAcknowledged);
 
 	if (browser && !isNoticeAcknowledged) {
-		// const notice = document.querySelector('.notice') as HTMLDialogElement | null;
-		// notice?.close();
-		// notice?.showModal();
+		const notice = document.querySelector('.notice') as HTMLDialogElement | null;
+		notice?.close();
+		notice?.showModal();
 	}
 </script>
 
@@ -168,14 +168,14 @@
 	{/if}
 </dialog>
 
-<!-- <dialog class="notice" open={!ack}>
+<dialog class="notice" open={!ack}>
 	<h1>{i18n.notice.title}</h1>
 	<p>{i18n.notice.content}</p>
 	<button onclick={() => {
 		document.cookie = `notice-acknowledged=true; SameSite=Lax; Max-Age=34559999`;
 		ack = true;
 	}}>{i18n.notice.acknowledged}</button>
-</dialog> -->
+</dialog>
 
 <style>
 	.popup {
