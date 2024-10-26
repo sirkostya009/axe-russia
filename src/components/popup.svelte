@@ -9,19 +9,13 @@
 	}
 
 	let { i18n, isNoticeAcknowledged }: Props = $props();
-
 	let ack = $state(isNoticeAcknowledged);
-	// if (browser && !isNoticeAcknowledged) {
-	// 	const notice = document.querySelector('.notice') as HTMLDialogElement;
-	// 	notice.close();
-	// 	notice.showModal();
-	// 	setTimeout(
-	// 		() =>
-	// 			notice.addEventListener('close', () => {
-	// 			}),
-	// 		0
-	// 	);
-	// }
+
+	if (browser && !isNoticeAcknowledged) {
+		// const notice = document.querySelector('.notice') as HTMLDialogElement | null;
+		// notice?.close();
+		// notice?.showModal();
+	}
 </script>
 
 <dialog class="popup">
@@ -174,14 +168,14 @@
 	{/if}
 </dialog>
 
-<dialog class="notice" open={!ack} onclose={() => {
-	document.cookie = `notice-acknowledged=true; SameSite=Lax; Max-Age=34559999`;
-	ack = true;
-}}>
+<!-- <dialog class="notice" open={!ack}>
 	<h1>{i18n.notice.title}</h1>
 	<p>{i18n.notice.content}</p>
-	<form><button formmethod="dialog">{i18n.notice.acknowledged}</button></form>
-</dialog>
+	<button onclick={() => {
+		document.cookie = `notice-acknowledged=true; SameSite=Lax; Max-Age=34559999`;
+		ack = true;
+	}}>{i18n.notice.acknowledged}</button>
+</dialog> -->
 
 <style>
 	.popup {
@@ -262,7 +256,7 @@
 		margin: 10px 0;
 	}
 
-	.notice[open] form button {
+	.notice[open] button {
 		appearance: none;
 		background-color: var(--secondary-color);
 		padding: 10px;
@@ -319,12 +313,12 @@
 		border-top-right-radius: 0;
 	}
 
-	form button svg {
+	.info form button svg {
 		width: 18px;
 		height: 18px;
 	}
 
-	form button:hover {
+	.info form button:hover {
 		background-color: rgb(165, 65, 65);
 	}
 
@@ -355,7 +349,7 @@
 			background-color: var(--secondary-color);
 		}
 
-		form button:hover {
+		.info form button:hover {
 			background-color: unset;
 		}
 
@@ -364,7 +358,7 @@
 			height: unset;
 		}
 
-		.notice[open] form button {
+		.notice[open] button {
 			font-size: 15pt;
 			width: fit-content;
 			height: fit-content;
