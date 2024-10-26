@@ -25,7 +25,7 @@
 	});
 </script>
 
-<svg viewBox="283 276 1100 2000">
+<!-- <svg viewBox="283 276 1100 2000">
 	<defs>
 		<pattern patternUnits="objectBoundingBox" id="liberal-russian-flag" width="1" height="1">
 			<image
@@ -246,7 +246,7 @@
 	<AdminBorders />
 	<Rivers />
 	<Lakes />
-</svg>
+</svg> -->
 
 <Popup {i18n} {isNoticeAcknowledged} />
 
