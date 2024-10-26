@@ -10,19 +10,18 @@
 
 	let { i18n, isNoticeAcknowledged }: Props = $props();
 
-	if (browser && !isNoticeAcknowledged) {
-		const notice = document.querySelector('.notice') as HTMLDialogElement;
-		notice.close();
-		notice.showModal();
-		setTimeout(
-			() =>
-				notice.addEventListener('close', () => {
-					document.cookie = `notice-acknowledged=true; SameSite=Lax; Max-Age=34559999`;
-					isNoticeAcknowledged = true;
-				}),
-			0
-		);
-	}
+	let ack = $state(isNoticeAcknowledged);
+	// if (browser && !isNoticeAcknowledged) {
+	// 	const notice = document.querySelector('.notice') as HTMLDialogElement;
+	// 	notice.close();
+	// 	notice.showModal();
+	// 	setTimeout(
+	// 		() =>
+	// 			notice.addEventListener('close', () => {
+	// 			}),
+	// 		0
+	// 	);
+	// }
 </script>
 
 <dialog class="popup">
@@ -175,7 +174,10 @@
 	{/if}
 </dialog>
 
-<dialog class="notice" open={!isNoticeAcknowledged}>
+<dialog class="notice" open={!ack} onclose={() => {
+	document.cookie = `notice-acknowledged=true; SameSite=Lax; Max-Age=34559999`;
+	ack = true;
+}}>
 	<h1>{i18n.notice.title}</h1>
 	<p>{i18n.notice.content}</p>
 	<form><button formmethod="dialog">{i18n.notice.acknowledged}</button></form>
