@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { __state, mapState, type MapState } from '$lib/client/state.svelte';
+	import { __state, mapState } from '$lib/client/state.svelte';
 	import type { I18n } from '../locales';
 
 	interface Props {
@@ -16,11 +16,7 @@
 	if (browser) {
 		for (const key in mapState) {
 			const item = localStorage?.getItem(key);
-			if (item !== null && __state[key] instanceof Boolean) {
-				__state[key] = item === 'true';
-			} else {
-				__state[key] = item || __state[key];
-			}
+			__state[key] = __state[key] instanceof Boolean ? item === 'true' : (item || __state[key]);
 		}
 
 		sideBarOpened = !navigator.userAgent.match(/iPhone|Android|iPad/);
@@ -338,7 +334,6 @@
 		border-radius: 4px;
 		position: relative;
 		cursor: pointer;
-		/* outline: none; */
 		transition: background 0.3s ease;
 		background-color: rgba(255, 255, 255, 0.85);
 	}
@@ -382,19 +377,33 @@
 		.sidebar {
 			width: 100%;
 			height: 100%;
-			transform: translateY(100%);
-			visibility: hidden;
-			transition:
-				transform 0.3s ease,
-				visibility 0s 0.3s;
+			display: none;
+			animation: hide 0.5s;
+		}
+
+		@keyframes appear {
+			from {
+				translate: 0 100vh;
+			}
+			to {
+				translate: 0 0;
+			}
+		}
+
+		@keyframes hide {
+			from {
+				display: block;
+				translate: 0 0;
+			}
+			to {
+				display: none;
+				translate: 0 100vh;
+			}
 		}
 
 		.sidebar.shown {
-			transform: translateY(0);
-			visibility: visible;
-			transition:
-				transform 0.3s ease,
-				visibility 0s 0s;
+			display: block;
+			animation: appear 0.5s;
 		}
 
 		select {

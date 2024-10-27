@@ -8,15 +8,10 @@
 	import Claims from '../components/claims.svelte';
 	import Popup from '../components/popup.svelte';
 	import Sidebar from '../components/sidebar.svelte';
-	import { browser } from '$app/environment';
 	import { mapState } from '$lib/client/state.svelte';
 
 	const { data } = $props();
 	const { i18n, locale, isMobile, isNoticeAcknowledged } = data;
-
-	if (browser) {
-		window.addEventListener('scrollend', (e) => window.scrollTo(window.scrollX, 0));
-	}
 
 	$effect(() => {
 		document.body.classList.remove('dark-theme', 'light-theme');
@@ -25,7 +20,7 @@
 	});
 </script>
 
-<svg class="map" viewBox="283 276 1100 600">
+<svg viewBox="283 276 1100 600">
 	<defs>
 		<pattern patternUnits="objectBoundingBox" id="liberal-russian-flag" width="1" height="1">
 			<image
@@ -257,14 +252,14 @@
 <Sidebar {i18n} {locale} {isMobile} />
 
 <style>
-	.map {
-		height: 100vh;
+	svg {
+		height: 100dvh;
 		margin-left: max(var(--sidebar-width), 10%);
 		display: block;
 	}
 
 	@media (max-width: 1023px) {
-		.map {
+		svg {
 			margin-left: 0;
 		}
 	}
