@@ -20,8 +20,8 @@ export function popup(
 		capital,
 		languages,
 		flag,
-		wikiLink
-	}: PopupInfo & { cssClass: string }
+		wikiLink,
+	}: PopupInfo & { cssClass: string },
 ) {
 	node.addEventListener('mousemove', onmousemove);
 	node.addEventListener('mouseout', onmouseout);

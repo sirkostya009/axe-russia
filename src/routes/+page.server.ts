@@ -2,7 +2,7 @@ import * as locales from '../locales';
 
 function matchLocale(lang: string | null): keyof typeof locales {
 	if (!lang) return 'en';
-	for (const chunk of lang.split(';')) {
+	for (const chunk of lang.split(';').slice(0, 10)) {
 		const [first] = Object.keys(locales)
 			.map((l) => ({ i: chunk.indexOf(l), l }))
 			.filter(({ i }) => i != -1)

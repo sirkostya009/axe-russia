@@ -77,7 +77,7 @@
 			<p>{popupInfo.languages}</p>
 		</span>
 	{/if}
-	<h5>Click to view more</h5>
+	<h5>{i18n.popup}</h5>
 </dialog>
 
 <dialog class="info" style:background-image="url({popupInfo.flag})">
@@ -162,7 +162,7 @@
 				/>
 			</svg>
 			<p>
-				<a target="_blank" href={popupInfo.wikiLink}>Wikipedia</a>
+				<a target="_blank" href={popupInfo.wikiLink}>{i18n.wikipedia}</a>
 			</p>
 		</span>
 	{/if}
@@ -175,8 +175,11 @@
 		onclick={() => {
 			document.cookie = `notice-acknowledged=true; SameSite=Lax; Max-Age=34559999`;
 			ack = true;
-		}}>{i18n.notice.acknowledged}</button
+			document.querySelector('.notice')?.close();
+		}}
 	>
+		{i18n.notice.acknowledged}
+	</button>
 </dialog>
 
 <style>

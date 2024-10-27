@@ -2,268 +2,386 @@ export default {
 	newRepublicOfRussia: {
 		name: 'Нова Республіка росії',
 		description:
-			'Теоретична республіка, що охоплює територію континентальної європейської частини російської Федерації. Цей регіон відомий своєю багатою культурною різноманітністю, історичною значимістю та економічною важливістю. Історично він був центром політичних рухів і соціальних змін, особливо наприкінці 20-го століття, коли різні етнічні групи шукали більшу автономію та представництво в російській державі.',
+			'Теоретична республіка, що охоплює територію європейської частини Російської Федерації. Ця російська держава, на відміну від колоній, таких як Урал, Сибір та Далекий Схід, вважатиметься безпосереднім спадкоємцем Федерації та єдиною «справжньою» Росією. Політично вона все ще матиме сильне регіональне значення завдяки, хоча й значно зменшеній, ресурсній базі, яка все ще містить пристойну кількість як природних, так і фінансових ресурсів.',
 		population: 'Близько 100-110 мільйонів',
 		capital: 'Санкт-Петербург або Москва',
 		languages: 'російська',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/6/6f/White-blue-white_flag.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Федеральні_округи_Росії'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Федеральні_округи_Росії',
 	},
 	komiRepublic: {
 		name: 'Комі',
 		description:
-			'Республіка фінно-угорського народу з багатою культурною спадщиною. Відома своїми лісами, річками та традиційними ремеслами.',
+			"Фінно-угорське плем'я, що розсіяно по трьом різним регіонам північної Росії. Корінне населення цієї республіки, разом із багатьма іншими федеральними республіками, повільно вмирає через постійні та систематичні зусилля Москви щодо придушення та винищення корінних народів.",
 		population: 'Близько 800,000, більшість складають етнічні росіяни та комі.',
 		capital: 'Сиктивкар',
 		languages: 'Комі, російська',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/5/54/Flag_of_Komi.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Республіка_Комі'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Республіка_Комі',
 	},
 	khakassiaRepublic: {
 		name: 'Хакасія',
 		description:
-			'Регіон, багатий на кочові традиції, Хакасія формувалася під впливом історії пасторалізму та суміші російських і корінних культур.',
+			"Ще одна республіка, населення якої стало незначною меншістю у власній країні. Сучасна Хакасія — це поєднання п'яти споріднених етнічних груп.",
 		population: 'Приблизно 500,000 осіб, з яких хакаси складають близько 12%.',
 		capital: 'Аґбан',
 		languages: 'Хакасська',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/e/ec/Flag_of_Khakassia.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Хакасія'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Хакасія',
 	},
 	sakhaRepublic: {
 		name: 'Республіка Саха (Якутія)',
 		description:
-			'Найбільша республіка російської Федерації, відома своїм суворим кліматом, багатими природними ресурсами та культурою корінних якутів.',
+			'Найбільша республіка Російської Федерації, відома своїм суворим кліматом та дуже багатими родовищами природних ресурсів, зокрема - діамантів.',
 		population: 'Близько 996,000 осіб, з яких якути складають майже 50%.',
 		capital: "Д'окуускай",
 		languages: 'Якутська (Саха)',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/e/eb/Flag_of_Sakha.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Республіка_Саха'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Республіка_Саха',
 	},
 	buryatRepublic: {
 		name: 'Бурятія',
 		description:
-			'Республіка розташована на півдні Сибіру вздовж східного узбережжя озера Байкал. Вона є домівкою монгольського народу бурятів, який має тісний зв’язок з Монголією.',
+			'Буряти — монголоїдний народ, республіка яких межує з Монголією. Вони також зазнали величезних страждань під час очищення Москви, оскільки населення зменшилося і стало меншістю на власній території.',
 		population: '978,588',
 		capital: 'Улан-Уде',
 		languages: 'Бурятська',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/6/68/Flag_of_Buryatia.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Бурятія'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Бурятія',
 	},
 	altaiRepublic: {
 		name: 'Алтай',
-		description:
-			'Регіон з багатою історією, що датується тюркськими коренями, та різноманітним етнічним складом.',
+		description: 'Гірський регіон Алтай, де проживає однойменна тюркська етнічна група.',
 		population: '221,600',
 		capital: 'Хот-Алтай',
 		languages: 'Алтайська',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/f/ff/Flag_of_Altai_Republic.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Республіка_Алтай'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Республіка_Алтай',
 	},
 	tuvaRepublic: {
 		name: 'Тува',
 		description:
-			'Республіка монгольських народів на півдні Сибіру, відома шаманістськими традиціями.',
+			'Республіка монголоїдного народу на півдні Сибіру, відома шаманістичними традиціями. Це одна з небагатьох республік, що зберегли свій етнічний образ, і становлять 88% загального населення згідно з переписом 2021 року.',
 		population: 'Приблизно 309,000',
 		capital: 'Кизил',
 		languages: 'Тувинська',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Tuva.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Тува'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Тува',
 	},
 	bashkortostanRepublic: {
 		name: 'Башкортостан',
-		description: 'Республіка, розташована в Уральських горах.',
+		description:
+			'Республіка на заході Уральських гір, насправді є домом для трьох основних етнічних груп: колонізаторів — росіян, корінних — башкирів та татарами з сусідньої країни.',
 		population: 'Приблизно 4 мільйони',
 		capital: 'Уфа',
 		languages: 'Башкирська',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/3/3d/Flag_of_Bashkortostan.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Башкортостан'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Башкортостан',
 	},
 	mordoviaRepublic: {
 		name: 'Мордовія',
 		description:
-			'Республіка, що складається з етнічних груп ерзян і мокшан, колективно відомих як мордовці росіянами.',
+			"Республіка, що складається з двох етнічностей: мокшани та езарі, які разом називаються «мордва» росіянами. Ходять чутки, що в стародавні часи слов'янські племена асимілювали мокшан та інші місцеві фінно-угорські племена, присвоюючи їх культуру та створюючи те, що сьогодні відоме як російська культура.",
 		population: 'Приблизно 800,000',
 		capital: 'Саранськ',
 		languages: 'Мордвін',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Mordovia.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Мордовія'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Мордовія',
 	},
 	chuvashiaRepublic: {
 		name: 'Чувашія',
-		description: 'Домівка чувашів, відома своєю унікальною мовою та культурою.',
+		description: 'Волзька республіка, що є домом для тюркської етнічної групи.',
 		population: 'Приблизно 1,25 мільйона',
 		capital: 'Шупашкар',
 		languages: 'Чуваш',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/d/d7/Flag_of_Chuvashia.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Чувашія'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Чувашія',
 	},
 	mariElRepublic: {
 		name: 'Марій Ел',
-		description: 'Республіка, відома своїми пишними лісами, озерами та марійцями.',
+		description: 'Марійці складають близько 40% населення республіки.',
 		population: 'Приблизно 700,000',
 		capital: 'Йошкар-Ола',
 		languages: 'Марій',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/Flag_of_Mari_El.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Марій_Ел'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Марій_Ел',
 	},
 	udmurtiaRepublic: {
 		name: 'Удмуртія',
-		description: 'Республіка в Поволжі, домівка удмуртів.',
+		description:
+			'Ще одна республіка волзького регіону, домом для фінно-угорських удмуртів та тюркських бесермян.',
 		population: 'Приблизно 1,5 мільйона',
 		capital: 'Ізкар',
 		languages: 'Удмурт',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Udmurtia.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Удмуртія'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Удмуртія',
 	},
 	tatarstanRepublic: {
 		name: 'Татарстан',
-		description: 'Республіка, відома татарами, розташована на злитті рік Волги та Ками.',
+		description:
+			'Республіка, відома татарським народом, розташована на злитті річок Волги та Ками. У 1992 році, відразу після розпаду Радянського Союзу, уряд Татарстану провів референдум, фактично запитуючи, чи хоче народ, щоб їхня держава стала незалежною, з більшістю голосів «так». Природно, імперський уряд у Москві не дозволив «дикому» васалу вийти з-під контролю.',
 		population: 'Приблизно 3,9 мільйона',
 		capital: 'Казан',
 		languages: 'Татар',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/2/28/Flag_of_Tatarstan.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Татарстан'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Татарстан',
 	},
 	karachayCherkessRepublic: {
 		name: 'Карачаєво-Черкесія',
 		description:
-			'Кавказ є домом для багатьох етнічних груп. Ця республіка представляє тюркські та кавказькі народи - карачаївців та черкесів відповідно. Історично, регіон стикався з багатьма конфліктами з півночі та півдня, і відігравав роль у буремній історії Кавказу в 20 столітті, особливо під час Другої світової війни, коли багато місцевих етнічних груп стикалися з депортацією.',
+			'Кавказ є домом для різноманітних етнічних груп. Ця держава представляє тюркські та кавказькі мови — карачаївців і черкесів відповідно. Історично цей регіон зазнав багатьох конфліктів з півночі та півдня.',
 		population: 'Приблизно 469,000',
 		capital: 'Черкеськ',
 		languages: 'Карачаєвська, Circassian',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/5/59/Flag_of_Karachay-Cherkessia.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Карачаєво-Черкесія'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Карачаєво-Черкесія',
 	},
 	kabardinoBalkarRepublic: {
 		name: 'Кабардино-Балкарія',
 		description:
-			'Республіка, розташована на Північному Кавказі, домівка кабардинців і балкарців. Регіон відомий своїми вражаючими гірськими пейзажами.',
+			"Ця республіка має багато спільного з Карачаєво-Черкесією: її також зловмисно створили, щоб розмістити дві не пов'язані етнічні групи, щоб підтримувати колишніх розділеними та завойованими.",
 		population: 'Приблизно 860,000',
 		capital: 'Нальчик',
 		languages: 'Кабардинська, балкарська',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/d/d8/Flag_of_Kabardino-Balkaria.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Кабардино-Балкарія'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Кабардино-Балкарія',
 	},
 	alaniaRepublic: {
 		name: 'Північна Осетія (Аланія)',
 		description:
-			'Теоретична республіка, що представляла б осетинський народ, розташована на Північному Кавказі. Історично, регіон має багатий спадок як частина аланів, середньовічної групи іраномовних кочівників. Осетини мають відмінну культуру та мову, а регіон стикався з різними політичними викликами, особливо в контексті російсько-грузинських відносин.',
+			'Країна, де проживає іранська етнічна група. Історично охоплювала сучасні території черкеських, гірських тюрків, чеченців та інгушів.',
 		population: 'Приблизно 687,000',
 		capital: 'Дзауджикау',
 		languages: 'Осетинська',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/1/1c/Flag_of_North_Ossetia.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Північна_Осетія'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Північна_Осетія',
 	},
 	ingushetiaRepublic: {
 		name: 'Інгушетія',
 		description:
-			'Республіка на Північному Кавказі, домівка ингушів. Інгушетія має складну історію, позначену конфліктами, включаючи масову депортацію її населення під час Другої світової війни.',
+			'Республіка на Північному Кавказі, батьківщина інгушів. Ця республіка колись була з’єднана з чеченцями, поки останні не проголосили незалежність і не почали десятиліття війн з Росією.',
 		population: 'Приблизно 500,000',
 		capital: 'Магас',
 		languages: 'Інгушська',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Ingushetia.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Інгушетія'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Інгушетія',
 	},
 	ichkeriaRepublic: {
 		name: 'Ічкерія',
 		description:
-			'Історична республіка, що представляє Чечню, відома своєю боротьбою за незалежність від росії в 1990-х. Чеченська Республіка Ічкерія оголосила незалежність у 1991 році, що призвело до двох руйнівних війн. Регіон має багатий культурний спадок, включаючи унікальні традиції та мови, але зіткнувся з великими викликами у відновленні після конфліктів.',
+			'Історична республіка, що представляє Чечню, відома своєю боротьбою за незалежність від Росії в 1990-х. Чеченська Республіка Ічкерія проголосила незалежність у 1991 році, що призвело до двох руйнівних воєн, зрештою програвши Росії через зраду Рамзана.',
 		population: 'Приблизно 1,5 мільйона',
 		capital: 'Солжа-Гала',
 		languages: 'Чеченська',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/d/d6/Flag_of_Chechen_Republic_of_Ichkeria.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Ічкерія'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Ічкерія',
 	},
 	kalmykiaRepublic: {
 		name: 'Калмикія',
 		description:
-			'Республіка, розташована на південно-західній частині росії, відома своєю унікальною буддійською культурою та калмиками, які є єдиними буддистами в Європі. Історично, Калмикія стикалася з труднощами, включаючи масову депортацію під час Другої світової війни. Регіон має багатий досвід кочового скотарства і зазнав впливу як російської, так і азіатської культур.',
+			'Республіка, розташована на північ від Дагестану, дім монголоїдного народу, відома своєю унікальною буддійською культурою — єдиною буддійською культурою в континентальній Європі.',
 		population: 'Приблизно 280,000',
 		capital: 'Еліста',
 		languages: 'Калмицька',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Kalmykia.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Калмикія'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Калмикія',
 	},
 	dagestanRepublic: {
 		name: 'Дагестан',
 		description:
-			'Республіка на Північному Кавказі, відома своєю етнічною різноманітністю, з понад 30 різними етнічними групами, включаючи аварців, даргінців і кумиків. Ця країна зазнала значних конфліктів, але залишається культурно яскравою та політично важливою в росії.',
+			'Республіка на Північному Кавказі, відома своєю етнічною різноманітністю, з понад 30 різними етнічними групами, включаючи аварців, даргинців і кумиків. Ця країна зазнала значних конфліктів, але залишається культурно яскравою та політично важливою в росії.',
 		population: 'Приблизно 3 мільйони',
 		capital: 'Махачкала',
 		languages: 'Агуль, аварська, даргінська, лезгінська, ногайська та багато інших',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_Dagestan.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Дагестан'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Дагестан',
 	},
-
 	karelia: {
 		name: 'Карелія',
 		description:
-			'Республіка, розташована в північно-західній частині росії, відома своїми вражаючими пейзажами озер і лісів. Історично населена карелами, регіон має багатий культурний спадок, впливовий як фінськими, так і російськими традиціями. Карелія була важливим пунктом під час Зимової війни та Війни продовження, і прагнула більшої автономії в пострадянську епоху, проте регіон був сильно русифікований, ставлячи під сумнів можливість функціонувати як автономна держава.',
+			'Республіка нині геноцидованих фінно-угорських народів. Це одна з небагатьох республік, незалежність якої під великим знаком питання. Оскільки карели, етнічна група, на честь якої названо країну, мають той же фенотип, що й росіяни, Москві було дуже легко асимілювати цілу етнічну групу, знищуючи ідентичність асимільованих народів.',
 		population: 'Приблизно 533,000',
 		capital: 'Еенісліна',
 		languages: 'Карельська, російська',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Flag_of_Karel.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Республіка_Карелія'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Республіка_Карелія',
 	},
 	nenetsState: {
 		name: 'Ненецька держава',
 		description:
-			'Республіка в Арктичному регіоні, домівка ненців, відомих своїм скотарством оленів та кочовим способом життя. Регіон характеризується суворими кліматичними умовами та широкими тундрами. Історично ненецька культура зазнала впливу як корінних традицій, так і російської експансії, а в останні роки стикається з проблемами, пов’язаними з правами на землю та екологічними питаннями.',
+			'Республіка в Арктичному регіоні, батьківщина ненців, які розділені між трьома різними федеральними округами.',
 		population: 'Приблизно 42,000',
 		capital: 'Нарьян-Мар',
 		languages: 'Ненецька',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/1/15/Flag_of_Nenets_Autonomous_District.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Ненецький_автономний_округ'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Ненецький_автономний_округ',
 	},
 	uralRepublic: {
 		name: 'Уральська республіка',
 		description:
-			'Теоретична республіка, що охоплює територію сучасного Уральського федерального округу. Уральський регіон багатий природними ресурсами та має різноманітний етнічний склад, включаючи росіян, татар та башкирів. Історично, Уральські гори були важливим культурним і економічним кордоном у росії, регіон зіграв вирішальну роль у промисловому розвитку країни.',
+			'Теоретична республіка, яка охоплюватиме територію сучасного Уральського федерального округу. Уральський регіон багатий природними ресурсами і має різноманітний етнічний склад. Історично Уральські гори були значною культурною та економічною межею в Росії, причому держава є «стіною» між рештою Сибіру та Росією/Європою.',
 		population: 'Приблизно 12 мільйонів',
 		capital: 'Єкатеринбург',
 		languages: 'російська',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/9/91/Flag_of_Ural.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Уральський_федеральний_округ'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Уральський_федеральний_округ',
 	},
 	siberianRepublic: {
 		name: 'Сибірська республіка (Сибір)',
 		description:
-			'Історично коріння в рухах 19 століття, відроджена в 1918 році під час Громадянської війни в росії',
+			'Теоретична республіка, адміністративно організована в межах сучасного Сибірського федерального округу. Як і Урал та Далекий Схід, це буде постколоніальна держава, яка повинна буде самостійно формувати зовнішню політику та управляти внутрішніми проблемами.',
 		population: 'Приблизно 39 мільйонів росіян',
 		capital: 'Новосибірськ',
 		languages: 'російська, з різними корінними сибірськими мовами',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/1/13/Flag_of_Siberia.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Сибірський_федеральний_округ'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Сибірський_федеральний_округ',
 	},
 	farEasternRepublic: {
 		name: 'Далекосхідна республіка',
 		description:
-			'Теоретична республіка, що охоплює територію колишнього Далекосхідного федерального округу. Відома своїми безкраїми пейзажами та різноманітними екосистемами, регіон є домом для різних корінних народів, включаючи евенків та нанайців. Історично, Далекий Схід зазнавав впливу як російської колонізації, так і економічного розвитку, особливо в 20 столітті.',
+			'Теоретична республіка, що охоплює територію колишнього Далекосхідного федерального округу, ця земля буде управлятися ще одним постколоніальним урядом. Регіон історично був домом для багатьох різних етнічностей, від китайців перед російсько-китайськими війнами та японців/айну перед російсько-японських війн, до корінного населення.',
 		population: 'Приблизно 8 мільйонів',
 		capital: 'Владивосток',
 		languages: 'російська',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/d/df/Flag_of_Far_East.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Далекосхідний_федеральний_округ'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Далекосхідний_федеральний_округ',
 	},
 	kralovecRepublic: {
 		name: 'Краловець',
 		description:
-			'Ще одна російська держава, схожа на Урал, Сибірську та Далекосхідні республіки. Ця держава була б розташована значно ближче до Європи.',
+			'Ще одна російська колонія, схожа на Урал, Сибір та республіки Далекого Сходу. З набагато ближчою відстанню до Європи та будучи частиною європейської історії до російської анексії, цей регіон, ймовірно, буде використано для експерименту: чи можуть росіяни справді європеїзуватися?',
 		population: 'Приблизно 1 мільйон',
 		capital: 'Краловець',
 		languages: 'російська',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Flagge_Koenigsberg.jpg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Краловець_(мем)'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Краловець_(мем)',
 	},
 	adygeaRepublic: {
 		name: 'Адигея',
 		description:
-			'Республіка на Північному Кавказі, що є домом для адигейського народу, який в основному вимер через російську колонізацію та подальший геноцид у 19 столітті.',
+			'Республіка на Північному Кавказі, домом для черкеського народу, який переважно вимер через російське завоювання та подальший геноцид у регіоні в 19 столітті.',
 		population: 'Приблизно 500,000',
 		capital: "Миек'уае/Гхак'ива",
 		languages: 'Адигейська',
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/1/16/Flag_of_Adygea.svg',
-		wikiLink: 'https://uk.wikipedia.org/wiki/Адигея'
+		wikiLink: 'https://uk.wikipedia.org/wiki/Адигея',
+	},
+	greaterKarelia: {
+		name: 'Greater Karelia',
+		description:
+			'Теоретична республіка, яка охоплює великі території, які колись були населені фінно-угорськими племенами, зокрема вепсами, карелами та саамами.',
+		population: '~1,3 million',
+		capital: 'Яанісліна',
+		languages: 'Карелійська, російська',
+		flag: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Flag_of_Karel.svg',
+		wikiLink: 'https://uk.wikipedia.org/wiki/Карелія',
+	},
+	polishPrussia: {
+		name: 'Polish Prussia',
+		description: 'Частина Пруссії, анексованої Польщею під час розподілу Калінінградської області.',
+		languages: 'Польска',
+		flag: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Flag_of_Karel.svg',
+		wikiLink: 'https://en.wikipedia.org/wiki/Karelia',
+	},
+	lithuaniaMinoris: {
+		name: 'Lithuania Minoris',
+		description: 'Історична земля, яка колись була рідною для литовців.',
+		languages: 'Литовська',
+		flag: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Flag_of_Karel.svg',
+		wikiLink: 'https://en.wikipedia.org/wiki/Karelia',
+	},
+	kralovecCity: {
+		name: 'Місто-держава Краловець',
+		description:
+			'Російська місто-держава, розташована на березі Балтійського моря. Населення області, ймовірно, буде депортовано до міста. Ця держава, ймовірно, буде найшвидшою для європеїзації та стане модельною російською державністю, оскільки тиск з боку сусідніх політичних гравців змусить місцевий уряд інвестувати в кращі інституції, мінімальні податки та інклюзивні закони.',
+		population: '~1 мільйон',
+		capital: 'Краловець',
+		languages: 'Російська',
+		flag: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Flagge_Koenigsberg.jpg',
+		wikiLink: 'https://en.wikipedia.org/wiki/Kr%C3%A1lovec_Region',
+	},
+	petsamo: {
+		name: 'Петсамо',
+		description:
+			'Колись фінський півострів, наразі окупований росією, ця територія надасть Фінляндії доступ до Арктичного моря, додаючи нового гравця в регіон.',
+		population: '~38,000',
+		languages: 'Фінська',
+		flag: 'https://upload.wikimedia.org/wikipedia/commons/4/46/Petsamo.vaakuna.svg',
+		wikiLink: 'https://en.wikipedia.org/wiki/Pechengsky_District',
+	},
+	salla: {
+		name: 'Салла',
+		population: '~38,000',
+		languages: 'Фінська',
+		flag: 'https://upload.wikimedia.org/wikipedia/commons/0/06/Salla.vaakuna.svg',
+		wikiLink: 'https://en.wikipedia.org/wiki/Salla',
+	},
+	abrene: {
+		name: 'Абрене',
+		description:
+			'Територія сучасної Псковської області в Росії, яка була відібрана у Латвії у 1945 році.',
+		languages: 'Латишська',
+		flag: 'https://upload.wikimedia.org/wikipedia/commons/0/06/Abrenes_apri%C5%86%C4%B7a_%C4%A3erbonis.svg',
+		wikiLink: 'https://en.wikipedia.org/wiki/Salla',
+	},
+	petseri: {
+		name: 'Петсери',
+		description:
+			'Територія сучасної Псковської області, Росія, яка була відібрана у Естонії у 1945 році.',
+		languages: 'Естонська',
+		flag: 'https://upload.wikimedia.org/wikipedia/commons/1/1e/Flag_of_Petserimaa.svg',
+		wikiLink: 'https://en.wikipedia.org/wiki/Salla',
+	},
+	narvaClaim: {
+		name: 'Яанілінн (Нарва)',
+		description: 'Естонський передмістя на сході річки Нарва, яке було передано РСФРР у 1945 році.',
+		population: '~10,000',
+		flag: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/Flag_of_et-Narva.svg',
+		wikiLink: 'https://en.wikipedia.org/wiki/Territorial_changes_of_the_Baltic_states',
+	},
+	smolensk: {
+		name: 'Білоруські історичні та етнічні території',
+		description:
+			'Етнічні білоруські землі, на які держава Білорусь може пред’явити претензії. Територія включає місто Смоленськ, яке колись було більшістю білоруською муніципалітетом.',
+		population: '~600,000',
+		languages: 'Білоруська, російська',
+		flag: 'https://upload.wikimedia.org/wikipedia/commons/a/a1/Flag_of_Smolensk_%28Smolensk_oblast%29.png',
+		wikiLink: 'https://en.wikipedia.org/wiki/Smolensk',
+	},
+	sudzha: {
+		name: 'Sudzha',
+		description:
+			'Земля, яку у 1924 році заявила Українська Радянська Соціалістична Республіка, але яка їй ніколи не була передана. Цю землю на той час населяли багато етнічних українців.',
+		population: '~5,000',
+		languages: 'Українська',
+		// flag: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/1917-1928_Soviet_Ukraine_borders_formation_%28EN%29.svg',
+		wikiLink: 'https://en.wikipedia.org/wiki/Russia%E2%80%93Ukraine_border',
+	},
+	tahanrih: {
+		name: 'Tahanrih',
+		description:
+			'Земля, яка контролювалася Українською РСР до її реквізиції РСФРР у 1924 році.',
+		population: '~500,000',
+		languages: 'Українська',
+		// flag: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/1917-1928_Soviet_Ukraine_borders_formation_%28EN%29.svg',
+		wikiLink: 'https://en.wikipedia.org/wiki/Russia%E2%80%93Ukraine_border',
+	},
+	starodub: {
+		name: 'Starodub',
+		description: 'Територія, яка була анексована з України після окупації радянськими силами.',
+		population: '~250,000',
+		languages: 'Українська',
+		// flag: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/1917-1928_Soviet_Ukraine_borders_formation_%28EN%29.svg',
+		wikiLink: 'https://en.wikipedia.org/wiki/Russia%E2%80%93Ukraine_border',
+	},
+	sloboda: {
+		name: 'Sloboda',
+		description:
+			"У 1924 році претендувала на цю землю Українська РСР, де проживало багато українців, але вона ніколи не була передана під контроль законним власникам.",
+		population: '~500,000',
+		languages: 'Українська',
+		// flag: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/1917-1928_Soviet_Ukraine_borders_formation_%28EN%29.svg',
+		wikiLink: 'https://en.wikipedia.org/wiki/Russia%E2%80%93Ukraine_border',
 	},
 	sidebar: {
 		exFederalRepublics: {
@@ -272,7 +390,7 @@ export default {
 			projectSiberianRepublic: 'Проект Сибірська Республіка',
 			projectFarEast: 'Проект Далекий Схід',
 			projectKralovec: 'Проект Краловець',
-			projectNewRepublic: 'Проект Нова Республіка'
+			projectNewRepublic: 'Проект Нова Республіка',
 		},
 		republics: {
 			title: 'Республіки',
@@ -297,7 +415,7 @@ export default {
 			tatarstanIndependent: 'Татарстан',
 			tuvaIndependent: 'Тува',
 			udmurtIndependent: 'Удмуртія',
-			nenetsIndependence: 'Ненецька держава'
+			nenetsIndependence: 'Ненецька держава',
 		},
 		claims: {
 			title: 'Претензії',
@@ -315,7 +433,7 @@ export default {
 			sloboda: 'Слобода',
 			kurilIslands: 'Курильські острови',
 			franzJosefLand: 'Земля Франца-Йосифа',
-			finishIsles: 'Острови фінської затоки'
+			finishIsles: 'Острови фінської затоки',
 		},
 		miscellaneous: {
 			title: 'Різне',
@@ -324,17 +442,19 @@ export default {
 			showFlags: 'Показати прапори (БЕТА)',
 			showRivers: 'Показати річки',
 			showLakes: 'Показати озера',
-			locale: 'Локаль'
+			locale: 'Локаль',
 		},
 		button: {
 			openState: 'Згорнути',
-			closedState: 'Меню'
-		}
+			closedState: 'Меню',
+		},
 	},
 	notice: {
 		title: 'Замітка',
 		content:
 			'Цей веб затосунок використовує кукі для покращення досвіду користування. Не проводиться збір жодної інформації про користувача. Насолоджуйтесь розтином!',
-		acknowledged: 'Зроз'
-	}
+		acknowledged: 'Зроз',
+	},
+	popup: 'Натисність щоб переглянути більше',
+	wikipedia: 'Вікіпедія',
 };

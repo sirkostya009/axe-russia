@@ -10,5 +10,6 @@ Active WIP.
 - ~~carve out territorial claims~~
 - ~~show flags~~
 - dark mode
-- more languages
+- more languages, better text
 - ~~touch screen issue~~
+- new borders for: altai, buryat, nenets, northern caucasus, kamchatka
