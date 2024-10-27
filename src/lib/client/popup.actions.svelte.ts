@@ -1,12 +1,14 @@
-export const popupInfo = $state({
-	name: '',
-	description: '',
-	population: '',
-	capital: '',
-	languages: '',
-	flag: '',
-	wikiLink: ''
-});
+export interface PopupInfo {
+	name?: string;
+	description?: string;
+	population?: string;
+	capital?: string;
+	languages?: string;
+	flag?: string;
+	wikiLink?: string;
+}
+
+export const popupInfo = $state<PopupInfo>({});
 
 export function popup(
 	node: SVGElement,
@@ -19,16 +21,7 @@ export function popup(
 		languages,
 		flag,
 		wikiLink
-	}: {
-		cssClass: string;
-		name: string;
-		description: string;
-		population: string;
-		capital: string;
-		languages: string;
-		flag: string;
-		wikiLink: string;
-	}
+	}: PopupInfo & { cssClass: string }
 ) {
 	node.addEventListener('mousemove', onmousemove);
 	node.addEventListener('mouseout', onmouseout);
@@ -53,7 +46,8 @@ export function popup(
 		}
 	}
 
-	function onpointerrelease({ target }: PointerEvent & { target: SVGElement }) {
+	function onpointerrelease(this: SVGElement, { target }: PointerEvent & { target: SVGElement }) {
+		console.log(this, target);
 		if (
 			target.classList.contains(cssClass) ||
 			!!target.parentElement?.classList?.contains(cssClass) ||

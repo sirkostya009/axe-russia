@@ -163,7 +163,7 @@
 				margin: 0;
 				padding: 0;
 				background-color: var(--water-color);
-				overflow: hidden;
+				overflow-y: hidden;
 				font-family: Ubuntu, Helvetica, "Noto Sans", Roboto, Arial, sans-serif;
 			}
 
@@ -201,6 +201,35 @@
 				*::-webkit-scrollbar {
 					width: 12px;
 				}
+			}
+
+			#admin-borders path {
+				stroke: black;
+				fill: none;
+				stroke-width: 0.33pt;
+			}
+
+			#rivers path {
+				stroke: var(--water-color);
+				fill: none;
+			}
+
+			#lakes path {
+				fill: var(--water-color);
+				stroke: none;
+			}
+
+			.foreign-territory,
+			.foreign-territory * {
+				fill: var(--land-color) !important;
+				stroke: none !important;
+				stroke-width: 0;
+			}
+
+			.foreign-borders * {
+				stroke: var(--foreign-border-color);
+				stroke-width: 1pt;
+				fill: none;
 			}
 
 			noscript {

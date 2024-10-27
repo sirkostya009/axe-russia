@@ -25,7 +25,7 @@
 	});
 </script>
 
-<!-- <svg viewBox="283 276 1100 2000">
+<svg class="map" viewBox="283 276 1100 600">
 	<defs>
 		<pattern patternUnits="objectBoundingBox" id="liberal-russian-flag" width="1" height="1">
 			<image
@@ -242,24 +242,29 @@
 	<ForeignTerritory />
 	<Republics {i18n} />
 	<Claims {i18n} />
-	<ForeignBorders />
-	<AdminBorders />
+	{#if mapState.nationalBorders}
+		<ForeignBorders />
+	{/if}
+	{#if mapState.showAdministrativeBorders}
+		<AdminBorders />
+	{/if}
 	<Rivers />
 	<Lakes />
-</svg> -->
+</svg>
 
 <Popup {i18n} {isNoticeAcknowledged} />
 
 <Sidebar {i18n} {locale} {isMobile} />
 
 <style>
-	svg {
+	.map {
+		height: 100vh;
 		margin-left: max(var(--sidebar-width), 10%);
+		display: block;
 	}
 
 	@media (max-width: 1023px) {
-		svg {
-			width: 350%;
+		.map {
 			margin-left: 0;
 		}
 	}

@@ -19,29 +19,23 @@
 	/>
 	<polygon
 		class="polish-kralovec-voidvodship"
+		class:foreign-borders={mapState.nationalBorders}
+		class:foreign-territory={mapState.polishPrussia}
 		class:hidden={!mapState.polishPrussia}
 		use:popup={{
 			cssClass: 'polish-kralovec-voidvodship',
-			name: 'Polish Prussia',
-			description: 'description',
-			population: 'population',
-			capital: 'capital',
-			languages: 'languages',
-			flags: 'flags'
+			...i18n.polishPrussia
 		}}
 		points="334.36 425.27 333.8 423.46 334.36 422.09 334.82 420.69 337.15 420.17 338.5 419.6 338.2 419.4 337.7 418.8 337.6 418.8 337.5 418.8 337.5 418.7 337.5 418.6 337.5 418.5 337.6 418.4 337.5 418.4 337.4 418.4 337 417.9 336.8 417 337 416.4 336.9 416 336.1 414.6 336.1 414.5 336.1 414.4 336.2 414.3 336.2 414.2 336.3 414.1 336.4 414.1 336.5 414.1 336.5 414.2 336.6 414.2 338 414.8 339.2 415 339.7 415.2 339.9 415.2 340.2 415.2 340.4 415.2 340.6 415.3 340.7 415.3 340.8 415.3 340.9 415.2 341 415.2 341 415.3 341.1 415.2 341.2 415.3 341.4 415.4 341.5 415.4 341.6 415.4 341.7 415.4 342 415.6 342.1 415.6 341.9 415 340.2 414.9 340.1 414.9 337.8 414.4 336.3 413.7 335.7 413.3 335.4 413 335 411.7 334.7 411.3 334.5 410.7 334.3 410.4 334.3 410.3 334.4 410 334.3 409.9 334 409.8 333.7 409.8 333.5 409.9 333.1 409.9 332.9 410 332.8 410.1 332.2 410.7 332 410.8 331.7 411 331.4 411.1 330.8 411.1 330.6 411.1 330.4 411.1 330.3 411.1 330.2 411.1 330.1 411.2 330 411.2 329.9 411.2 329.9 411.1 329.8 411.1 328.9 411.1 327.5 410.8 326.4 410.3 326.3 410.4 326.2 410.3 326.1 410.5 326.2 410.9 327.1 413.2 328.3 416.3 330.3 420.8 331.5 423.6 332.9 427 334.36 425.27"
 	/>
 	<polygon
 		class="lithuania-minoris"
+		class:foreign-borders={mapState.nationalBorders}
+		class:foreign-territory={mapState.lithuaniaMinor}
 		class:hidden={!mapState.lithuaniaMinor}
 		use:popup={{
 			cssClass: 'lithuania-minoris',
-			name: 'Lithuania Minor',
-			description: 'description',
-			population: 'population',
-			capital: 'capital',
-			languages: 'languages',
-			flags: 'flags'
+			...i18n.lithuaniaMinoris
 		}}
 		points="332.83 426.84 334.36 425.27 333.8 423.46 334.36 422.09 334.82 420.69 337.15 420.17 338.5 419.6 338.9 419.5 339.1 419.4 339.5 419 341 418 341.1 418 341.1 417.9 341.4 417.7 341.7 417.5 341.8 417.5 341.9 417.5 342.1 417.6 342 417.7 342 417.8 342 417.9 342.1 418 342.2 418.1 342.3 418.1 342.4 418 342.6 418 342.7 417.9 342.8 417.8 343.6 418.2 343.7 418.4 343.6 418.7 343 419.6 342.9 420 343.3 420.7 343.3 421.1 343.1 421.8 343 422.1 343 422.2 343.1 422.8 343 423.2 343 423.4 343.1 423.7 343.1 423.9 343.1 424 343.1 424.1 343.4 424.2 343.5 424.4 343.5 424.5 343.3 424.6 343.1 424.7 342.9 424.9 342.9 425.1 342.9 425.4 343 425.5 343.2 425.6 343.4 425.6 343.5 425.7 344.1 426.4 344.7 427.8 345.3 428.5 345.3 428.7 345.2 428.9 345 429.1 344.5 429.6 344.3 429.8 344.1 430 344.1 430.2 344.4 430.6 344.4 430.7 344.3 430.8 344.2 431 344.3 431.1 344 431.1 344 431.2 344 431.8 343.9 431.9 343.8 432 343.3 432.4 343.1 432.6 342.9 432.7 342.6 432.7 342.4 432.7 342.1 432.5 341.9 432.5 341.8 432.5 341.6 432.4 341.5 432.4 341.5 432.3 341.4 432.3 341.3 432.3 341.3 432.4 341.2 432.4 340.9 432.4 340.8 432.4 340.6 432.5 340.4 432.7 340.2 432.8 340 432.8 339.3 433 338.2 433.5 337.7 433.8 337.4 434.2 336.8 435.1 336.4 434.7 335.7 433.2 334.9 431.4 332.9 427 332.83 426.84"
 	/>
@@ -57,6 +51,8 @@
 	/>
 	<polygon
 		class="petsamo"
+		class:foreign-borders={mapState.nationalBorders}
+		class:foreign-territory={mapState.petsamo}
 		class:hidden={!mapState.petsamo}
 		use:popup={{
 			cssClass: 'petsamo',
@@ -66,6 +62,8 @@
 	/>
 	<path
 		class="salla"
+		class:foreign-borders={mapState.nationalBorders}
+		class:foreign-territory={mapState.salla}
 		class:hidden={!mapState.salla}
 		use:popup={{
 			cssClass: 'salla',
@@ -75,6 +73,8 @@
 	/>
 	<polygon
 		class="abrene"
+		class:foreign-borders={mapState.nationalBorders}
+		class:foreign-territory={mapState.latvianClaim}
 		class:hidden={!mapState.latvianClaim}
 		use:popup={{
 			cssClass: 'abrene',
@@ -84,6 +84,8 @@
 	/>
 	<polyline
 		class="petseri"
+		class:foreign-borders={mapState.nationalBorders}
+		class:foreign-territory={mapState.estonianClaim}
 		class:hidden={!mapState.estonianClaim}
 		use:popup={{
 			cssClass: 'petseri',
@@ -93,6 +95,8 @@
 	/>
 	<polygon
 		class="narva"
+		class:foreign-borders={mapState.nationalBorders}
+		class:foreign-territory={mapState.estonianClaim}
 		class:hidden={!mapState.estonianClaim}
 		use:popup={{
 			cssClass: 'narva',
@@ -102,6 +106,8 @@
 	/>
 	<path
 		class="belarusian-claim"
+		class:foreign-borders={mapState.nationalBorders}
+		class:foreign-territory={mapState.belarusClaim}
 		class:hidden={!mapState.belarusClaim}
 		use:popup={{
 			cssClass: 'belarusian-claim',
@@ -111,6 +117,8 @@
 	/>
 	<polyline
 		class="sudzha"
+		class:foreign-borders={mapState.nationalBorders}
+		class:foreign-territory={mapState.sudzha}
 		class:hidden={!mapState.sudzha}
 		use:popup={{
 			cssClass: 'sudzha',
@@ -120,6 +128,8 @@
 	/>
 	<polyline
 		class="tahanrih"
+		class:foreign-borders={mapState.nationalBorders}
+		class:foreign-territory={mapState.tahanrih}
 		class:hidden={!mapState.tahanrih}
 		use:popup={{
 			cssClass: 'tahanrih',
@@ -129,6 +139,8 @@
 	/>
 	<path
 		class="starodub"
+		class:foreign-borders={mapState.nationalBorders}
+		class:foreign-territory={mapState.starodub}
 		class:hidden={!mapState.starodub}
 		use:popup={{
 			cssClass: 'starodub',
@@ -138,6 +150,8 @@
 	/>
 	<path
 		class="sloboda"
+		class:foreign-borders={mapState.nationalBorders}
+		class:foreign-territory={mapState.sloboda}
 		class:hidden={!mapState.sloboda}
 		use:popup={{
 			cssClass: 'sloboda',
@@ -350,74 +364,9 @@
 			fill: url(#karelia-flag);
 		}
 
-		.kralovec-city {
-			fill: var(--land-color);
-			stroke: var(--foreign-border-color);
-		}
-
-		.polish-kralovec-voidvodship {
-			fill: var(--land-color);
-			stroke: var(--foreign-border-color);
-		}
-
-		.lithuania-minoris {
-			fill: none;
-			stroke: var(--foreign-border-color);
-		}
-
-		.petsamo {
-			fill: var(--land-color);
-			stroke: var(--foreign-border-color);
-		}
-
-		.salla {
-			fill: var(--land-color);
-			stroke: var(--foreign-border-color);
-		}
-
-		.lithuania-minoris {
-			fill: var(--land-color);
-			stroke: var(--foreign-border-color);
-		}
-
-		.abrene {
-			fill: var(--land-color);
-			stroke: var(--foreign-border-color);
-		}
-
-		.narva {
-			fill: var(--land-color);
-			stroke: var(--foreign-border-color);
-		}
-
-		.petseri {
-			fill: var(--land-color);
-			stroke: var(--foreign-border-color);
-		}
-
-		.belarusian-claim {
-			fill: var(--land-color);
-			stroke: var(--foreign-border-color);
-		}
-
-		.sudzha {
-			fill: var(--land-color);
-			stroke: var(--foreign-border-color);
-		}
-
-		.tahanrih {
-			fill: var(--land-color);
-			stroke: var(--foreign-border-color);
-		}
-
-		.starodub {
-			fill: var(--land-color);
-			stroke: var(--foreign-border-color);
-		}
-
-		.sloboda {
-			fill: var(--land-color);
-			stroke: var(--foreign-border-color);
+		.foreign-territory.foreign-borders {
+			stroke: var(--foreign-border-color) !important;
+			stroke-width: 1pt !important;
 		}
 	}
 </style>

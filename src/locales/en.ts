@@ -274,6 +274,24 @@ export default {
 		flag: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Flag_of_Karel.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Karelia'
 	},
+	polishPrussia: {
+		name: 'Polish Prussia',
+		description: '',
+		population: '~1,3 million',
+		capital: '',
+		languages: '',
+		flag: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Flag_of_Karel.svg',
+		wikiLink: 'https://en.wikipedia.org/wiki/Karelia'
+	},
+	lithuaniaMinoris: {
+		name: 'Lithuania Minoris',
+		description: '',
+		population: '~1,3 million',
+		capital: '',
+		languages: '',
+		flag: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Flag_of_Karel.svg',
+		wikiLink: 'https://en.wikipedia.org/wiki/Karelia'
+	},
 	kralovecCity: {
 		name: 'Free city of Kralovec',
 		description:
