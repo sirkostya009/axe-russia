@@ -47,7 +47,6 @@ export function popup(
 	}
 
 	function onpointerrelease(this: SVGElement, { target }: PointerEvent & { target: SVGElement }) {
-		console.log(this, target);
 		if (
 			target.classList.contains(cssClass) ||
 			!!target.parentElement?.classList?.contains(cssClass) ||
