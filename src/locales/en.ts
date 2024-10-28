@@ -6,7 +6,6 @@ export default {
 		population: '~100-110 million',
 		capital: 'Saint-Petersburg or Moscow',
 		languages: 'Russian',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/6/6f/White-blue-white_flag.svg',
 	},
 	komiRepublic: {
 		name: 'Komi',
@@ -15,7 +14,6 @@ export default {
 		population: '~800,000, with a majority of ethnic Russians and Komi people.',
 		capital: 'Syktyvkar',
 		languages: 'Komi, Russian',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/5/54/Flag_of_Komi.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Komi_Republic',
 	},
 	khakassiaRepublic: {
@@ -25,7 +23,6 @@ export default {
 		population: 'Roughly 500,000 people, with Khakas comprising about 12%.',
 		capital: 'Ağban',
 		languages: 'Khakass',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/e/ec/Flag_of_Khakassia.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Khakassia',
 	},
 	sakhaRepublic: {
@@ -35,7 +32,6 @@ export default {
 		population: 'About 996,000 people, with Yakuts making up nearly 50% of the population.',
 		capital: "D'okuuskay",
 		languages: 'Sakha (Yakut)',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/e/eb/Flag_of_Sakha.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Sakha_Republic',
 	},
 	buryatRepublic: {
@@ -45,7 +41,6 @@ export default {
 		population: '978,588',
 		capital: 'Ulaan Üde',
 		languages: 'Buryat',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/6/68/Flag_of_Buryatia.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Buryatia',
 	},
 	altaiRepublic: {
@@ -54,7 +49,6 @@ export default {
 		population: '221,600',
 		capital: 'Khot-Altaı',
 		languages: 'Altai',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/f/ff/Flag_of_Altai_Republic.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Altai_Republic',
 	},
 	tuvaRepublic: {
@@ -64,7 +58,6 @@ export default {
 		population: '~309,000',
 		capital: 'Kyzyl',
 		languages: 'Tuvan',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Tuva.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Tuva',
 	},
 	bashkortostanRepublic: {
@@ -74,7 +67,6 @@ export default {
 		population: '~4 million',
 		capital: 'Ufa',
 		languages: 'Bashkir',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/3/3d/Flag_of_Bashkortostan.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Bashkortostan',
 	},
 	mordoviaRepublic: {
@@ -84,7 +76,6 @@ export default {
 		population: '~800,000',
 		capital: 'Saransk',
 		languages: 'Mordvin',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Mordovia.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Mordovia',
 	},
 	chuvashiaRepublic: {
@@ -93,7 +84,6 @@ export default {
 		population: '~1.25 million',
 		capital: 'Shupashkar',
 		languages: 'Chuvash',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/d/d7/Flag_of_Chuvashia.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Chuvashia',
 	},
 	mariElRepublic: {
@@ -102,7 +92,6 @@ export default {
 		population: '~700,000',
 		capital: 'Yoshkar-Ola',
 		languages: 'Mari',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/Flag_of_Mari_El.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Mari_El',
 	},
 	udmurtiaRepublic: {
@@ -112,7 +101,6 @@ export default {
 		population: '~1.5 million',
 		capital: 'Izkar',
 		languages: 'Udmurt',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Udmurtia.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Udmurtia',
 	},
 	tatarstanRepublic: {
@@ -122,7 +110,6 @@ export default {
 		population: '~3.9 million',
 		capital: 'Kazan',
 		languages: 'Tatar',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/2/28/Flag_of_Tatarstan.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Tatarstan',
 	},
 	karachayCherkessRepublic: {
@@ -132,7 +119,6 @@ export default {
 		population: '~469,000',
 		capital: 'Batalpashinsk',
 		languages: 'Qaraçay-Malqar (Mountain Turkic), Circassian',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/5/59/Flag_of_Karachay-Cherkessia.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Karachay-Cherkessia',
 	},
 	kabardinoBalkarRepublic: {
@@ -142,7 +128,6 @@ export default {
 		population: '~860,000',
 		capital: 'Nalshich/Nalchik',
 		languages: 'Qaraçay-Malqar (Mountain Turkic), Circassian',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/d/d8/Flag_of_Kabardino-Balkaria.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Kabardino-Balkaria',
 	},
 	alaniaRepublic: {
@@ -152,7 +137,6 @@ export default {
 		population: '~687,000',
 		capital: 'Dzaudzhyqau/Dzauegigeu',
 		languages: 'Ossetian',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/1/1c/Flag_of_North_Ossetia.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/North_Ossetia%E2%80%93Alania',
 	},
 	ingushetiaRepublic: {
@@ -162,7 +146,6 @@ export default {
 		population: '~500,000',
 		capital: 'Magas or Nazran',
 		languages: 'Ingush',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Ingushetia.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Ingushetia',
 	},
 	ichkeriaRepublic: {
@@ -172,7 +155,6 @@ export default {
 		population: '~1.5 million',
 		capital: 'Solzha-Gala',
 		languages: 'Chechen',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/d/d6/Flag_of_Chechen_Republic_of_Ichkeria.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Chechen_Republic_of_Ichkeria',
 	},
 	kalmykiaRepublic: {
@@ -182,7 +164,6 @@ export default {
 		population: '~280,000',
 		capital: 'Elst',
 		languages: 'Kalmyk',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Kalmykia.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Kalmykia',
 	},
 	dagestanRepublic: {
@@ -192,7 +173,6 @@ export default {
 		population: '~3 million',
 		capital: 'Makhachkala/Anji',
 		languages: 'Aghul, Avar, Dargwa, Lezgin, Nogai and many others',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_Dagestan.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Dagestan',
 	},
 	karelia: {
@@ -202,7 +182,6 @@ export default {
 		population: '~533,000',
 		capital: 'Äänislina',
 		languages: 'Karelian, Russian',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Flag_of_Karel.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Republic_of_Karelia',
 	},
 	nenetsState: {
@@ -212,7 +191,6 @@ export default {
 		population: '~42,000',
 		capital: 'Naryan-Mar',
 		languages: 'Nenets',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/1/15/Flag_of_Nenets_Autonomous_District.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Nenets_Autonomous_Okrug',
 	},
 	uralRepublic: {
@@ -222,7 +200,6 @@ export default {
 		population: '~12 million',
 		capital: 'Yekaterinburg',
 		languages: 'Russian',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/9/91/Flag_of_Ural.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Ural_Federal_District',
 	},
 	siberianRepublic: {
@@ -232,7 +209,6 @@ export default {
 		population: '~39 million Russians',
 		capital: 'Novosibirsk',
 		languages: 'Russian, with various indigenous Siberian languages',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/1/13/Flag_of_Siberia.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Siberian_Federal_District',
 	},
 	farEasternRepublic: {
@@ -242,7 +218,6 @@ export default {
 		population: '~8 million',
 		capital: 'Vladivostok',
 		languages: 'Russian',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/d/df/Flag_of_Far_East.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Far_Eastern_Federal_District',
 	},
 	kralovecRepublic: {
@@ -252,7 +227,6 @@ export default {
 		population: '~1 million',
 		capital: 'Kralovec',
 		languages: 'Russian',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Flagge_Koenigsberg.jpg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Kr%C3%A1lovec_Region',
 	},
 	adygeaRepublic: {
@@ -262,7 +236,6 @@ export default {
 		population: '~500,000',
 		capital: "Myek'uae/Ghak'iva",
 		languages: 'Adyghe',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/1/16/Flag_of_Adygea.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Adygea',
 	},
 	greaterKarelia: {
@@ -271,18 +244,15 @@ export default {
 			'A theoretical republic that encompasses vast territories that once were inhabited by Finno-Ugric tribes, namely the Vepsians, Karelians and Saami.',
 		capital: 'Äänislina',
 		languages: 'Karelian, Russian',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Flag_of_Karel.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Karelia',
 	},
 	polishPrussia: {
 		name: 'Polish Prussia',
 		description: 'Part of Prussia annexed by Poland during division of Kaliningrad Oblast.',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Flag_of_Karel.svg',
 	},
 	lithuaniaMinoris: {
 		name: 'Lithuania Minoris',
 		description: 'A historical land that was once native to Lithuanians.',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Flag_of_Karel.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Lithuania_Minor',
 	},
 	kralovecCity: {
@@ -292,7 +262,6 @@ export default {
 		population: '~1 million',
 		capital: 'Kralovec',
 		languages: 'Russian',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Flagge_Koenigsberg.jpg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Kr%C3%A1lovec_Region',
 	},
 	petsamo: {
@@ -300,34 +269,29 @@ export default {
 		description:
 			'Once a Finnish panhandle, now under Russian occupation, this territory will unlock Finland access to the arctic sea, adding a new player to the region.',
 		population: '~38,000',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/4/46/Petsamo.vaakuna.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Pechengsky_District',
 	},
 	salla: {
 		name: 'Salla',
 		population: '~38,000',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/0/06/Salla.vaakuna.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Salla',
 	},
 	abrene: {
 		name: 'Abrene',
 		description:
 			'Area of modern-day Pskov Oblast in Russia that was taken away from Latvia in 1945.',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/0/06/Abrenes_apri%C5%86%C4%B7a_%C4%A3erbonis.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Territorial_changes_of_the_Baltic_states',
 	},
 	petseri: {
 		name: 'Petseri',
 		description:
 			'Area of modern-day Pskov Oblast, Russia, that was taken away from Estonia in 1945.',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/1/1e/Flag_of_Petserimaa.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Territorial_changes_of_the_Baltic_states',
 	},
 	narvaClaim: {
 		name: 'Jaanilinn (Narva)',
 		description: 'An Estonian suburb east of Narva river that got ceded to RSFSR in 1945.',
 		population: '~10,000',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/Flag_of_et-Narva.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Territorial_changes_of_the_Baltic_states',
 	},
 	smolensk: {
@@ -336,7 +300,6 @@ export default {
 			'Ethnic Belarus land that state of Belarus may claim. Area includes city of Smolensk, once a majority Belarusian municipality.',
 		population: '~600,000',
 		languages: 'Belarusian, Russian',
-		flag: 'https://upload.wikimedia.org/wikipedia/commons/a/a1/Flag_of_Smolensk_%28Smolensk_oblast%29.png',
 		wikiLink: 'https://en.wikipedia.org/wiki/Smolensk',
 	},
 	sudzha: {

@@ -31,11 +31,10 @@
 		</pattern>
 		<pattern patternUnits="objectBoundingBox" id="komi-flag" width="1" height="1">
 			<image
-				href="https://upload.wikimedia.org/wikipedia/commons/5/54/Flag_of_Komi.svg"
-				width="305"
-				height="105"
-				x="-70"
-				y="-5"
+				href="https://upload.wikimedia.org/wikipedia/commons/3/38/Komi_Nordic_cross_flag.svg"
+				width="165"
+				height="125"
+				y="-10"
 			></image>
 		</pattern>
 		<pattern patternUnits="objectBoundingBox" id="khakassia-flag" width="1" height="1">
@@ -104,9 +103,11 @@
 		</pattern>
 		<pattern patternUnits="objectBoundingBox" id="mari-el-flag" width="1" height="1">
 			<image
-				href="https://upload.wikimedia.org/wikipedia/commons/a/a7/Flag_of_Mari_El.svg"
-				width="40"
-				height="50"
+				href="https://upload.wikimedia.org/wikipedia/commons/f/f8/Flag_of_Mari_El_%282006-2011%29.svg"
+				width="45"
+				height="45"
+				y="-7"
+				x="-5"
 			></image>
 		</pattern>
 		<pattern patternUnits="objectBoundingBox" id="udmurtia-flag" width="1" height="1">
