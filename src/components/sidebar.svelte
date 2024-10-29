@@ -261,12 +261,8 @@
 		dialog.close();
 	}}
 >
-	<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
-		<path
-			d={sideBarOpened
-				? 'M2.8,23.8l-2.3-2.4,9.2-9.5L.4,2.5,2.8.2l9.2,9.5L21.2.2l2.3,2.4-9.2,9.5,9.2,9.5-2.3,2.4-9.2-9.5L2.8,23.8Z'
-				: 'M3,19.2l-2.7-2.7L12,4.8l11.8,11.8-2.7,2.7-9-9L3,19.2Z'}
-		/>
+	<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+		<path class:close-button={sideBarOpened} />
 	</svg>
 </button>
 
@@ -420,6 +416,14 @@
 			height: 10px;
 			left: 6px;
 			top: 8px;
+		}
+
+		path {
+			d: path('M3,19.2l-2.7-2.7L12,4.8l11.8,11.8-2.7,2.7-9-9L3,19.2Z');
+		}
+
+		path.close-button {
+			d: path('M2.8,23.8l-2.3-2.4,9.2-9.5L.4,2.5,2.8.2l9.2,9.5L21.2.2l2.3,2.4-9.2,9.5,9.2,9.5-2.3,2.4-9.2-9.5L2.8,23.8Z');
 		}
 
 		.toggler {
