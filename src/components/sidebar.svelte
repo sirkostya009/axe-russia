@@ -16,6 +16,7 @@
 	if (browser) {
 		for (const key in mapState) {
 			const item = localStorage?.getItem(key);
+			// @ts-expect-error
 			__state[key] = __state[key] instanceof Boolean ? item === 'true' : (item || __state[key]);
 		}
 
