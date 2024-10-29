@@ -6,8 +6,11 @@ export interface PopupInfo {
 	languages?: string;
 	flag?: string;
 	wikiLink?: string;
+	popup: HTMLDialogElement;
+	info: HTMLDialogElement;
 }
 
+// @ts-expect-error popup and info will almost certainly get hydrated before user interaction
 export const popupInfo = $state<PopupInfo>({});
 
 export function popup(
@@ -21,13 +24,15 @@ export function popup(
 		languages,
 		flag,
 		wikiLink,
-	}: PopupInfo & { cssClass: string },
+	}: Omit<PopupInfo, 'popup' | 'info'> & { cssClass: string },
 ) {
 	node.addEventListener('mousemove', onmousemove);
-	node.addEventListener('mouseout', onmouseout);
+	node.addEventListener('mouseleave', onmouseout);
 	node.addEventListener('blur', onmouseout);
+	// @ts-expect-error target is always a derivative of SVGElement
 	node.addEventListener('mouseenter', onmouseenter);
 	node.addEventListener('keydown', onkeydown);
+	// @ts-expect-error target is always a derivative of SVGElement
 	node.addEventListener('pointerup', onpointerrelease);
 
 	function onmouseenter({ target }: MouseEvent & { target: SVGElement }) {
@@ -36,23 +41,21 @@ export function popup(
 			!!target.parentElement?.classList?.contains(cssClass) ||
 			!!target.parentElement?.parentElement?.classList?.contains(cssClass)
 		) {
-			const popup = document.querySelector('.popup') as HTMLDialogElement;
 			popupInfo.name = name;
 			popupInfo.description = description;
 			popupInfo.population = population;
 			popupInfo.capital = capital;
 			popupInfo.languages = languages;
-			popup.show();
+			popupInfo.popup.show();
 		}
 	}
 
-	function onpointerrelease(this: SVGElement, { target }: PointerEvent & { target: SVGElement }) {
+	function onpointerrelease({ target }: PointerEvent & { target: SVGElement }) {
 		if (
 			target.classList.contains(cssClass) ||
 			!!target.parentElement?.classList?.contains(cssClass) ||
 			!!target.parentElement?.parentElement?.classList?.contains(cssClass)
 		) {
-			const info = document.querySelector('.info') as HTMLDialogElement;
 			popupInfo.name = name;
 			popupInfo.description = description;
 			popupInfo.population = population;
@@ -60,7 +63,7 @@ export function popup(
 			popupInfo.languages = languages;
 			popupInfo.flag = flag;
 			popupInfo.wikiLink = wikiLink;
-			info.showModal();
+			popupInfo.info.showModal();
 		}
 	}
 }
@@ -72,7 +75,7 @@ function onmousemove({ x, y }: MouseEvent) {
 }
 
 function onmouseout() {
-	(document.querySelector('.popup') as HTMLDialogElement).close();
+	popupInfo.popup.close();
 }
 
 function onkeydown(e: KeyboardEvent) {

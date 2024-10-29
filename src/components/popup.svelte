@@ -18,7 +18,7 @@
 	}
 </script>
 
-<dialog class="popup">
+<dialog bind:this={popupInfo.popup} class="popup">
 	<h1>{popupInfo.name}</h1>
 	{#if popupInfo.capital}
 		<span>
@@ -80,7 +80,7 @@
 	<h5>{i18n.popup}</h5>
 </dialog>
 
-<dialog class="info" style:background-image="url({popupInfo.flag})">
+<dialog bind:this={popupInfo.info} class="info" style:background-image="url({popupInfo.flag})">
 	<form method="dialog">
 		<button aria-label="close">
 			<svg width="24px" height="24px" viewBox="0 0 24 24">
@@ -175,7 +175,8 @@
 		onclick={() => {
 			document.cookie = `notice-acknowledged=true; SameSite=Lax; Max-Age=34559999`;
 			ack = true;
-			document.querySelector('.notice')?.close();
+			// @ts-expect-error notice is always a dialog
+			document.querySelector('notice')?.close();
 		}}
 	>
 		{i18n.notice.acknowledged}
