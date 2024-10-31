@@ -9,7 +9,7 @@ Active WIP.
 - carve out autonomous okrugs
 - ~~carve out territorial claims~~
 - ~~show flags~~
-- dark mode
+- ~~dark mode~~
 - more languages, better text
 - ~~touch screen issue~~
 - new borders for: altai, buryat, nenets, northern caucasus, kamchatka
