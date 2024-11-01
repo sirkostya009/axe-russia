@@ -44,6 +44,11 @@ export function popup(
 	}
 
 	function onpointerrelease() {
+		popupInfo.name = name;
+		popupInfo.description = description;
+		popupInfo.population = population;
+		popupInfo.capital = capital;
+		popupInfo.languages = languages;
 		popupInfo.flag = flag;
 		popupInfo.wikiLink = wikiLink;
 		popupInfo.info.showModal();

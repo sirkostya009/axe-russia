@@ -11,7 +11,9 @@
 	import { mapState } from '$lib/client/state.svelte';
 
 	const { data } = $props();
-	const { i18n, locale, isMobile, isNoticeAcknowledged } = data;
+	const { locale, isMobile, isNoticeAcknowledged } = data;
+
+	let i18n = $state(data.i18n);
 
 	$effect(() => {
 		document.body.classList.remove('dark-theme', 'light-theme');
@@ -339,7 +341,12 @@
 
 <Popup {i18n} {isNoticeAcknowledged} />
 
-<Sidebar {i18n} {locale} {isMobile} />
+<Sidebar
+	{i18n}
+	{locale}
+	{isMobile}
+	changeLocale={async (locale) => (i18n = await fetch('/api/' + locale).then((r) => r.json()))}
+/>
 
 <style>
 	svg {

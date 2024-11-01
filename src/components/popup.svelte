@@ -174,9 +174,8 @@
 	<button
 		onclick={() => {
 			document.cookie = `notice-acknowledged=true; SameSite=Lax; Max-Age=34559999`;
+			(document.querySelector('.notice') as HTMLDialogElement).close();
 			ack = true;
-			// @ts-expect-error notice is always a dialog
-			document.querySelector('notice')?.close();
 		}}
 	>
 		{i18n.notice.acknowledged}
@@ -281,7 +280,7 @@
 		background-blend-mode: overlay;
 		border-radius: 4px;
 		border-width: 2pt;
-		padding: 100px;
+		padding: 5%;
 		background-origin: border-box;
 		background-repeat: no-repeat;
 		background-position: center;

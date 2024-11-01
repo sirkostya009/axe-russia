@@ -372,7 +372,7 @@ export default {
 	komiPermyakUnion: {
 		name: 'Komi-Permyak Union State',
 		description:
-			'It is believe to that Komi and Permyak languages are one and the same. Therefore uniting Permyak Okrug with Komi only makes sense.',
+			'It is believed that Komi and Permyak languages are one and the same. Therefore uniting Permyak Okrug with Komi only makes sense.',
 		population: '~900k',
 		capital: 'Kudymkar',
 		languages: 'Komi-Permyak, Russian',
@@ -441,7 +441,8 @@ export default {
 	},
 	enetsCountry: {
 		name: 'Enets Country',
-		description: 'Enets, a dying out Samoyedic people, constitute slightly less than 200 people living here.',
+		description:
+			'Enets, a dying out Samoyedic people, constitute slightly less than 200 people living here.',
 		population: '<30k, less than 185 Enets specimen',
 		capital: 'Dudinka',
 		languages: 'Enets, Russian',

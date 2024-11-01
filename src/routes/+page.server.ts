@@ -1,18 +1,6 @@
 import * as locales from '../locales';
 
-function matchLocale(lang: string | null): keyof typeof locales {
-	if (!lang) return 'en';
-	for (const chunk of lang.split(';').slice(0, 10)) {
-		const [first] = Object.keys(locales)
-			.map((l) => ({ i: chunk.indexOf(l), l }))
-			.filter(({ i }) => i != -1)
-			.sort(({ i }) => i);
-		if (first) {
-			return first.l as keyof typeof locales;
-		}
-	}
-	return 'en';
-}
+const regex = new RegExp(Object.keys(locales).join('|'));
 
 export async function load({ cookies, request }): Promise<{
 	i18n: locales.I18n;
@@ -21,7 +9,7 @@ export async function load({ cookies, request }): Promise<{
 	isNoticeAcknowledged: boolean;
 }> {
 	const lang = cookies.get('locale') || request.headers.get('Accept-Language');
-	const locale = matchLocale(lang);
+	const locale = (regex.exec(lang!)?.[0] || 'en') as keyof typeof locales;
 	const ua = request.headers.get('User-Agent');
 	return {
 		locale,

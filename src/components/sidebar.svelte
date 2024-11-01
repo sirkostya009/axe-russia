@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
+	import { popupInfo } from '$lib/client/popup.actions.svelte';
 	import { __state, mapState } from '$lib/client/state.svelte';
 	import type { I18n } from '../locales';
 
@@ -7,9 +8,10 @@
 		i18n: I18n;
 		locale: string;
 		isMobile: boolean;
+		changeLocale(locale: string): void;
 	}
 
-	let { i18n, locale, isMobile }: Props = $props();
+	let { i18n, locale, isMobile, changeLocale }: Props = $props();
 
 	let sideBarOpened = $state(!isMobile);
 
@@ -33,7 +35,7 @@
 
 {#snippet checkboxSection(i18n: Record<string, string>)}
 <section>
-	<h1>{i18n.title}</h1>
+	<h3>{i18n.title}</h3>
 	{#each keysOf(i18n) as key}
 	<label>
 		<input type="checkbox" bind:checked={mapState[key]} />
@@ -51,8 +53,8 @@
 					name="locale"
 					value={locale}
 					onchange={(e) => {
-						document.cookie = `locale=${e.currentTarget?.value}; SameSite=Lax; Max-Age=34559999`;
-						location.reload();
+						document.cookie = `locale=${e.currentTarget.value}; SameSite=Lax; Max-Age=34559999`;
+						changeLocale(e.currentTarget.value);
 					}}
 				>
 					<option value="uk">Укр</option>
@@ -81,8 +83,7 @@
 	class="toggler"
 	onmousedown={() => {
 		sideBarOpened = !sideBarOpened;
-		const dialog = document.querySelector('.info') as HTMLDialogElement;
-		dialog.close();
+		popupInfo.info.close();
 	}}
 >
 	<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
@@ -112,6 +113,10 @@
 		flex-direction: column;
 		gap: 5px;
 		padding: 5px 5px;
+	}
+
+	h3 {
+		margin: 10px 0;
 	}
 
 	select option {
