@@ -441,7 +441,7 @@ export default {
 	},
 	enetsCountry: {
 		name: 'Enets Country',
-		description: 'Enets, a dying out Samoyedic people, ',
+		description: 'Enets, a dying out Samoyedic people, constitute slightly less than 200 people living here.',
 		population: '<30k, less than 185 Enets specimen',
 		capital: 'Dudinka',
 		languages: 'Enets, Russian',
