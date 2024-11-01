@@ -132,7 +132,6 @@
 				height="40"
 				x="-10"
 				y="-9"
-				preserveAspectRatio="xMinYMin meet"
 			></image>
 		</pattern>
 		<pattern patternUnits="objectBoundingBox" id="kabardino-balkar-flag" width="1" height="1">
@@ -178,7 +177,6 @@
 				href="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_Dagestan.svg"
 				width="90"
 				height="60"
-				preserveAspectRatio="xMidYMid slice"
 			></image>
 		</pattern>
 		<pattern patternUnits="objectBoundingBox" id="karelia-flag" width="1" height="1">
@@ -200,9 +198,9 @@
 		<pattern patternUnits="objectBoundingBox" id="ural-flag" width="1" height="1">
 			<image
 				href="https://upload.wikimedia.org/wikipedia/commons/9/91/Flag_of_Ural.svg"
-				width="400"
-				height="250"
-				preserveAspectRatio="xMidYMid slice"
+				width={mapState.mansi ? '200' : '400'}
+				height={mapState.mansi ? '200' : '250'}
+				y={mapState.mansi ? '75' : '0'}
 			></image>
 		</pattern>
 		<pattern patternUnits="userSpaceOnUse" id="siberian-flag" width="1100" height="900">
@@ -234,16 +232,107 @@
 				height="35"
 			></image>
 		</pattern>
+		<pattern patternUnits="objectBoundingBox" id="khanty" width="1" height="1">
+			<image
+				href="https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Khanty-Mansiysky_rayon_%28Yugra%29.svg"
+			></image>
+		</pattern>
+		<pattern patternUnits="objectBoundingBox" id="mansi" width="1" height="1">
+			<image href="https://upload.wikimedia.org/wikipedia/commons/7/70/Flag_of_Yugra.svg"></image>
+		</pattern>
+		<pattern patternUnits="objectBoundingBox" id="nenets-nation-flag" width="1" height="1">
+			<image
+				href="https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Yamal-Nenets_Autonomous_District.svg"
+				width="300"
+			>
+			</image>
+		</pattern>
+		<pattern patternUnits="objectBoundingBox" id="enets-flag" width="1" height="1">
+			<image
+				href="https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Nenets_people.png"
+				height="90"
+				x="-50"
+			>
+			</image>
+		</pattern>
+		<pattern patternUnits="objectBoundingBox" id="circassia-flag" width="1" height="1">
+			<image
+				href="https://upload.wikimedia.org/wikipedia/commons/5/5a/Circassian_flag.svg"
+				height="30"
+			>
+			</image>
+		</pattern>
+		<pattern patternUnits="objectBoundingBox" id="karachay-balkar-flag" width="1" height="1">
+			<image
+				href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Ethnic_flag_of_the_Balkar_and_Karachay_peoples_%28Karachay-Balkaria%29.svg"
+				height="35"
+				x="-10"
+			>
+			</image>
+		</pattern>
+		<pattern patternUnits="objectBoundingBox" id="kamchatka-flag" width="1" height="1">
+			<image
+				href="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Koryakia.svg"
+				height="212"
+				x="-70"
+			>
+			</image>
+		</pattern>
+		<pattern patternUnits="objectBoundingBox" id="chukotka-flag" width="1" height="1">
+			<image
+				href="https://upload.wikimedia.org/wikipedia/commons/4/4f/Flag_of_the_Free_State_of_Chutkotka.svg"
+				width="255"
+			>
+			</image>
+		</pattern>
+		<pattern patternUnits="objectBoundingBox" id="taymyria-flag" width="1" height="1">
+			<image
+				href="https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Taymyr_Autonomous_Okrug.svg"
+				width="150"
+				x="-12"
+			>
+			</image>
+		</pattern>
+		<pattern patternUnits="objectBoundingBox" id="evenkia-flag" width="1" height="1">
+			<image
+				href="https://upload.wikimedia.org/wikipedia/commons/7/72/Flag_of_Evenks.svg"
+				width="210"
+				x="-42"
+			>
+			</image>
+		</pattern>
+		<pattern patternUnits="objectBoundingBox" id="khanty-flag" width="1" height="1">
+			<image
+				href="https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Khanty-Mansiysky_rayon_%28Yugra%29.svg"
+				height="140"
+			>
+			</image>
+		</pattern>
+		<pattern patternUnits="objectBoundingBox" id="mansi-flag" width="1" height="1">
+			<image
+				href="https://upload.wikimedia.org/wikipedia/commons/7/70/Flag_of_Yugra.svg"
+				height="110"
+				x="-30"
+			>
+			</image>
+		</pattern>
+		<pattern patternUnits="objectBoundingBox" id="selkup-flag" width="1" height="1">
+			<image
+				href="https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Selkup_people.svg"
+				height="120"
+			>
+			</image>
+		</pattern>
 	</defs>
 	<ForeignTerritory />
 	<Republics {i18n} />
-	<Claims {i18n} />
 	{#if mapState.nationalBorders}
 		<ForeignBorders />
 	{/if}
 	{#if mapState.showAdministrativeBorders}
 		<AdminBorders />
 	{/if}
+	<Claims {i18n} />
 	<Rivers />
 	<Lakes />
 </svg>

@@ -16,7 +16,6 @@ export const popupInfo = $state<PopupInfo>({});
 export function popup(
 	node: SVGElement,
 	{
-		cssClass,
 		name,
 		description,
 		population,
@@ -24,47 +23,30 @@ export function popup(
 		languages,
 		flag,
 		wikiLink,
-	}: Omit<PopupInfo, 'popup' | 'info'> & { cssClass: string },
+	}: Omit<PopupInfo, 'popup' | 'info'>,
 ) {
 	node.addEventListener('mousemove', onmousemove);
 	node.addEventListener('mouseleave', onmouseout);
 	node.addEventListener('blur', onmouseout);
-	// @ts-expect-error target is always a derivative of SVGElement
 	node.addEventListener('mouseenter', onmouseenter);
 	node.addEventListener('keydown', onkeydown);
-	// @ts-expect-error target is always a derivative of SVGElement
 	node.addEventListener('pointerup', onpointerrelease);
+	if (typeof flag === 'string' && !flag.startsWith('https://'))
+		flag = document.querySelector(`#${flag} image`)?.getAttribute('href') || '';
 
-	function onmouseenter({ target }: MouseEvent & { target: SVGElement }) {
-		if (
-			target.classList.contains(cssClass) ||
-			!!target.parentElement?.classList?.contains(cssClass) ||
-			!!target.parentElement?.parentElement?.classList?.contains(cssClass)
-		) {
-			popupInfo.name = name;
-			popupInfo.description = description;
-			popupInfo.population = population;
-			popupInfo.capital = capital;
-			popupInfo.languages = languages;
-			popupInfo.popup.show();
-		}
+	function onmouseenter() {
+		popupInfo.name = name;
+		popupInfo.description = description;
+		popupInfo.population = population;
+		popupInfo.capital = capital;
+		popupInfo.languages = languages;
+		popupInfo.popup.show();
 	}
 
-	function onpointerrelease({ target }: PointerEvent & { target: SVGElement }) {
-		if (
-			target.classList.contains(cssClass) ||
-			!!target.parentElement?.classList?.contains(cssClass) ||
-			!!target.parentElement?.parentElement?.classList?.contains(cssClass)
-		) {
-			popupInfo.name = name;
-			popupInfo.description = description;
-			popupInfo.population = population;
-			popupInfo.capital = capital;
-			popupInfo.languages = languages;
-			popupInfo.flag = flag;
-			popupInfo.wikiLink = wikiLink;
-			popupInfo.info.showModal();
-		}
+	function onpointerrelease() {
+		popupInfo.flag = flag;
+		popupInfo.wikiLink = wikiLink;
+		popupInfo.info.showModal();
 	}
 }
 

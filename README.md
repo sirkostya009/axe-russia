@@ -13,3 +13,4 @@ Active WIP.
 - more languages, better text
 - ~~touch screen issue~~
 - new borders for: altai, buryat, nenets, northern caucasus, kamchatka
+- fix international border claims

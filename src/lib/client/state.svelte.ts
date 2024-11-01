@@ -46,7 +46,20 @@ export const __state = $state({
 	showFlags: true,
 	showLakes: true,
 	showRivers: true,
-	theme: 'auto'
+	nenetsNation: false,
+	selkupTerritory: false,
+	khanty: false,
+	mansi: false,
+	komiPermyakUnion: false,
+	karachayBalkar: false,
+	circassia: false,
+	altaiExtended: false,
+	chukotka: false,
+	kamchatka: false,
+	taymyria: false,
+	evenkia: false,
+	enets: false,
+	theme: 'auto',
 });
 
 export type MapState = typeof __state;
@@ -54,8 +67,9 @@ export type MapState = typeof __state;
 export const mapState: MapState = new Proxy(__state, {
 	set(target, p: keyof MapState, newValue) {
 		globalThis?.localStorage?.setItem(p, newValue);
+		// @ts-expect-error
 		target[p] = newValue;
 		return true;
 	},
-	get: (target, p: keyof MapState) => target[p]
+	get: (target, p: keyof MapState) => target[p],
 });

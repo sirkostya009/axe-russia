@@ -115,19 +115,19 @@ export default {
 	karachayCherkessRepublic: {
 		name: 'Karachay-Cherkess',
 		description:
-			'Caucasus is home to a diverse number of ethnic groups. With this state representing Turkic and Caucasian language speaking peoples - Karachay and Cherkess, respectively. Historically, the region has faced many conflicts coming from north and south.',
+			'Caucasus is home to a diverse number of ethnic groups. With this state representing Turkic and Caucasian language speaking peoples - Karachay (Balkar) and Cherkess (Adyghe), respectively.',
 		population: '~469,000',
 		capital: 'Batalpashinsk',
-		languages: 'Qaraçay-Malqar (Mountain Turkic), Circassian',
+		languages: 'Mountain Turkic (Qaraçay-Malqar), Circassian (Adyghe)',
 		wikiLink: 'https://en.wikipedia.org/wiki/Karachay-Cherkessia',
 	},
 	kabardinoBalkarRepublic: {
 		name: 'Kabardino-Balkar',
 		description:
-			'This republic shares a lot of in common with Karachay-Cherkess republic: it too was sinisterly made to host two non-related ethnic groups by Stalin to keep the former divided and conquered.',
+			'This republic shares a lot of in common with Karachay-Cherkess republic: it too was sinisterly made to host two non-similar ethnic groups by Stalin to keep them divided and conquered. It is also comprised of [almost] identical two ethnic groups as Karachay-Cherkess Republic.',
 		population: '~860,000',
 		capital: 'Nalshich/Nalchik',
-		languages: 'Qaraçay-Malqar (Mountain Turkic), Circassian',
+		languages: 'Mountain Turkic (Qaraçay-Malqar), Circassian (Aydghe)',
 		wikiLink: 'https://en.wikipedia.org/wiki/Kabardino-Balkaria',
 	},
 	alaniaRepublic: {
@@ -232,10 +232,10 @@ export default {
 	adygeaRepublic: {
 		name: 'Adygea',
 		description:
-			'A republic in the North Caucasus, home to a Circass people, which are mostly extinct now due to Russian conquest and subsequent genocide of the region in the 19th century.',
+			'A republic in the North Caucasus, home to Circass (self-named as Adyghe) people, which are mostly extinct now due to Russian conquest and subsequent genocide of the region in the 19th century.',
 		population: '~500,000',
 		capital: "Myek'uae/Ghak'iva",
-		languages: 'Adyghe',
+		languages: 'Circassian (Adyghe)',
 		wikiLink: 'https://en.wikipedia.org/wiki/Adygea',
 	},
 	greaterKarelia: {
@@ -334,6 +334,119 @@ export default {
 		// flag: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/1917-1928_Soviet_Ukraine_borders_formation_%28EN%29.svg',
 		wikiLink: 'https://en.wikipedia.org/wiki/Russia%E2%80%93Ukraine_border',
 	},
+	nenetsNation: {
+		name: 'Nenets Nation',
+		description:
+			'A theoretical state comprised of native ethnic Nenets lands. Stretches all the way from northern Europe to Taymyr peninsula.',
+		population: '~1 million: 90% ethnic Russian migrants',
+		capital: 'Salekhard',
+		languages: 'Nenets, Russian',
+		wikiLink: 'https://en.wikipedia.org/wiki/Nenets_Autonomous_Okrug',
+	},
+	selkupia: {
+		name: 'Selkupia',
+		description: 'A sparsely populated land home to Uralic people.',
+		population: '~3,600',
+		capital: 'Nyaryi Mache',
+		languages: 'Selkup, Russian',
+		wikiLink: 'https://en.wikipedia.org/wiki/Selkup_people',
+	},
+	khanty: {
+		name: 'Khantia',
+		description:
+			'Home to an Ugric speaking people, closely related to Hungarians, as they too once came from Yugra.',
+		population: '~1.5 million, ~20k Khanty',
+		capital: 'Khanti-Mansiysk',
+		languages: 'Khanty, Russian',
+		wikiLink: 'https://en.wikipedia.org/wiki/Khanty-Mansi_Autonomous_Okrug',
+	},
+	mansi: {
+		name: 'Mansia',
+		description:
+			'Home to another Ugric speaking people, that are closely related to Hungarians, located on the historical land of Yugra.',
+		population: '~200k total, ~11k Mansi',
+		capital: 'Uray',
+		languages: 'Mansi, Russian',
+		wikiLink: 'https://en.wikipedia.org/wiki/Khanty-Mansi_Autonomous_Okrug',
+	},
+	komiPermyakUnion: {
+		name: 'Komi-Permyak Union State',
+		description:
+			'It is believe to that Komi and Permyak languages are one and the same. Therefore uniting Permyak Okrug with Komi only makes sense.',
+		population: '~900k',
+		capital: 'Kudymkar',
+		languages: 'Komi-Permyak, Russian',
+		wikiLink: 'https://en.wikipedia.org/wiki/Komi-Permyak_Okrug',
+	},
+	karachayBalkar: {
+		name: 'Karachay-Balkar Republic',
+		description:
+			"Karachay-Balkar are just two dialects of the same-named language (also known as Mountain Turkic), it just happened so that Stalin didn't wish to properly unite the two as it might make Caucasus more problematic for him. This state resolves the issue, for once.",
+		population: '~225k',
+		capital: 'Mikoyan-Shahar',
+		languages: 'Karachay-Balkar (Mountain Turkic)',
+	},
+	circassia: {
+		name: 'Circassia',
+		description:
+			'An ancient country of Circassia revived and united after being cleansed off the surface of Earth by Russians in 19th century.',
+		population: '~800k ethnic Circassians',
+		capital: 'Maykop',
+		languages: 'Circassian (Adygean)',
+		wikiLink: 'https://en.wikipedia.org/wiki/Circassia',
+	},
+	altaiMountains: {
+		name: 'Altai Republic',
+		description:
+			'Good old Altai Republic with borders extended to cover all of Altai mountains. The bordering Altai Krai would most likely get renamed to Barnaul Oblast.',
+		population: '~230k',
+		capital: 'Khot-Altai',
+		languages: 'Altai',
+		wikiLink: 'https://en.wikipedia.org/wiki/Altai_Mountains',
+	},
+	chukotka: {
+		name: 'Chukotkan Republic',
+		description:
+			'A republic located on Chukotka peninsula, comprised of several ethnic groups, with the main being Chukchi - an indigenous people native to the land.',
+		population: '~40k',
+		capital: 'Anadyr',
+		languages: 'Chukchi',
+		wikiLink: 'https://en.wikipedia.org/wiki/Chukotka_Autonomous_Okrug',
+	},
+	kamchatka: {
+		name: 'Kamchatka State',
+		description:
+			'State consituting previous Kamchatka Krai administrative region, home to Koryak people.',
+		population: '~291,000',
+		capital: 'Petropavlovsk-Kamchatsky',
+		languages: 'Koryak, Kerek, Alyutor, Itelmen, Russian',
+		wikiLink: 'https://en.wikipedia.org/wiki/Kamchatka_Krai',
+	},
+	taymyria: {
+		name: 'Taymyria',
+		description:
+			'Taymyria, named after its location - the Taymyrian Peninsula, houses a Semoyedic and a Tungusian ethnic groups - Nganasan and Dolganets, the latter being very closely related to Sakhans.',
+		population: '~35k',
+		capital: 'Khatanga',
+		languages: 'Nganasan, Dolganets, Russian',
+		wikiLink: 'https://en.wikipedia.org/wiki/Taymyr_Autonomous_Okrug',
+	},
+	evenkia: {
+		name: 'Evenkia',
+		description: 'Country native to Evenks, a Tungusic people.',
+		population: '~11k',
+		capital: 'Tura',
+		languages: 'Evenk, Russian',
+		wikiLink: 'https://en.wikipedia.org/wiki/Evenkiysky_District',
+	},
+	enetsCountry: {
+		name: 'Enets Country',
+		description: 'Enets, a dying out Samoyedic people, ',
+		population: '<30k, less than 185 Enets specimen',
+		capital: 'Dudinka',
+		languages: 'Enets, Russian',
+		wikiLink: 'https://en.wikipedia.org/wiki/Evenkiysky_District',
+	},
 	sidebar: {
 		exFederalRepublics: {
 			title: 'Russian colonies',
@@ -385,6 +498,19 @@ export default {
 			kurilIslands: 'Kuril Islands',
 			franzJosefLand: 'Franz Josef Land',
 			finishIsles: 'Gulf of Finland isles',
+			nenetsNation: 'Nenets Nation',
+			selkupTerritory: 'Selkup Territory',
+			khanty: 'Khanty Country',
+			mansi: 'Mansi Country',
+			komiPermyakUnion: 'Komy-Permyak Union',
+			karachayBalkar: 'Karachay-Balkar Republic',
+			circassia: 'Circassia',
+			altaiExtended: 'Altai Mountains Claim',
+			chukotka: 'Chukotkan Republic',
+			kamchatka: 'Kamchatka Republic',
+			taymyria: 'Republic of Taymyria',
+			evenkia: 'Evenkia',
+			enets: 'Enets State',
 		},
 		miscellaneous: {
 			title: 'Miscellaneous',

@@ -22,7 +22,26 @@
 
 		sideBarOpened = !navigator.userAgent.match(/iPhone|Android|iPad/);
 	}
+
+	function* keysOf<T extends object>(t: T) {
+		for (const key in t) {
+			if (key === 'title' || key === 'locale') continue;
+			yield key;
+		}
+	}
 </script>
+
+{#snippet checkboxSection(i18n: Record<string, string>)}
+<section>
+	<h1>{i18n.title}</h1>
+	{#each keysOf(i18n) as key}
+	<label>
+		<input type="checkbox" bind:checked={mapState[key]} />
+		{i18n[key]}
+	</label>
+	{/each}
+</section>
+{/snippet}
 
 <aside class="sidebar" class:shown={sideBarOpened}>
 	<form>
@@ -49,206 +68,10 @@
 				</select>
 			</label>
 		</section>
-		<section>
-			<h3>{i18n.sidebar.exFederalRepublics.title}</h3>
-			<label>
-				<input type="checkbox" bind:checked={mapState.projectUralRepublic} />
-				{i18n.sidebar.exFederalRepublics.projectUralRepublic}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.projectSiberianRepublic} />
-				{i18n.sidebar.exFederalRepublics.projectSiberianRepublic}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.projectFarEast} />
-				{i18n.sidebar.exFederalRepublics.projectFarEast}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.projectKralovec} />
-				{i18n.sidebar.exFederalRepublics.projectKralovec}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.projectNewRepublic} />
-				{i18n.sidebar.exFederalRepublics.projectNewRepublic}
-			</label>
-		</section>
-		<section>
-			<h3>{i18n.sidebar.republics.title}</h3>
-			<label>
-				<input type="checkbox" bind:checked={mapState.adygeaIndependent} />
-				{i18n.sidebar.republics.adygeaIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.altaiIndependent} />
-				{i18n.sidebar.republics.altaiIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.bashkortostanIndependent} />
-				{i18n.sidebar.republics.bashkortostanIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.buryatiaIndependent} />
-				{i18n.sidebar.republics.buryatiaIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.ichkeriaIndependent} />
-				{i18n.sidebar.republics.ichkeriaIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.chuvashIndependent} />
-				{i18n.sidebar.republics.chuvashIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.dagestanIndependent} />
-				{i18n.sidebar.republics.dagestanIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.ingushetiaIndependent} />
-				{i18n.sidebar.republics.ingushetiaIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.kabardinoBalkarIndependent} />
-				{i18n.sidebar.republics.kabardinoBalkarIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.kalmykiaIndependent} />
-				{i18n.sidebar.republics.kalmykiaIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.karachayCherkessiaIndependent} />
-				{i18n.sidebar.republics.karachayCherkessiaIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.kareliaIndependent} />
-				{i18n.sidebar.republics.kareliaIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.khakassiaIndependent} />
-				{i18n.sidebar.republics.khakassiaIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.komiIndependent} />
-				{i18n.sidebar.republics.komiIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.mariElIndependent} />
-				{i18n.sidebar.republics.mariElIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.mordoviaIndependent} />
-				{i18n.sidebar.republics.mordoviaIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.northOssetiaAlaniaIndependent} />
-				{i18n.sidebar.republics.northOssetiaAlaniaIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.sakhaIndependent} />
-				{i18n.sidebar.republics.sakhaIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.tatarstanIndependent} />
-				{i18n.sidebar.republics.tatarstanIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.tuvaIndependent} />
-				{i18n.sidebar.republics.tuvaIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.udmurtIndependent} />
-				{i18n.sidebar.republics.udmurtIndependent}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.nenetsIndependence} />
-				{i18n.sidebar.republics.nenetsIndependence}
-			</label>
-		</section>
-		<section>
-			<h3>{i18n.sidebar.claims.title}</h3>
-			<label>
-				<input type="checkbox" bind:checked={mapState.greaterKarelia} />
-				{i18n.sidebar.claims.greaterKarelia}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.polishPrussia} />
-				{i18n.sidebar.claims.polishPrussia}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.lithuaniaMinor} />
-				{i18n.sidebar.claims.lithuaniaMinor}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.petsamo} />
-				{i18n.sidebar.claims.petsamo}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.salla} />
-				{i18n.sidebar.claims.salla}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.latvianClaim} />
-				{i18n.sidebar.claims.latvianClaim}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.estonianClaim} />
-				{i18n.sidebar.claims.estonianClaim}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.belarusClaim} />
-				{i18n.sidebar.claims.belarusClaim}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.sudzha} />
-				{i18n.sidebar.claims.sudzha}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.tahanrih} />
-				{i18n.sidebar.claims.tahanrih}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.starodub} />
-				{i18n.sidebar.claims.starodub}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.sloboda} />
-				{i18n.sidebar.claims.sloboda}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.kurilIslands} />
-				{i18n.sidebar.claims.kurilIslands}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.franzJosefLand} />
-				{i18n.sidebar.claims.franzJosefLand}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.finishIsles} />
-				{i18n.sidebar.claims.finishIsles}
-			</label>
-		</section>
-		<section>
-			<h3>{i18n.sidebar.miscellaneous.title}</h3>
-			<label>
-				<input type="checkbox" bind:checked={mapState.showAdministrativeBorders} />
-				{i18n.sidebar.miscellaneous.showAdministrativeBorders}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.nationalBorders} />
-				{i18n.sidebar.miscellaneous.nationalBorders}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.showFlags} />
-				{i18n.sidebar.miscellaneous.showFlags}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.showLakes} />
-				{i18n.sidebar.miscellaneous.showLakes}
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={mapState.showRivers} />
-				{i18n.sidebar.miscellaneous.showRivers}
-			</label>
-		</section>
+		{@render checkboxSection(i18n.sidebar.exFederalRepublics)}
+		{@render checkboxSection(i18n.sidebar.republics)}
+		{@render checkboxSection(i18n.sidebar.claims)}
+		{@render checkboxSection(i18n.sidebar.miscellaneous)}
 	</form>
 </aside>
 
@@ -289,10 +112,6 @@
 		flex-direction: column;
 		gap: 5px;
 		padding: 5px 5px;
-	}
-
-	h3 {
-		margin: 10px 0;
 	}
 
 	select option {

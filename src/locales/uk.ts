@@ -116,19 +116,19 @@ export default {
 	karachayCherkessRepublic: {
 		name: 'Карачаєво-Черкесія',
 		description:
-			'Кавказ є домом для різноманітних етнічних груп. Ця держава представляє тюркські та кавказькі мови — карачаївців і черкесів відповідно. Історично цей регіон зазнав багатьох конфліктів з півночі та півдня.',
+			'Кавказ є домом для різноманітних етнічних груп. Ця держава представляє тюркський та черкеський народи — карачаївців та черкесів відповідно.',
 		population: 'Приблизно 469,000',
 		capital: 'Черкеськ',
-		languages: 'Карачаєво-балкарська, черкеська (Адигейська)',
+		languages: 'Карачаєво-балкарська, черкеська (адигейська)',
 		wikiLink: 'https://uk.wikipedia.org/wiki/Карачаєво-Черкесія',
 	},
 	kabardinoBalkarRepublic: {
 		name: 'Кабардино-Балкарія',
 		description:
-			"Ця республіка має багато спільного з Карачаєво-Черкесією: її також зловмисно створили, щоб розмістити дві не пов'язані етнічні групи, щоб підтримувати колишніх розділеними та завойованими.",
+			"Ця республіка має багато спільного з Карачаєво-Черкесією: її також зловмисно створили, щоб розмістити дві не пов'язані етнічні групи, щоб підтримувати їх розділеними та завойованими. Також ця республіка є домівкою для двох [майже] однакових етнічних груп: карачай-балкарів та черкесів.",
 		population: 'Приблизно 860,000',
 		capital: 'Нальчик',
-		languages: 'Карачаєво-балкарська, черкеська (Адигейська)',
+		languages: 'Карачаєво-балкарська, черкеська (адигейська)',
 		wikiLink: 'https://uk.wikipedia.org/wiki/Кабардино-Балкарія',
 	},
 	alaniaRepublic: {
@@ -346,6 +346,119 @@ export default {
 		// flag: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/1917-1928_Soviet_Ukraine_borders_formation_%28EN%29.svg',
 		wikiLink: 'https://uk.wikipedia.org/wiki/Російсько-український_кордон',
 	},
+	nenetsNation: {
+		name: 'Nenets Nation',
+		description:
+			'A theoretical state comprised of native ethnic Nenets lands. Stretches all the way from northern Europe to Taymyr peninsula.',
+		population: '~1 million: 90% ethnic Russian migrants',
+		capital: 'Salekhard',
+		languages: 'Nenets, Russian',
+		wikiLink: 'https://en.wikipedia.org/wiki/Nenets_Autonomous_Okrug',
+	},
+	selkupia: {
+		name: 'Selkupia',
+		description: 'A sparsely populated land home to Uralic people.',
+		population: '~3,600',
+		capital: 'Nyaryi Mache',
+		languages: 'Selkup, Russian',
+		wikiLink: 'https://en.wikipedia.org/wiki/Selkup_people',
+	},
+	khanty: {
+		name: 'Khantia',
+		description:
+			'Home to an Ugric speaking people, closely related to Hungarians, as they too once came from Yugra.',
+		population: '~1.5 million, ~20k Khanty',
+		capital: 'Khanti-Mansiysk',
+		languages: 'Khanty, Russian',
+		wikiLink: 'https://en.wikipedia.org/wiki/Khanty-Mansi_Autonomous_Okrug',
+	},
+	mansi: {
+		name: 'Mansia',
+		description:
+			'Home to another Ugric speaking people, that are closely related to Hungarians, located on the historical land of Yugra.',
+		population: '~200k total, ~11k Mansi',
+		capital: 'Uray',
+		languages: 'Mansi, Russian',
+		wikiLink: 'https://en.wikipedia.org/wiki/Khanty-Mansi_Autonomous_Okrug',
+	},
+	komiPermyakUnion: {
+		name: 'Komi-Permyak Union State',
+		description:
+			'It is believe to that Komi and Permyak languages are one and the same. Therefore uniting Permyak Okrug with Komi only makes sense.',
+		population: '~900k',
+		capital: 'Kudymkar',
+		languages: 'Komi-Permyak, Russian',
+		wikiLink: 'https://en.wikipedia.org/wiki/Komi-Permyak_Okrug',
+	},
+	karachayBalkar: {
+		name: 'Karachay-Balkar Republic',
+		description:
+			"Karachay-Balkar are just two dialects of the same-named language (also known as Mountain Turkic), it just happened so that Stalin didn't wish to properly unite the two as it might make Caucasus more problematic for him. This state resolves the issue, for once.",
+		population: '~225k',
+		capital: 'Mikoyan-Shahar',
+		languages: 'Karachay-Balkar (Mountain Turkic)',
+	},
+	circassia: {
+		name: 'Circassia',
+		description:
+			'An ancient country of Circassia revived and united after being cleansed off the surface of Earth by Russians in 19th century.',
+		population: '~800k ethnic Circassians',
+		capital: 'Maykop',
+		languages: 'Circassian (Adygean)',
+		wikiLink: 'https://en.wikipedia.org/wiki/Circassia',
+	},
+	altaiMountains: {
+		name: 'Altai Republic',
+		description:
+			'Good old Altai Republic with borders extended to cover all of Altai mountains. The bordering Altai Krai would most likely get renamed to Barnaul Oblast.',
+		population: '~230k',
+		capital: 'Khot-Altai',
+		languages: 'Altai',
+		wikiLink: 'https://en.wikipedia.org/wiki/Altai_Mountains',
+	},
+	chukotka: {
+		name: 'Chukotkan Republic',
+		description:
+			'A republic located on Chukotka peninsula, comprised of several ethnic groups, with the main being Chukchi - an indigenous people native to the land.',
+		population: '~40k',
+		capital: 'Anadyr',
+		languages: 'Chukchi',
+		wikiLink: 'https://en.wikipedia.org/wiki/Chukotka_Autonomous_Okrug',
+	},
+	kamchatka: {
+		name: 'Kamchatka State',
+		description:
+			'State consituting previous Kamchatka Krai administrative region, home to Koryak people.',
+		population: '~291,000',
+		capital: 'Petropavlovsk-Kamchatsky',
+		languages: 'Koryak, Kerek, Alyutor, Itelmen, Russian',
+		wikiLink: 'https://en.wikipedia.org/wiki/Kamchatka_Krai',
+	},
+	taymyria: {
+		name: 'Taymyria',
+		description:
+			'Taymyria, named after its location - the Taymyrian Peninsula, houses a Semoyedic and a Tungusian ethnic groups - Nganasan and Dolganets, the latter being very closely related to Sakhans.',
+		population: '~35k',
+		capital: 'Khatanga',
+		languages: 'Nganasan, Dolganets, Russian',
+		wikiLink: 'https://en.wikipedia.org/wiki/Taymyr_Autonomous_Okrug',
+	},
+	evenkia: {
+		name: 'Evenkia',
+		description: 'Country native to Evenks, a Tungusic people.',
+		population: '~11k',
+		capital: 'Tura',
+		languages: 'Evenk, Russian',
+		wikiLink: 'https://en.wikipedia.org/wiki/Evenkiysky_District',
+	},
+	enetsCountry: {
+		name: 'Enets Country',
+		description: 'Enets, a dying out Samoyedic people, ',
+		population: '<30k, less than 185 Enets specimen',
+		capital: 'Dudinka',
+		languages: 'Enets, Russian',
+		wikiLink: 'https://en.wikipedia.org/wiki/Evenkiysky_District',
+	},
 	sidebar: {
 		exFederalRepublics: {
 			title: 'Російські колоніальні володіння',
@@ -397,6 +510,19 @@ export default {
 			kurilIslands: 'Курильські острови',
 			franzJosefLand: 'Земля Франца-Йосифа',
 			finishIsles: 'Острови фінської затоки',
+			nenetsNation: 'Nenets Nation',
+			selkupTerritory: 'Selkup Territory',
+			khanty: 'Khanty Country',
+			mansi: 'Mansi Country',
+			komiPermyakUnion: 'Komy-Permyak Union',
+			karachayBalkar: 'Karachay-Balkar Republic',
+			circassia: 'Circassia',
+			altaiExtended: 'Altai Mountains Claim',
+			chukotka: 'Chukotkan Republic',
+			kamchatka: 'Kamchatka Republic',
+			taymyria: 'Republic of Taymyria',
+			evenkia: 'Evenkia',
+			enets: 'Enets State',
 		},
 		miscellaneous: {
 			title: 'Різне',
