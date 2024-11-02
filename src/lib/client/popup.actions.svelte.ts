@@ -1,3 +1,5 @@
+import type { ActionReturn } from 'svelte/action';
+
 export interface PopupInfo {
 	name?: string;
 	description?: string;
@@ -13,18 +15,12 @@ export interface PopupInfo {
 // @ts-expect-error popup and info will almost certainly get hydrated before user interaction
 export const popupInfo = $state<PopupInfo>({});
 
+type PopupData = Omit<PopupInfo, 'popup' | 'info'>;
+
 export function popup(
 	node: SVGElement,
-	{
-		name,
-		description,
-		population,
-		capital,
-		languages,
-		flag,
-		wikiLink,
-	}: Omit<PopupInfo, 'popup' | 'info'>,
-) {
+	{ name, description, population, capital, languages, flag, wikiLink }: PopupData,
+): ActionReturn<PopupData> {
 	node.addEventListener('mousemove', onmousemove);
 	node.addEventListener('mouseleave', onmouseout);
 	node.addEventListener('blur', onmouseout);
@@ -33,6 +29,25 @@ export function popup(
 	node.addEventListener('pointerup', onpointerrelease);
 	if (typeof flag === 'string' && !flag.startsWith('https://'))
 		flag = document.querySelector(`#${flag} image`)?.getAttribute('href') || '';
+
+	return {
+		update(newValues: PopupData) {
+			name = newValues.name;
+			description = newValues.description;
+			population = newValues.population;
+			capital = newValues.capital;
+			languages = newValues.languages;
+			wikiLink = newValues.wikiLink;
+		},
+		destroy() {
+			node.removeEventListener('mousemove', onmousemove);
+			node.removeEventListener('mouseleave', onmouseout);
+			node.removeEventListener('blur', onmouseout);
+			node.removeEventListener('mouseenter', onmouseenter);
+			node.removeEventListener('keydown', onkeydown);
+			node.removeEventListener('pointerup', onpointerrelease);
+		},
+	};
 
 	function onmouseenter() {
 		popupInfo.name = name;
