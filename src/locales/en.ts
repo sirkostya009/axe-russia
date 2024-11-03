@@ -528,7 +528,6 @@ export default {
 			showLakes: 'Show lakes',
 			nationalBorders: 'Show national borders',
 			showRivers: 'Show rivers',
-			locale: 'Locale',
 		},
 	},
 	notice: {

@@ -57,10 +57,12 @@
 						changeLocale(e.currentTarget.value);
 					}}
 				>
-					<option value="uk">Укр</option>
 					<option value="en">Eng</option>
+					<option value="uk">Укр</option>
 					<option value="ru">Рос</option>
 					<option value="kk">Kaz</option>
+					<option value="fi">Fin</option>
+					<option value="be">Бел</option>
 				</select>
 			</label>
 			<label>

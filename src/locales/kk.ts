@@ -528,7 +528,6 @@ export default {
 			showLakes: 'Kólderdi kórsetý',
 			showRivers: 'Ózenderdi kórsetý',
 			nationalBorders: 'Ulttyq shekaralardy kórsetińiz',
-			locale: 'Jergilikti',
 		},
 	},
 	notice: {

@@ -533,7 +533,6 @@ export default {
 			showLakes: 'Показать озера',
 			showRivers: 'Показать реки',
 			showFlags: 'Показать флаги (БЕТА)',
-			locale: 'Локаль',
 		},
 	},
 	notice: {
