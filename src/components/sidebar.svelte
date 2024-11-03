@@ -23,6 +23,7 @@
 		}
 
 		sideBarOpened = !navigator.userAgent.match(/iPhone|Android|iPad/);
+		document.documentElement.lang = locale;
 	}
 
 	function* keysOf<T extends object>(t: T) {
@@ -54,6 +55,7 @@
 					value={locale}
 					onchange={(e) => {
 						document.cookie = `locale=${e.currentTarget.value}; SameSite=Lax; Max-Age=34559999`;
+						document.documentElement.lang = e.currentTarget.value;
 						changeLocale(e.currentTarget.value);
 					}}
 				>
@@ -63,6 +65,7 @@
 					<option value="kk">Kaz</option>
 					<option value="fi">Fin</option>
 					<option value="be">Бел</option>
+					<option value="fr">Fra</option>
 				</select>
 			</label>
 			<label>
