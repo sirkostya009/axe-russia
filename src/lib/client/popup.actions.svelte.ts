@@ -71,9 +71,8 @@ export function popup(
 }
 
 function onmousemove({ x, y }: MouseEvent) {
-	const { style } = document.querySelector('.popup') as HTMLDialogElement;
-	style.left = x + window.scrollX + 'px';
-	style.top = y + window.scrollY + 'px';
+	popupInfo.popup.style.left = x + window.scrollX + 'px';
+	popupInfo.popup.style.top = y + window.scrollY + 'px';
 }
 
 function onmouseout() {

@@ -57,8 +57,10 @@
 		<pattern patternUnits="objectBoundingBox" id="buryat-flag" width="1" height="1">
 			<image
 				href="https://upload.wikimedia.org/wikipedia/commons/6/68/Flag_of_Buryatia.svg"
-				width="160"
+				width="240"
 				height="120"
+				style="transform: scaleX(-1)"
+				x="-180"
 			></image>
 		</pattern>
 		<pattern patternUnits="objectBoundingBox" id="altai-flag" width="1" height="1">
@@ -90,7 +92,7 @@
 			<image
 				href="https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Mordovia.svg"
 				width="50"
-				height="30"
+				height="35"
 				x="-10"
 			></image>
 		</pattern>
@@ -115,9 +117,9 @@
 		<pattern patternUnits="objectBoundingBox" id="udmurtia-flag" width="1" height="1">
 			<image
 				href="https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Udmurtia.svg"
-				width="65"
-				height="40"
-				x="-13"
+				width="70"
+				height="35"
+				x="-15"
 			></image>
 		</pattern>
 		<pattern patternUnits="objectBoundingBox" id="tatarstan-flag" width="1" height="1">

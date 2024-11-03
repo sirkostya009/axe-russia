@@ -59,6 +59,7 @@ export const __state = $state({
 	taymyria: false,
 	evenkia: false,
 	enets: false,
+	greaterBuryatia: false,
 	theme: 'auto',
 });
 

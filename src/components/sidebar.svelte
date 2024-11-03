@@ -60,6 +60,7 @@
 					<option value="uk">Укр</option>
 					<option value="en">Eng</option>
 					<option value="ru">Рос</option>
+					<option value="kk">Kaz</option>
 				</select>
 			</label>
 			<label>

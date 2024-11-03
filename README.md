@@ -6,11 +6,11 @@ Active WIP.
 
 - ~~carve out republics~~
 - ~~carve out federal districts~~
-- carve out autonomous okrugs
+- ~~carve out autonomous okrugs~~
 - ~~carve out territorial claims~~
 - ~~show flags~~
 - ~~dark mode~~
 - more languages, better text
 - ~~touch screen issue~~
-- new borders for: altai, buryat, nenets, northern caucasus, kamchatka
-- fix international border claims
+- ~~new borders for: altai, buryat, nenets, northern caucasus, kamchatka~~
+- ~~fix international border claims~~
