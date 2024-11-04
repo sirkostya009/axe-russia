@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { popupInfo } from '$lib/client/popup.actions.svelte';
-	import { __state, mapState } from '$lib/client/state.svelte';
+	import { mapState } from '$lib/client/state.svelte';
 	import type { I18n } from '../locales';
 
 	interface Props {
@@ -18,15 +18,18 @@
 	if (browser) {
 		for (const key in mapState) {
 			const item = localStorage?.getItem(key);
+			if (item === null) continue;
 			// @ts-expect-error
-			__state[key] = __state[key] instanceof Boolean ? item === 'true' : (item || __state[key]);
+			if (typeof mapState[key] === 'boolean') mapState[key] = item === 'true';
+			// @ts-expect-error
+			else mapState[key] = item;
 		}
 
 		sideBarOpened = !navigator.userAgent.match(/iPhone|Android|iPad/);
 		document.documentElement.lang = locale;
 	}
 
-	function* keysOf<T extends object>(t: T) {
+	function* keysOf(t: object) {
 		for (const key in t) {
 			if (key === 'title' || key === 'locale') continue;
 			yield key;

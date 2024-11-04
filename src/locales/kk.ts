@@ -364,7 +364,7 @@ export default {
 		description:
 			'Majar tiline jaqyn ýgor tobynyń tilinde sóıleıtin halyqtyń úıi, óıtkeni olar da ýgradan kelgen.',
 		population: '~1,5 mıllıon, ~20 myń Hanty',
-		capital: 'Hantıısk (burynǵy Hanty-Mansıısk)',
+		capital: 'Surgut',
 		languages: 'Hanty, orys',
 		wikiLink: 'https://en.wikipedia.org/wiki/Khanty-Mansi_Autonomous_Okrug',
 	},

@@ -314,7 +314,7 @@ export default {
 		description:
 			'Kotipaikka ugria puhuvalle kansalle, joka on läheistä sukua unkarilaisille, koska hekin tulivat kerran Yugrasta.',
 		population: '~1,5 miljoonaa, ~20 000 hantia',
-		capital: 'Khanti-Mansiysk',
+		capital: 'Surgut',
 		languages: 'Hanti, venäjä',
 	},
 	mansi: {

@@ -316,7 +316,7 @@ export default {
 		description:
 			"Terre d'origine pour un peuple parlant l'ougrien, étroitement lié aux Hongrois, puisqu'ils venaient eux aussi autrefois de Yougra.",
 		population: '~1,5 million, ~20 000 Khantys',
-		capital: 'Khanti-Mansiïsk',
+		capital: 'Sourgout',
 		languages: 'Khanty, russe',
 	},
 	mansi: {

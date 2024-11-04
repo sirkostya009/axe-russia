@@ -1,4 +1,4 @@
-export const __state = $state({
+const __state = $state({
 	projectNewRepublic: true,
 	adygeaIndependent: true,
 	altaiIndependent: true,

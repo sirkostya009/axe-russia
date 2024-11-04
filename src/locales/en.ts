@@ -363,7 +363,7 @@ export default {
 		description:
 			'Home to an Ugric speaking people, closely related to Hungarians, as they too once came from Yugra.',
 		population: '~1.5 million, ~20k Khanty',
-		capital: 'Khanti-Mansiysk',
+		capital: 'Surgut',
 		languages: 'Khanty, Russian',
 		wikiLink: 'https://en.wikipedia.org/wiki/Khanty-Mansi_Autonomous_Okrug',
 	},

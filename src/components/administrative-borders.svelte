@@ -2,7 +2,7 @@
 	import { mapState } from '../lib/client/state.svelte';
 </script>
 
-<g id="admin-borders" class:hidden={!mapState.showAdministrativeBorders}>
+<g class="admin-borders" class:hidden={!mapState.showAdministrativeBorders}>
 	<path d="M772.8 479.6v-.1" />
 	<path
 		d="M548.1 630.6v.2l-.1.1v.1l-.6.5v.2l-.1.1.1.6-.1.4-.4.2-.1.1v.1l-.1.1.3.7.7.5c.3-.1.7-.3 1-.1.4 0 .8.3 1 .7l-.1.3c.4.3 1 1 1.5.6.2.3.6 1.1.9 1.3l.1-.1h.1l.1.1v.2c-.1.1-.1.4-.3.5l.3.3h.2v-.1l.2-.2h.4v-.1l.6-.3.7.2.2.2v.1l-.1.1c.2.3.5.7.5 1.1l-.1.6c.1.2.5.3.5.5.2 0 .8.5 1 .4l.5-.1.1-.1h.1l.6-.7"
