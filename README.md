@@ -36,3 +36,4 @@ need to pass an additional `--host` argument.
 - ~~touch screen issue~~
 - ~~new borders for: altai, buryat, nenets, northern caucasus, kamchatka~~
 - ~~fix international border claims~~
+- add missing `wikiLink`s in locales
