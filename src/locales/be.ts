@@ -399,6 +399,12 @@ export default {
 		capital: 'Дудзінка',
 		languages: 'Енецкая, расійская',
 	},
+	greaterBuryatia: {
+		name: 'Вялікая Бурація',
+		description: 'Рэспубліка Бурація з межамі, якія ўключаюць Усць-Ардзінскую і Агінскую Бурацію.',
+		capital: 'Улан-Удэ',
+		languages: 'Бурацкая',
+	},
 	sidebar: {
 		exFederalRepublics: {
 			title: 'Расійскія каланіяльныя ўладанні',
@@ -424,7 +430,6 @@ export default {
 			kareliaIndependent: 'Карэлія',
 			mordoviaIndependent: 'Мардовія',
 			mariElIndependent: 'Марый Эл',
-			nenetsIndependence: 'Ненецкая дзяржава',
 			northOssetiaAlaniaIndependent: 'Паўночная Асеція-Аланія',
 			sakhaIndependent: 'Саха',
 			tatarstanIndependent: 'Татарстан',
@@ -448,6 +453,7 @@ export default {
 			latvianClaim: 'Латышская прэтэнзія',
 			lithuaniaMinor: 'Малая Літва',
 			mansi: 'Мансія',
+			nenetsIndependence: 'Ненецкая дзяржава',
 			nenetsNation: 'Ненецкая нацыя',
 			petsamo: 'Петсамо',
 			polishPrussia: 'Польская Прусія',

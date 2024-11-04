@@ -2,7 +2,7 @@ export default {
 	newRepublicOfRussia: {
 		name: 'Nouvelle République de Russie',
 		description:
-			"Une république théorique englobant le territoire de la partie européenne de la Fédération de Russie. Cet État russe, contrairement aux colonies telles que l'Oural, la Sibérie et l'Extrême-Orient, serait considéré comme le successeur direct de la Fédération et la seule « véritable » Russie. Politiquement, elle conservera une forte importance régionale en raison de la quantité encore décente de ressources naturelles et financières présentes, bien que ses capacités en ressources soient considérablement réduites.",
+			"La Nouvelle République de Russie est un État d'une superficie de 100 à 110 millions de km². Elle comprend diverses régions, y compris celles d'importance régionale comme l'Oural, le Caucase, la Sibérie, et la Yakoutie. Ces régions sont également appelées « colonies » car elles contiennent des populations russes minoritaires, voire inexistantes.",
 		population: '~100-110 millions',
 		capital: 'Saint-Pétersbourg ou Moscou',
 		languages: 'russe',
@@ -10,7 +10,7 @@ export default {
 	komiRepublic: {
 		name: 'Komis',
 		description:
-			"Une tribu finno-ougrienne qui s'étendait sur trois régions différentes du nord de la Russie. La population autochtone de cette république, comme de nombreuses autres républiques fédérales, est en voie de disparition à cause des efforts persistants et systématiques de Moscou visant à réprimer et à éradiquer les peuples autochtones.",
+			'Le peuple komi habite la République des Komis. La langue komie est en déclin en raison de la domination du russe et de la russification, particulièrement parmi les jeunes générations.',
 		population: '~800 000, avec une majorité de Russes et de Komi.',
 		capital: 'Syktyvkar',
 		languages: 'Komi, russe',
@@ -18,7 +18,7 @@ export default {
 	khakassiaRepublic: {
 		name: 'Khakassie',
 		description:
-			'Une autre république dont la population est devenue une minorité insignifiante dans son propre pays. La nationalité khakass actuelle est une combinaison de 5 groupes ethniques apparentés.',
+			"En Khakassie, les Khakasses forment une minorité en déclin. Il existe une association séparatiste qui vise à protéger l'identité khakasse et à préserver leur culture. Celle-ci prône une résistance aux influences externes et appelle à la formation d’un État khakasse indépendant.",
 		population: 'Environ 500 000 personnes, dont les Khakas représentent environ 12 %.',
 		capital: 'Ağban',
 		languages: 'Khakass',
@@ -26,16 +26,16 @@ export default {
 	sakhaRepublic: {
 		name: 'République de Sakha (Yakoutie)',
 		description:
-			'La plus grande république de la Fédération de Russie, connue pour son climat rigoureux et ses très riches gisements de ressources naturelles, à savoir les diamants.',
+			"La République de Sakha, ou Yakoutie, est l’un des plus grands territoires de la Nouvelle République de Russie. La capitale est D'okuuskayt (Yakoutsk), et les Sakhas, aussi appelés Yakoutes. Ils possèdent une terre riche en minéraux specifiauement du diamant, influencée par leurs croyances traditionnelles et leur lien étroit avec la nature.",
 		population:
 			'Environ 996 000 personnes, dont les Iakoutes représentent près de 50 % de la population.',
-		capital: "D'okuuskay",
+		capital: "D'okuuskayt",
 		languages: 'Sakha (Yakoute)',
 	},
 	buryatRepublic: {
 		name: 'Bouriatie',
 		description:
-			'Les Bouriates sont un peuple mongol dont la république est limitrophe de la Mongolie. Eux aussi ont énormément souffert du régime purificateur de Moscou, leur population ayant diminué et étant devenue une minorité dans leur propre pays.',
+			"Les Bouriate vivent dans la République de Bouriatie, en Asie centrale. Ils ont beaucoup souffert pendant les répressions soviétiques et cherchent aujourd'hui à revitaliser leur culture. Bien qu’une partie de la population ait conservé ses traditions, notamment le bouddhisme tibétain, la majorité est aujourd'hui russophone.",
 		population: '978 588',
 		capital: 'Oulan-Oude',
 		languages: 'Bouriate',
@@ -50,7 +50,7 @@ export default {
 	tuvaRepublic: {
 		name: 'Touva',
 		description:
-			"République du peuple mongol du sud de la Sibérie, connue pour ses traditions chamaniques. Ce serait l'une des rares républiques à avoir préservé son image ethnique et à représenter 88 % de la population totale selon un recensement de 2021.",
+			'La République de Touva est peuplée principalement par des Touvains, connus pour leurs traditions chamaniques. La région est également célèbre pour son chant de gorge, une pratique musicale unique dans le monde entier. Depuis l’indépendance de la Nouvelle République de Russie, la culture touvaine connaît une renaissance.',
 		population: '~309 000',
 		capital: 'Kyzyl',
 		languages: 'Touva',
@@ -58,7 +58,7 @@ export default {
 	bashkortostanRepublic: {
 		name: 'Bachkirie',
 		description:
-			"République située à l'ouest des montagnes de l'Oural, elle abrite en réalité trois groupes ethniques majeurs : les colonisateurs - les Russes, les autochtones - les Bachkirs et ceux d'un pays voisin - les Tatars.",
+			"République située à l'ouest des montagnes de l'Oural, elle abrite en réalité trois groupes ethniques majeurs: les colonisateurs - les Russes, les autochtones - les Bachkirs et ceux d'un pays voisin - les Tatars.",
 		population: '~4 millions',
 		capital: 'Oufa',
 		languages: 'Bachkir',
@@ -66,7 +66,7 @@ export default {
 	mordoviaRepublic: {
 		name: 'Mordovie',
 		description:
-			"République composée de deux ethnies : Moksha et Ezrya, surnommées collectivement « Mordves » par les Russes. Une rumeur raconte qu'autrefois, les tribus slaves assimilaient les Mokshans et d'autres tribus finno-ougriennes locales, s'appropriant leur culture et créant ce que l'on appelle aujourd'hui la culture russe.",
+			"République composée de deux ethnies: Moksha et Ezrya, surnommées collectivement « Mordves » par les Russes. Une rumeur raconte qu'autrefois, les tribus slaves assimilaient les Mokshans et d'autres tribus finno-ougriennes locales, s'appropriant leur culture et créant ce que l'on appelle aujourd'hui la culture russe.",
 		population: '~800 000',
 		capital: 'Saransk',
 		languages: 'Mordovie',
@@ -176,7 +176,7 @@ export default {
 	uralRepublic: {
 		name: "République de l'Oural",
 		description:
-			"Une république théorique qui engloberait le territoire de l'actuel district fédéral de l'Oural. La région de l'Oural est riche en ressources naturelles et possède une composition ethnique diversifiée. Historiquement, les montagnes de l'Oural ont constitué une frontière culturelle et économique importante en Russie, l'État étant un « mur » entre le reste de la Sibérie et la Russie/l'Europe.",
+			"La République de l’Oural a une importance stratégique car elle sert de « barrière » entre la Russie et la Nouvelle République de Russie. Majoritairement peuplée de Tatars et d'autres groupes ethniques, la région est influencée par la culture tatare, tout en étant marquée par les conflits avec les Russes.",
 		population: '~12 millions',
 		capital: 'Ekaterinbourg',
 		languages: 'russe',
@@ -306,7 +306,7 @@ export default {
 	},
 	selkupia: {
 		name: 'Selkupia',
-		description: 'Une terre peu peuplée abritant le peuple ouralien.',
+		description: 'Une terre peu dense abritant le peuple Uralicien.',
 		population: '~3 600',
 		capital: 'Nyaryi Mache',
 		languages: 'Selkup, russe',
@@ -398,6 +398,13 @@ export default {
 		capital: 'Doudinka',
 		languages: 'Enets, russe',
 	},
+	greaterBuryatia: {
+		name: 'Grande Bouriatie',
+		description:
+			"République de Bouriatie mais avec des frontières contenant les Bouriaties d'Oust-Orda et d'Agin.",
+		capital: 'Oulan-Oude',
+		languages: 'Bouriate',
+	},
 	sidebar: {
 		exFederalRepublics: {
 			title: 'Colonies russes',
@@ -415,7 +422,6 @@ export default {
 			buryatiaIndependent: 'Bouriatie',
 			kareliaIndependent: 'Carélie',
 			dagestanIndependent: 'Daghestan',
-			nenetsIndependence: 'État des Nenets',
 			ichkeriaIndependent: 'Ichkérie',
 			ingushetiaIndependent: 'Ingouchie',
 			kabardinoBalkarIndependent: 'Kabardino-Balkar',
@@ -435,6 +441,7 @@ export default {
 		claims: {
 			title: 'Revendications',
 			circassia: 'Circassie',
+			nenetsIndependence: 'État des Nenets',
 			enets: "État d'Enets",
 			evenkia: 'Evenkia',
 			greaterBuryatia: 'Grande Bouriatie',

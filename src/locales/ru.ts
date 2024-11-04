@@ -460,6 +460,14 @@ export default {
 		languages: 'Энецкий, российский',
 		wikiLink: 'https://ru.wikipedia.org/wiki/Энцы',
 	},
+	greaterBuryatia: {
+		name: 'Великая Бурятия',
+		description: 'Бурятия с границами которые включают бурятские округи Усть-Орды и Агин.',
+		capital: 'Улаан-Удэ',
+		languages: 'Бурятский',
+		wikiLink:
+			'https://ru.wikipedia.org/wiki/Бурятская_Автономная_Советская_Социалистическая_Республика',
+	},
 	sidebar: {
 		exFederalRepublics: {
 			title: 'Российские колониальные владения',
@@ -485,7 +493,6 @@ export default {
 			komiIndependent: 'Коми',
 			mariElIndependent: 'Марий Эл',
 			mordoviaIndependent: 'Мордовия',
-			nenetsIndependence: 'Ненецкое государство',
 			sakhaIndependent: 'Саха',
 			northOssetiaAlaniaIndependent: 'Северная Осетия-Алания',
 			tatarstanIndependent: 'Татарстан',
@@ -507,6 +514,7 @@ export default {
 			latvianClaim: 'Латвийская претензия',
 			lithuaniaMinor: 'Малая Литва',
 			mansi: 'Мансия',
+			nenetsIndependence: 'Ненецкое государство',
 			nenetsNation: 'Ненецкая Нация',
 			finishIsles: 'Острова финского залива',
 			petsamo: 'Петсамо',

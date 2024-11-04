@@ -455,6 +455,12 @@ export default {
 		languages: 'Enetskıı, orys',
 		wikiLink: 'https://en.wikipedia.org/wiki/Evenkiysky_District',
 	},
+	greaterBuryatia: {
+		name: 'Býrıatııa',
+		description: 'Бурятия Республикасы, бірақ шекаралары Усть-Орда және Агин Бурятияларымен.',
+		capital: 'Ýlan-Ýde',
+		languages: 'býrıat',
+	},
 	sidebar: {
 		exFederalRepublics: {
 			title: 'Reseı otarlary',
@@ -480,7 +486,6 @@ export default {
 			komiIndependent: 'Komı',
 			mariElIndependent: 'Marı El',
 			mordoviaIndependent: 'Mordovııa',
-			nenetsIndependence: 'Nenets memleketi',
 			kalmykiaIndependent: 'qalmaq',
 			karachayCherkessiaIndependent: 'Qarashaı-Cherkes',
 			sakhaIndependent: 'Saha',
@@ -507,6 +512,7 @@ export default {
 			kurilIslands: 'Kýrıl araldary',
 			latvianClaim: 'Latvııalyq talap',
 			mansi: 'Mansı eli',
+			nenetsIndependence: 'Nenets memleketi',
 			nenetsNation: 'Nenets ulty',
 			petsamo: 'Petsamo',
 			polishPrussia: 'Polsha Prýssııasy',

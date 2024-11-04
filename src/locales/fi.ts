@@ -395,6 +395,12 @@ export default {
 		capital: 'Dudinka',
 		languages: 'Enets, venäjä',
 	},
+	greaterBuryatia: {
+		greaterBuryatia: 'Suur-Buryatia',
+		description: 'Burjatian tasavalta, mutta rajat sisältävät Ust-Ordan ja Agin Burjatian.',
+		capital: 'Ulaan Üde',
+		languages: 'burjat',
+	},
 	sidebar: {
 		exFederalRepublics: {
 			title: 'Venäjän siirtokuntia',
@@ -421,7 +427,6 @@ export default {
 			komiIndependent: 'Komi',
 			mariElIndependent: 'Mari El',
 			mordoviaIndependent: 'Mordovia',
-			nenetsIndependence: 'Nenetsin osavaltio',
 			northOssetiaAlaniaIndependent: 'Pohjois-Ossetia-Alania',
 			sakhaIndependent: 'Sakha',
 			tatarstanIndependent: 'Tatarstan',
@@ -444,6 +449,7 @@ export default {
 			kurilIslands: 'Kuriilisaaret',
 			latvianClaim: 'Latvian väite',
 			mansi: 'Mansin maa',
+			nenetsIndependence: 'Nenetsin osavaltio',
 			nenetsNation: 'Nenetsien kansakunta',
 			petsamo: 'Petsamo',
 			lithuaniaMinor: 'Pieni Liettua',

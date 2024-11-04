@@ -2,7 +2,7 @@ export default {
 	newRepublicOfRussia: {
 		name: 'New Republic of Russia',
 		description:
-			'A theoretical republic encompassing territory of the European part of Russian Federation. This Russian state, unlike colonies such as Ural, Siberia and Far East, would be considered direct successor of the Federation and an only "true" Russia. Politically it will  still hold strong regional significance due to, although much-shrunk resource capacity, a still decent amount of resources both natural and financial present.',
+			'A theoretical republic encompassing territory of the European part of Russian Federation. This Russian state, unlike colonies such as Ural, Siberia and Far East, would be considered direct successor of the Federation and an only "true" Russia. Politically it will still hold strong regional significance due to, although much-shrunk resource capacity, a still decent amount of resources both natural and financial present.',
 		population: '~100-110 million',
 		capital: 'Saint-Petersburg or Moscow',
 		languages: 'Russian',
@@ -455,6 +455,13 @@ export default {
 		languages: 'Enets, Russian',
 		wikiLink: 'https://en.wikipedia.org/wiki/Evenkiysky_District',
 	},
+	greaterBuryatia: {
+		name: 'Greater Buryatia',
+		description: 'Republic of Buryatia but with borders containing Ust-Orda and Agin Buryatia(s).',
+		capital: 'Ulaan Üde',
+		languages: 'Buryat',
+		wikiLink: 'https://en.wikipedia.org/wiki/Buryat_Autonomous_Soviet_Socialist_Republic',
+	},
 	sidebar: {
 		exFederalRepublics: {
 			title: 'Russian colonies',
@@ -482,7 +489,6 @@ export default {
 			komiIndependent: 'Komi',
 			mariElIndependent: 'Mari El',
 			mordoviaIndependent: 'Mordovia',
-			nenetsIndependence: 'Nenets State',
 			northOssetiaAlaniaIndependent: 'North Ossetia-Alania',
 			sakhaIndependent: 'Sakha',
 			tatarstanIndependent: 'Tatarstan',
@@ -511,6 +517,7 @@ export default {
 			lithuaniaMinor: 'Lithuania Minor',
 			mansi: 'Mansi Country',
 			nenetsNation: 'Nenets Nation',
+			nenetsIndependence: 'Nenets State',
 			petsamo: 'Petsamo',
 			polishPrussia: 'Polish Prussia',
 			taymyria: 'Republic of Taymyria',
