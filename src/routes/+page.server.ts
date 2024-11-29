@@ -1,4 +1,4 @@
-import * as locales from '../locales';
+import * as locales from '$lib/locales';
 
 const regex = new RegExp(Object.keys(locales).join('|'));
 
@@ -18,3 +18,5 @@ export function load({ cookies, request }): {
 		isNoticeAcknowledged: cookies.get('notice-acknowledged') === 'true',
 	};
 }
+
+export const ssr = false;

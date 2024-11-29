@@ -1,13 +1,13 @@
 <script>
-	import Lakes from '../components/lakes.svelte';
-	import Rivers from '../components/rivers.svelte';
-	import AdminBorders from '../components/administrative-borders.svelte';
-	import Republics from '../components/republics.svelte';
-	import ForeignBorders from '../components/foreign-borders.svelte';
-	import ForeignTerritory from '../components/foreign-territory.svelte';
-	import Claims from '../components/claims.svelte';
-	import Popup from '../components/popup.svelte';
-	import Sidebar from '../components/sidebar.svelte';
+	import Lakes from '$lib/components/lakes.svelte';
+	import Rivers from '$lib/components/rivers.svelte';
+	import AdminBorders from '$lib/components/administrative-borders.svelte';
+	import Republics from '$lib/components/republics.svelte';
+	import ForeignBorders from '$lib/components/foreign-borders.svelte';
+	import ForeignTerritory from '$lib/components/foreign-territory.svelte';
+	import Claims from '$lib/components/claims.svelte';
+	import Popup from '$lib/components/popup.svelte';
+	import Sidebar from '$lib/components/sidebar.svelte';
 	import { mapState } from '$lib/client/state.svelte';
 
 	const { data } = $props();

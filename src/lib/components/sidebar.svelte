@@ -2,7 +2,7 @@
 	import { browser } from '$app/environment';
 	import { popupInfo } from '$lib/client/popup.actions.svelte';
 	import { mapState, type MapState } from '$lib/client/state.svelte';
-	import type { I18n } from '../locales';
+	import type { I18n } from '$lib/locales';
 
 	interface Props {
 		i18n: I18n;
@@ -135,6 +135,7 @@
 
 <style>
 	.sidebar {
+		display: none;
 		background-color: var(--main-color);
 		min-width: var(--sidebar-width);
 		width: 10%;
@@ -146,8 +147,30 @@
 		overflow-x: hidden;
 	}
 
+	.sidebar.shown {
+		display: block;
+	}
+
 	.toggler {
 		display: none;
+		appearance: none;
+		position: absolute;
+		border-color: var(--secondary-color);
+		background-color: var(--main-color);
+		color: var(--secondary-color);
+		fill: var(--text-color);
+		left: var(--sidebar-width);
+		top: calc(50% - 50px);
+		height: 100px;
+		border-radius: 0 8px 8px 0;
+	}
+
+	path {
+		d: path('M3,19.2l-2.7-2.7L12,4.8l11.8,11.8-2.7,2.7-9-9L3,19.2Z');
+	}
+
+	path.close-button {
+		d: path('M2.8,23.8l-2.3-2.4,9.2-9.5L.4,2.5,2.8.2l9.2,9.5L21.2.2l2.3,2.4-9.2,9.5,9.2,9.5-2.3,2.4-9.2-9.5L2.8,23.8Z');
 	}
 
 	.sidebar form {
@@ -232,10 +255,6 @@
 		text-align: center;
 	}
 
-	select option {
-		text-align: center;
-	}
-
 	@media (max-width: 1023px) {
 		:root {
 			--toggler-height: 65px;
@@ -298,7 +317,8 @@
 		}
 
 		.toggler {
-			display: block;
+			left: unset;
+			top: unset;
 			position: absolute;
 			bottom: 0;
 			right: 0;

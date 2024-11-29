@@ -1,5 +1,5 @@
 import { json, type RequestEvent } from '@sveltejs/kit';
-import * as locales from '../../../locales';
+import * as locales from '$lib/locales';
 
 export function GET({ params }: RequestEvent) {
 	if (params.locale! in locales) {
