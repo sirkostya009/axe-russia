@@ -319,6 +319,7 @@
 		.toggler {
 			left: unset;
 			top: unset;
+			display: block;
 			position: absolute;
 			bottom: 0;
 			right: 0;
