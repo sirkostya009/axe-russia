@@ -106,7 +106,7 @@ export default {
 	tatarstanRepublic: {
 		name: 'Tatarstan',
 		description:
-			'A republic known for the Tatar people, located at the confluence of the Volga and Kama rivers. In 1992, right after collapse of Soviet Union, Tatarstan government has held a referendum effectively asking if people wish for their state to become independent, with a majority vote being `yes`. Naturally, emperial government in Moscow didn\'t let go of a "savage" vassal.',
+			'A republic known for the Tatar people, located at the confluence of the Volga and Kama rivers. In 1992, right after collapse of Soviet Union, Tatarstan government has held a referendum effectively asking if people wish for their state to become independent, with a majority vote being `yes`. Naturally, imperial government in Moscow didn\'t let go of a "savage" vassal.',
 		population: '~3.9 million',
 		capital: 'Kazan',
 		languages: 'Tatar',
