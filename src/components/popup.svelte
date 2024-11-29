@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
 	import { popupInfo } from '$lib/client/popup.actions.svelte';
 	import type { I18n } from '../locales';
 
@@ -9,13 +8,6 @@
 	}
 
 	let { i18n, isNoticeAcknowledged }: Props = $props();
-	let ack = $state(isNoticeAcknowledged);
-
-	if (browser && !isNoticeAcknowledged) {
-		const notice = document.querySelector('.notice') as HTMLDialogElement | null;
-		notice?.close();
-		notice?.showModal();
-	}
 </script>
 
 <dialog bind:this={popupInfo.popup} class="popup">
@@ -168,19 +160,24 @@
 	{/if}
 </dialog>
 
-<dialog class="notice" open={!ack}>
+<dialog id="notice" class="notice">
 	<h1>{i18n.notice.title}</h1>
 	<p>{i18n.notice.content}</p>
-	<button
-		onclick={() => {
-			document.cookie = `notice-acknowledged=true; SameSite=Lax; Max-Age=34559999`;
-			(document.querySelector('.notice') as HTMLDialogElement).close();
-			ack = true;
-		}}
-	>
-		{i18n.notice.acknowledged}
-	</button>
+	<form method="dialog">
+		<button
+			onclick={() => (document.cookie = `notice-acknowledged=true; SameSite=Lax; Max-Age=34559999`)}
+		>
+			{i18n.notice.acknowledged}
+		</button>
+	</form>
 </dialog>
+
+{@html `<script>
+if (!${isNoticeAcknowledged}) {
+	notice.close();
+	notice.showModal();
+}
+</script>`}
 
 <style>
 	.popup {

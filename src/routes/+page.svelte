@@ -17,8 +17,8 @@
 
 	$effect(() => {
 		document.body.classList.remove('dark-theme', 'light-theme');
-		if (mapState.theme === 'dark') document.body.classList.add('dark-theme');
-		else if (mapState.theme === 'light') document.body.classList.add('light-theme');
+		if (mapState.theme === 'auto') return;
+		document.body.classList.add(mapState.theme + '-theme');
 	});
 </script>
 

@@ -37,3 +37,5 @@ need to pass an additional `--host` argument.
 - ~~new borders for: altai, buryat, nenets, northern caucasus, kamchatka~~
 - ~~fix international border claims~~
 - add missing `wikiLink`s in locales
+- add an emoji-capable font
+- sidebar button on pc

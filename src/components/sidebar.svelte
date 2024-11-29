@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { popupInfo } from '$lib/client/popup.actions.svelte';
-	import { mapState } from '$lib/client/state.svelte';
+	import { mapState, type MapState } from '$lib/client/state.svelte';
 	import type { I18n } from '../locales';
 
 	interface Props {
@@ -16,13 +16,10 @@
 	let sideBarOpened = $state(!isMobile);
 
 	if (browser) {
-		for (const key in mapState) {
-			const item = localStorage?.getItem(key);
-			if (item === null) continue;
+		for (const key in localStorage) {
+			if (key in Storage.prototype) continue;
 			// @ts-expect-error
-			if (typeof mapState[key] === 'boolean') mapState[key] = item === 'true';
-			// @ts-expect-error
-			else mapState[key] = item;
+			mapState[key] = typeof mapState[key] === 'boolean' ? localStorage[key] === 'true' : localStorage[key];
 		}
 
 		sideBarOpened = !navigator.userAgent.match(/iPhone|Android|iPad/);
@@ -32,7 +29,7 @@
 	function* keysOf(t: object) {
 		for (const key in t) {
 			if (key === 'title' || key === 'locale') continue;
-			yield key;
+			yield key as keyof Omit<MapState, 'theme'>;
 		}
 	}
 </script>
@@ -59,16 +56,52 @@
 					onchange={(e) => {
 						document.cookie = `locale=${e.currentTarget.value}; SameSite=Lax; Max-Age=34559999`;
 						document.documentElement.lang = e.currentTarget.value;
-						changeLocale(e.currentTarget.value);
+						changeLocale(kebabToCamelCase(e.currentTarget.value));
+
+						/*
+						 * Exports with hyphens are not allowed in JS,
+						 * this quirky lil function is needed to make sure
+						 * tags are same as IANA-provided but are also camel case to work.
+						 */
+						function kebabToCamelCase(s: string): string {
+							if (!s.includes('-')) return s;
+							const split = s.split('-');
+							return split[0] + split.slice(1).map(ss => ss[0].toLocaleUpperCase() + ss.substring(1)).join('');
+						}
 					}}
 				>
-					<option value="en">Eng</option>
-					<option value="uk">Укр</option>
-					<option value="ru">Рос</option>
-					<option value="kk">Kaz</option>
-					<option value="fi">Fin</option>
-					<option value="be">Бел</option>
-					<option value="fr">Fra</option>
+					<option value="en">🏴󠁧󠁢󠁥󠁮󠁧󠁿</option>
+					<option value="it">🇮🇹</option>
+					<option value="es">🇪🇸</option>
+					<option value="br">🇧🇷</option>
+					<option value="de">🇩🇪</option>
+					<option value="sv">🇸🇪</option>
+					<option value="no">🇳🇴</option>
+					<option value="da">🇩🇰</option>
+					<option value="fi">🇫🇮</option>
+					<option value="et">🇪🇪</option>
+					<option value="fr">🇫🇷</option>
+					<option value="ro">🇷🇴</option>
+					<option value="lt">🇱🇹</option>
+					<option value="hu">🇭🇺</option>
+					<option value="nl">🇳🇱</option>
+					<option value="ko">🇰🇷</option>
+					<option value="jp">🇯🇵</option>
+					<option value="zh-TW">🇹🇼</option>
+					<option value="zh-CN">🇨🇳</option>
+					<option value="ug">☪️🟦</option>
+					<option value="hi">🇮🇳</option>
+					<option value="el">🇬🇷</option>
+					<option value="gd">🏴󠁧󠁢󠁳󠁣󠁴󠁿</option>
+					<option value="cy">🏴󠁧󠁢󠁷󠁬󠁳󠁿</option>
+					<option value="ga">🇮🇪</option>
+					<option value="pl">🇵🇱</option>
+					<option value="sk">🇸🇰</option>
+					<option value="cs">🇨🇿</option>
+					<option value="kk">🇰🇿</option>
+					<option value="uk">🇺🇦</option>
+					<option value="be">🇧🇾</option>
+					<option value="ru">🇷🇺</option>
 				</select>
 			</label>
 			<label>
@@ -196,6 +229,10 @@
 		border-color: var(--secondary-color);
 		border-radius: 4px;
 		width: 100%;
+		text-align: center;
+	}
+
+	select option {
 		text-align: center;
 	}
 
