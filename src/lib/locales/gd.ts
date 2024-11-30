@@ -107,7 +107,7 @@ export default {
 			"Tha an Caucasus na dhachaigh do ghrunn bhuidhnean cinnidheach. Leis an stàit seo a 'riochdachadh sluagh Turkic agus Caucasian le cànan - Karachay (Balkar) agus Cherkess (Adyghe), fa leth.",
 		population: '~469,000',
 		capital: 'Batalpashinsk',
-		languages: 'Mountain Turkic (Qaraçay-Malqar), Circassian (Adyghe)',
+		languages: 'Qaraçay-Malqar, Circassian (Adyghe)',
 	},
 	kabardinoBalkarRepublic: {
 		name: 'Kabardino-Balkar',
@@ -115,7 +115,7 @@ export default {
 			'Tha a’ phoblachd seo a’ co-roinn mòran ann an cumantas ri poblachd Karachai-Cherkess: chaidh cuideachd a dhèanamh gu neònach dà bhuidheann cinnidheach neo-ionann a chumail le Stalin gus an cumail air an roinn agus air an ceannsachadh. Tha e cuideachd air a dhèanamh suas de [cha mhòr] dà bhuidheann cinnidheach ri Poblachd Karachay-Cherkess.',
 		population: '~860,000',
 		capital: 'Nalchik/Nalchik',
-		languages: 'Mountain Turkic (Qaraçay-Malqar), Circassian (Aydghe)',
+		languages: 'Qaraçay-Malqar, Circassian (Aydghe)',
 	},
 	alaniaRepublic: {
 		name: 'Ossetia a Tuath (Alania)',
@@ -342,7 +342,7 @@ export default {
 			'Chan eil ann an Karachay-Balkar ach dà dhualchainnt den aon chànan leis an aon ainm (ris an canar cuideachd Mountain Turkic), thachair e dìreach gus nach robh Stalin airson an dithis aonachadh gu ceart oir dh’ fhaodadh sin an Caucasus a dhèanamh nas duilghe dha. Bidh an stàit seo a’ fuasgladh na cùise, airson aon turas.',
 		population: '~225k',
 		capital: 'Mikoyan-Shahar',
-		languages: 'Karachay-Balkar (Mountain Turkic)',
+		languages: 'Karachay-Balkar',
 	},
 	circassia: {
 		name: 'Ciorcas',

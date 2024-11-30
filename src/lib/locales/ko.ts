@@ -106,7 +106,7 @@ export default {
 			'코카서스는 다양한 민족 집단의 고향입니다. 이 주는 투르크어와 백인어를 사용하는 사람들, 즉 카라차이(발카르)와 체르케스(아디게)를 대표합니다.',
 		population: '~469,000',
 		capital: '바탈파신스크',
-		languages: '산악 투르크어(Qaraçay-Malqar), 체르케스어(Adyghe)',
+		languages: 'Qaraçay-Malqar, 체르케스어(Adyghe)',
 	},
 	kabardinoBalkarRepublic: {
 		name: '카바르디노발카르',
@@ -114,7 +114,7 @@ export default {
 			'이 공화국은 카라차이-체르케스 공화국과 많은 공통점을 공유합니다. 이 공화국 역시 스탈린이 두 개의 유사하지 않은 민족 집단을 불길하게 만들어 분열시키고 정복했습니다. 또한 카라차이 공화국과 [거의] 동일한 두 민족 집단으로 구성되어 있습니다. -체르케스 공화국.',
 		population: '~860,000',
 		capital: '날시치/날치크',
-		languages: '산악 투르크어(Qaraçay-Malqar), 체르케스어(Aydghe)',
+		languages: 'Qaraçay-Malqar, 체르케스어(Aydghe)',
 	},
 	alaniaRepublic: {
 		name: '북오세티아(알라니아)',
@@ -335,7 +335,7 @@ export default {
 			'카라차이발카르어는 같은 이름의 언어(산악 투르크어라고도 함)의 두 방언일 뿐이며, 스탈린이 두 언어를 제대로 통합하고 싶어하지 않아서 코카서스가 그에게 더 문제가 될 수 있었기 때문입니다. 이 국가는 이 문제를 한 번 해결했습니다.',
 		population: '~22만5천',
 		capital: '미코얀-샤하르',
-		languages: '카라차이발카르(산악 투르크어)',
+		languages: '카라차이발카르',
 	},
 	circassia: {
 		name: '체르카시아',

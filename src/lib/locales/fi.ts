@@ -106,7 +106,7 @@ export default {
 			'Kaukasuksella asuu monenlaisia etnisiä ryhmiä. Tämä valtio edustaa turkkilaisia ja valkoihoisia kieltä puhuvia kansoja - karachay (balkar) ja Cherkess (Adyghe), vastaavasti.',
 		population: '~469 000',
 		capital: 'Batalpašinsk',
-		languages: 'vuoristoturkkilainen (Qaraçay-Malqar), tšerkessi (adyghe)',
+		languages: 'Qaraçay-Malqar, tšerkessi (adyghe)',
 	},
 	kabardinoBalkarRepublic: {
 		name: 'Kabardino-Balkar',
@@ -114,7 +114,7 @@ export default {
 			'Tällä tasavallalla on paljon yhteistä Karatšai-Tšerkessin tasavallan kanssa: Stalin teki senkin synkästi isännöimään kahta ei-samanlaista etnistä ryhmää pitääkseen ne jakautuneina ja valloitteina. Se koostuu myös [melkein] kahdesta identtisestä etnisestä ryhmästä kuin Karachay-Cherkess Republic.',
 		population: '~860 000',
 		capital: 'Nalshich/Nalchik',
-		languages: 'vuoristoturkkilainen (Qaraçay-Malqar), tšerkessi (Aydghe)',
+		languages: 'Qaraçay-Malqar, tšerkessi (Aydghe)',
 	},
 	alaniaRepublic: {
 		name: 'Pohjois-Ossetia (Alania)',
@@ -339,7 +339,7 @@ export default {
 			'Karatšai-balkarit ovat vain kaksi samannimisen kielen (tunnetaan myös vuoristoturkkilaisena) murretta, se vain tapahtui niin, että Stalin ei halunnut yhdistää näitä kahta kunnolla, koska se saattaisi tehdä Kaukasuksesta hänelle ongelmallisempaa. Tämä tila ratkaisee ongelman kerran.',
 		population: '~225k',
 		capital: 'Mikoyan-Shahar',
-		languages: 'karachay-balkar (vuoristoturkkilainen)',
+		languages: 'karachay-balkar',
 	},
 	circassia: {
 		name: 'Circassia',

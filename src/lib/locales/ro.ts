@@ -108,7 +108,7 @@ export default {
 			'Caucazul găzduiește un număr divers de grupuri etnice. Cu acest stat reprezentând popoare vorbitoare de limbi turcești și caucaziene - Karachay (Balkar) și, respectiv, Cherkess (Adyghe).',
 		population: '~469.000',
 		capital: 'Batalpashinsk',
-		languages: 'Turcă de munte (Qaraçay-Malqar), circasian (Adyghe)',
+		languages: 'Qaraçay-Malqar, circasian (Adyghe)',
 	},
 	kabardinoBalkarRepublic: {
 		name: 'Kabardino-Balkar',
@@ -116,7 +116,7 @@ export default {
 			'Această republică are multe în comun cu republica Karachay-Cerkess: și ea a fost făcută în mod sinistru să găzduiască două grupuri etnice neasemănătoare de către Stalin pentru a le menține divizate și cucerite. Este, de asemenea, compus din [aproape] două grupuri etnice identice cu Republica Karachay-Cherkess.',
 		population: '~860.000',
 		capital: 'Nalshich/Nalchik',
-		languages: 'Turcă de munte (Qaraçay-Malqar), circasian (Aydghe)',
+		languages: 'Qaraçay-Malqar, circasian (Aydghe)',
 	},
 	alaniaRepublic: {
 		name: 'Osetia de Nord (Alania)',
@@ -340,7 +340,7 @@ export default {
 			'Karachay-Balkar sunt doar două dialecte ale aceleiași limbi (cunoscute și sub denumirea de Mountain Turkic), tocmai sa întâmplat că Stalin nu a dorit să le unească în mod corespunzător pe cele două, deoarece ar putea face Caucazul mai problematic pentru el. Această stare rezolvă problema, pentru o dată.',
 		population: '~225k',
 		capital: 'Mikoyan-Shahar',
-		languages: 'Karachay-Balkar (turcă de munte)',
+		languages: 'Karachay-Balkar',
 	},
 	circassia: {
 		name: 'Circasia',

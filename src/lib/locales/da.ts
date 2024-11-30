@@ -106,7 +106,7 @@ export default {
 			'Kaukasus er hjemsted for en lang række etniske grupper. Med denne stat repræsenterer tyrkisk og kaukasisk sprogtalende folk - henholdsvis Karachay (Balkar) og Cherkess (Adyghe).',
 		population: '~469.000',
 		capital: 'Batalpashinsk',
-		languages: 'Bjerg Turkic (Qaraçay-Malqar), Circassian (Adyghe)',
+		languages: 'Qaraçay-Malqar, Circassian (Adyghe)',
 	},
 	kabardinoBalkarRepublic: {
 		name: 'Kabardino-Balkar',
@@ -114,7 +114,7 @@ export default {
 			'Denne republik har meget til fælles med republikken Karachay-Cherkess: den blev også skummelt lavet til at være vært for to ikke-lignende etniske grupper af Stalin for at holde dem splittet og erobret. Den består også af [næsten] identiske to etniske grupper som Karachay-Cherkess Republic.',
 		population: '~860.000',
 		capital: 'Nalshich/Nalchik',
-		languages: 'Bjerg Turkic (Qaraçay-Malqar), Circassian (Aydghe)',
+		languages: 'Qaraçay-Malqar, Circassian (Aydghe)',
 	},
 	alaniaRepublic: {
 		name: 'Nordossetien (Alania)',
@@ -339,7 +339,7 @@ export default {
 			'Karachay-Balkar er kun to dialekter af det samme navngivne sprog (også kendt som bjergturkisk), det skete bare, så Stalin ikke ønskede at forene de to ordentligt, da det kunne gøre Kaukasus mere problematisk for ham. Denne tilstand løser problemet for en gangs skyld.',
 		population: '~225k',
 		capital: 'Mikoyan-Shahar',
-		languages: 'Karachay-Balkar (Turkisk bjerg)',
+		languages: 'Karachay-Balkar',
 	},
 	circassia: {
 		name: 'Circassia',

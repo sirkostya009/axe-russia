@@ -18,5 +18,3 @@ export function load({ cookies, request }): {
 		isNoticeAcknowledged: cookies.get('notice-acknowledged') === 'true',
 	};
 }
-
-export const ssr = false;

@@ -107,7 +107,7 @@ export default {
 			'De Kaukasus is de thuisbasis van een divers aantal etnische groepen. Deze staat vertegenwoordigt Turkse en Kaukasische taalsprekende volkeren - respectievelijk Karachay (Balkar) en Cherkess (Adyghe).',
 		population: '~469.000',
 		capital: 'Batalpasjinsk',
-		languages: 'Berg Turks (Qaraçay-Malqar), Circassian (Adyghe)',
+		languages: 'Qaraçay-Malqar, Circassian (Adyghe)',
 	},
 	kabardinoBalkarRepublic: {
 		name: 'Kabardië-Balkarië',
@@ -115,7 +115,7 @@ export default {
 			'Deze republiek heeft veel gemeen met de Karachay-Tsjerkessische republiek: ook deze werd op sinistere wijze door Stalin gemaakt om twee niet-gelijksoortige etnische groepen te huisvesten om ze verdeeld en veroverd te houden. Het bestaat ook uit [bijna] twee identieke etnische groepen als Karachay -Tsjerkess Republiek.',
 		population: '~860.000',
 		capital: 'Naltsjik/Naltsjik',
-		languages: 'Berg Turks (Qaraçay-Malqar), Circassian (Aydghe)',
+		languages: 'Qaraçay-Malqar, Circassian (Aydghe)',
 	},
 	alaniaRepublic: {
 		name: 'Noord-Ossetië (Alania)',
@@ -342,7 +342,7 @@ export default {
 			'Karatsjaj-Balkar zijn slechts twee dialecten van dezelfde taal (ook bekend als Berg-Turks), het gebeurde gewoon zodat Stalin de twee niet goed wilde verenigen omdat het de Kaukasus problematischer voor hem zou kunnen maken. Deze staat lost het probleem op, voor eens en altijd.',
 		population: '~225k',
 		capital: 'Mikojan-Shahar',
-		languages: 'Karatsjaj-Balkar (Berg-Turks)',
+		languages: 'Karatsjaj-Balkar',
 	},
 	circassia: {
 		name: 'Circassië',

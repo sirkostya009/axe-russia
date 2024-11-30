@@ -105,7 +105,7 @@ export default {
 			"Mae Cawcasws yn gartref i nifer amrywiol o grwpiau ethnig. Gyda'r wladwriaeth hon yn cynrychioli pobloedd Tyrcig a'r Cawcasws sy'n siarad iaith - Karachay (Balkar) a Cherkess (Adyghe), yn y drefn honno.",
 		population: '~469,000',
 		capital: 'Batalpashinsk',
-		languages: 'Tyrcig Mynydd (Qaraçay-Malqar), Circassian (Adyghe)',
+		languages: 'Qaraçay-Malqar, Circassian (Adyghe)',
 	},
 	kabardinoBalkarRepublic: {
 		name: 'Kabardino-Balkar',

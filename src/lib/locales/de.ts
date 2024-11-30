@@ -106,7 +106,7 @@ export default {
 			'Der Kaukasus ist die Heimat einer Vielzahl ethnischer Gruppen. In diesem Staat leben Völker, die türkische und kaukasische Sprachen sprechen - Karatschai (Balkar) und Tscherkessen (Adygei).',
 		population: '~469.000',
 		capital: 'Batalpaschinsk',
-		languages: 'Bergtürkisch (Qaraçay-Malqar), Tscherkessen (Adyghe)',
+		languages: 'Karatschai-balkarische, Tscherkessen (Adyghe)',
 	},
 	kabardinoBalkarRepublic: {
 		name: 'Kabardino-Balkar',
@@ -114,7 +114,7 @@ export default {
 			'Diese Republik hat viel mit der Karatschai-Tscherkessischen Republik gemeinsam: Auch sie wurde von Stalin auf unheilvolle Weise dazu bestimmt, zwei ungleiche Volksgruppen aufzunehmen, um sie zu trennen und zu unterwerfen. Sie besteht auch aus [fast] identischen zwei Volksgruppen wie die Karatschai -Tscherkessische Republik.',
 		population: '~860.000',
 		capital: 'Nalsitsch/Naltschik',
-		languages: 'Bergtürkisch (Qaraçay-Malqar), Tscherkessen (Aydghe)',
+		languages: 'Karatschai-balkarische, Tscherkessen (Aydghe)',
 	},
 	alaniaRepublic: {
 		name: 'Nordossetien (Alanien)',
@@ -342,7 +342,7 @@ export default {
 			'Karatschai-Balkar sind nur zwei Dialekte derselben Sprache (auch Bergturkisch genannt). Stalin wollte die beiden Sprachen nicht vereinen, da dies den Kaukasus für ihn problematischer machen könnte. Dieser Staat löst das Problem, zumindest einmal.',
 		population: '~225.000',
 		capital: 'Mikojan-Schahar',
-		languages: 'Karatschai-Balkar (Bergtürkisch)',
+		languages: 'Karatschai-balkarische',
 	},
 	circassia: {
 		name: 'Tscherkessen',

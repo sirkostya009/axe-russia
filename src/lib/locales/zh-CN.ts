@@ -106,7 +106,7 @@ export default {
 			'高加索地区居住着许多民族。这个国家代表着突厥语族和高加索语族——卡拉恰伊人（巴尔卡尔人）和切尔克斯人（阿迪格人）。',
 		population: '~469,000',
 		capital: '巴塔尔帕申斯克',
-		languages: '山地突厥语（Qaraçay-Malqar）、切尔克斯语（Adyghe）',
+		languages: 'Qaraçay-Malqar、切尔克斯语（Adyghe）',
 	},
 	kabardinoBalkarRepublic: {
 		name: '卡巴尔达-巴尔卡尔',
@@ -114,7 +114,7 @@ export default {
 			'这个共和国与卡拉恰伊-切尔克斯共和国有很多共同之处：斯大林也险恶地让两个不相似的民族居住在那里，以保持分裂和征服。它也由与卡拉恰伊共和国几乎相同的两个民族组成-切尔克斯共和国。',
 		population: '约86万',
 		capital: '纳尔希奇/纳尔奇克',
-		languages: '山地突厥语（Qaraçay-Malqar）、切尔克斯语（Aydghe）',
+		languages: 'Qaraçay-Malqar、切尔克斯语（Aydghe）',
 	},
 	alaniaRepublic: {
 		name: '北奥塞梯（阿兰）',
@@ -334,7 +334,7 @@ export default {
 			'卡拉恰伊-巴尔卡尔语只是同名语言（也称为山地突厥语）的两种方言，只是斯大林不想将这两种语言完全统一起来，因为这可能会使高加索地区对他来说更加棘手。这个国家终于解决了这个问题。',
 		population: '~22.5万',
 		capital: '米高扬-沙哈尔',
-		languages: '卡拉恰伊-巴尔卡尔语（山地突厥语）',
+		languages: '卡拉恰伊-巴尔卡尔语',
 	},
 	circassia: {
 		name: '切尔克西亚',

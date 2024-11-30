@@ -106,7 +106,7 @@ export default {
 			'Tá líon éagsúil de ghrúpaí eitneacha sa Chugais. Agus an stát seo ag déanamh ionadaíochta ar phobail na Tuirce agus na gCaucasian - Karachay (Balkar) agus Cherkess (Adyghe), faoi seach.',
 		population: '~469,000',
 		capital: 'Batalpashinsk',
-		languages: 'Turcach Sléibhe (Qaraçay-Malqar), Circassian (Adyghe)',
+		languages: 'Qaraçay-Malqar, Circassian (Adyghe)',
 	},
 	kabardinoBalkarRepublic: {
 		name: 'Kabardino-Balkar',
@@ -114,7 +114,7 @@ export default {
 			'Tá go leor i gcoiteann ag an bPoblacht seo le Poblacht Karachai-Cherkess: thug Stalin uirthi go doiléir freisin dhá ghrúpa eitneacha neamhchosúla a óstáil chun iad a choinneáil roinnte agus faoi cheannas. Tá sé comhdhéanta freisin [beagnach] de dhá ghrúpa eitneacha comhionann le Poblacht Karachay-Cherkess.',
 		population: '~860,000',
 		capital: 'Nalchik/Nalchik',
-		languages: 'Turcach Sléibhe (Qaraçay-Malqar), Circassian (Aydghe)',
+		languages: 'Qaraçay-Malqar, Circassian (Aydghe)',
 	},
 	alaniaRepublic: {
 		name: 'Oiséit Thuaidh (Alania)',
@@ -340,7 +340,7 @@ export default {
 			'Níl iontu ach Karachay-Balkar ach dhá chanúint den teanga chéanna (ar a dtugtar Mountain Turkic freisin), tharla sé ionas nár mhian le Stalin an dá chanúint a aontú i gceart mar go bhféadfadh sé an Cugais a dhéanamh níos fadhbanna dó. Réitíonn an stát seo an cheist, ar feadh uair amháin.',
 		population: '~225k',
 		capital: 'Mikoyan-Shahar',
-		languages: 'Karachay-Balkar (Sliabh Turcach)',
+		languages: 'Karachay-Balkar',
 	},
 	circassia: {
 		name: 'Ciorcas',

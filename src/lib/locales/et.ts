@@ -106,7 +106,7 @@ export default {
 			'Kaukaasia on koduks mitmesugustele etnilistele rühmadele. See riik esindab türgi ja kaukaasia keelt kõnelevaid rahvaid - vastavalt karatšai (balkari) ja tšerkessi (adõgee).',
 		population: '~469 000',
 		capital: 'Batalpašinsk',
-		languages: 'mägitürgi (Qaraçay-Malqar), tšerkessi (adõghe)',
+		languages: 'Qaraçay-Malqar, tšerkessi (adõghe)',
 	},
 	kabardinoBalkarRepublic: {
 		name: 'Kabardi-Balkar',
@@ -337,7 +337,7 @@ export default {
 			'Karatšai-balkari on vaid kaks samanimelise keele (tuntud ka kui mägitürgi) murret, see juhtus lihtsalt nii, et Stalin ei tahtnud neid kahte korralikult ühendada, kuna see võib Kaukaasia tema jaoks problemaatilisemaks muuta. See olek lahendab probleemi üks kord.',
 		population: '~225k',
 		capital: 'Mikojan-Shahar',
-		languages: 'karatšai-balkari (mägitürgi)',
+		languages: 'karatšai-balkari',
 	},
 	circassia: {
 		name: 'Tšerkessia',

@@ -342,7 +342,7 @@ export default {
 			'Karacháevo-balkario son sólo dos dialectos de la misma lengua (también conocida como túrquico de montaña), pero Stalin no quiso unirlos porque eso podría hacer que el Cáucaso fuera más problemático para él. Este estado resuelve el problema, por una vez.',
 		population: '~225k',
 		capital: 'Mikoyan-Shahar',
-		languages: 'Karachay-Balkaria (turco de montaña)',
+		languages: 'Karachay-Balkaria',
 	},
 	circassia: {
 		name: 'Circasia',

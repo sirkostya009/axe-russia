@@ -107,7 +107,7 @@ export default {
 			'Kaukaze gyvena įvairios etninės grupės. Ši valstybė atstovauja tiurkų ir kaukaziečių kalbomis kalbančioms tautoms - atitinkamai karačajų (balkarų) ir čerkesų (adigėjų).',
 		population: '~469 000',
 		capital: 'Batalpašinskas',
-		languages: 'Kalnų tiurkų (Qaraçay-Malqar), čerkesų (Adyghe)',
+		languages: 'Qaraçay-Malqar, čerkesų (Adyghe)',
 	},
 	kabardinoBalkarRepublic: {
 		name: 'Kabardino-Balkaras',
@@ -115,7 +115,7 @@ export default {
 			'Šią respubliką turi daug bendro su Karačajaus-Čerkeso respublika: Stalinas taip pat grėsmingai privertė priimti dvi nepanašias etnines grupes, kad jos būtų suskaldytos ir užkariautos. Ją taip pat sudaro [beveik] dvi identiškos etninės grupės kaip Karačajų-Čerkesų Respublika.',
 		population: '~860 000',
 		capital: 'Nalšichas/Nalčikas',
-		languages: 'Kalnų turkų (Qaraçay-Malqar), čerkesų (Aydghe)',
+		languages: 'Qaraçay-Malqar, čerkesų (Aydghe)',
 	},
 	alaniaRepublic: {
 		name: 'Šiaurės Osetija (Alanija)',
@@ -336,7 +336,7 @@ export default {
 			'Karačajų-balkarų kalbos yra tik du to paties pavadinimo kalbos (dar žinomos kaip kalnų tiurkų) tarmės, taip atsitiko taip, kad Stalinas nenorėjo deramai sujungti šių dviejų, nes dėl to Kaukazas jam gali tapti problemiškesnis. Ši būsena vieną kartą išsprendžia problemą.',
 		population: '~225 tūkst',
 		capital: 'Mikojanas-Šaharas',
-		languages: 'karačajų-balkarų (kalnų turkų)',
+		languages: 'karačajų-balkarų',
 	},
 	circassia: {
 		name: 'Čerkesija',

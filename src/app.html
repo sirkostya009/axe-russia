@@ -4,10 +4,13 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Cut the pie!</title>
+		<meta name="robots" content="index, nofollow">
+		<meta name="color-scheme" content="light dark">
+		<title>Axe Russia</title>
 		%sveltekit.head%
 		<style>
 			:root {
+				color-scheme: light dark;
 				--sidebar-width: 200px;
 				--water-color: #c8ebff;
 				--land-color: gainsboro;
@@ -52,6 +55,7 @@
 				--chukotka-color: #ed0bff;
 				--kamchatka-color: #ffce00;
 				--karachay-balkar-color: #6eff7f;
+				--github-logo-color: #24292f;
 			}
 
 			.light-theme {
@@ -98,6 +102,7 @@
 				--chukotka-color: #ed0bff;
 				--kamchatka-color: #ffce00;
 				--karachay-balkar-color: #6eff7f;
+				--github-logo-color: #24292f;
 			}
 
 			.dark-theme {
@@ -144,6 +149,7 @@
 				--chukotka-color: #ed0bff;
 				--kamchatka-color: #ffce00;
 				--karachay-balkar-color: #6eff7f;
+				--github-logo-color: white;
 			}
 
 			@media (prefers-color-scheme: dark) {
@@ -191,6 +197,7 @@
 					--chukotka-color: #ed0bff;
 					--kamchatka-color: #ffce00;
 					--karachay-balkar-color: #6eff7f;
+					--github-logo-color: white;
 				}
 			}
 
@@ -266,10 +273,6 @@
 				stroke: var(--foreign-border-color);
 				stroke-width: 1pt;
 				fill: none;
-			}
-
-			noscript {
-				margin-left: var(--sidebar-width);
 			}
 		</style>
 	</head>

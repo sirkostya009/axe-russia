@@ -106,7 +106,7 @@ export default {
 			'Kaukāzā dzīvo dažādas etniskās grupas. Ar šo valsti pārstāv turku un kaukāziešu valodā runājošas tautas - attiecīgi karačaju (balkāru) un čerkesu (adigiešu).',
 		population: '~469 000',
 		capital: 'Batalpašinska',
-		languages: 'Kalnu turku (Qaraçay-Malqar), čerkesu (Adighe)',
+		languages: 'Qaraçay-Malqar, čerkesu (Adighe)',
 	},
 	kabardinoBalkarRepublic: {
 		name: 'Kabardīno-Balkāra',
@@ -114,7 +114,7 @@ export default {
 			'Šai republikai ir daudz kopīga ar Karačajas-Čerkesas republiku: arī Staļins draudīgi lika uzņemt divas nelīdzīgas etniskās grupas, lai tās sašķeltu un iekarotu. To veido arī [gandrīz] identiskas divas etniskās grupas kā Karačaju-Čerkesu Republika.',
 		population: '~860 000',
 		capital: 'Naļšičs/Nalčiks',
-		languages: 'Kalnu turku (Qaraçay-Malqar), čerkesu (Aydghe)',
+		languages: 'Qaraçay-Malqar, čerkesu (Aydghe)',
 	},
 	alaniaRepublic: {
 		name: 'Ziemeļosetija (Alānija)',
@@ -338,7 +338,7 @@ export default {
 			'Karačaju-balkāru ir tikai divi viena nosaukuma valodas (pazīstamas arī kā kalnu turku) dialekti, tas vienkārši notika tā, ka Staļins nevēlējās pareizi apvienot abus, jo tas varētu padarīt Kaukāzu viņam problemātiskāku. Šis stāvoklis vienreiz atrisina problēmu.',
 		population: '~225k',
 		capital: 'Mikojans-Šahars',
-		languages: 'karačaju-balkāru (kalnu turku)',
+		languages: 'karačaju-balkāru',
 	},
 	circassia: {
 		name: 'Čerkesija',

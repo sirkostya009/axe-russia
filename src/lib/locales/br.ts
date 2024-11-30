@@ -338,7 +338,7 @@ export default {
 			'Karachay-Balkar são apenas dois dialetos da língua de mesmo nome (também conhecida como Mountain Turkic), apenas aconteceu que Stalin não queria unir os dois adequadamente, pois isso poderia tornar o Cáucaso mais problemático para ele. Este estado resolve o problema, por uma vez.',
 		population: '~225 mil',
 		capital: 'Mikoyan-Shahar',
-		languages: 'Karachay-Balkar (turco montanhoso)',
+		languages: 'Karachay-Balkar',
 	},
 	circassia: {
 		name: 'Circássia',

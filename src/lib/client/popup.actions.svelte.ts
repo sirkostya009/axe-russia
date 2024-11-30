@@ -24,9 +24,9 @@ export function popup(
 	node.addEventListener('mousemove', onmousemove);
 	node.addEventListener('mouseleave', onmouseout);
 	node.addEventListener('blur', onmouseout);
-	node.addEventListener('mouseenter', onmouseenter);
+	node.addEventListener('mouseenter', togglePopup);
 	node.addEventListener('keydown', onkeydown);
-	node.addEventListener('pointerup', onpointerrelease);
+	node.addEventListener('click', toggleInfo);
 	if (typeof flag === 'string' && !flag.startsWith('https://'))
 		flag = document.querySelector(`#${flag} image`)?.getAttribute('href') || '';
 
@@ -43,13 +43,13 @@ export function popup(
 			node.removeEventListener('mousemove', onmousemove);
 			node.removeEventListener('mouseleave', onmouseout);
 			node.removeEventListener('blur', onmouseout);
-			node.removeEventListener('mouseenter', onmouseenter);
+			node.removeEventListener('mouseenter', togglePopup);
 			node.removeEventListener('keydown', onkeydown);
-			node.removeEventListener('pointerup', onpointerrelease);
+			node.removeEventListener('click', toggleInfo);
 		},
 	};
 
-	function onmouseenter() {
+	function togglePopup() {
 		popupInfo.name = name;
 		popupInfo.description = description;
 		popupInfo.population = population;
@@ -58,7 +58,7 @@ export function popup(
 		popupInfo.popup.show();
 	}
 
-	function onpointerrelease() {
+	function toggleInfo() {
 		popupInfo.name = name;
 		popupInfo.description = description;
 		popupInfo.population = population;

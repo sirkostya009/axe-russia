@@ -104,7 +104,7 @@ export default {
 			'高加索地區是多個民族的家園。這個國家代表突厥語族和高加索語族，分別是卡拉恰伊（巴爾卡爾）和切爾克斯（阿迪格）。',
 		population: '〜469,000',
 		capital: '巴塔爾帕欣斯克',
-		languages: '山地突厥語（Qaraçay-Malqar）、切爾克斯語（Adyghe）',
+		languages: 'Qaraçay-Malqar、切爾克斯語（Adyghe）',
 	},
 	kabardinoBalkarRepublic: {
 		name: '卡巴爾達-巴爾卡爾',
@@ -112,7 +112,7 @@ export default {
 			'這個共和國與卡拉恰伊-切爾克斯共和國有許多共同點：史達林也險惡地接納了兩個不同的民族，以分裂和征服它們。它也由與卡拉恰伊-切爾克斯共和國[幾乎]相同的兩個民族組成。',
 		population: '〜860,000',
 		capital: '納爾希克/納爾奇克',
-		languages: '山地突厥語（Qaraçay-Malqar）、切爾克斯語（Aydghe）',
+		languages: 'Qaraçay-Malqar、切爾克斯語（Aydghe）',
 	},
 	alaniaRepublic: {
 		name: '北奧塞梯（阿拉尼亞）',
@@ -330,7 +330,7 @@ export default {
 			'卡拉恰伊-巴爾卡爾語只是同名語言（也稱為山地突厥語）的兩種方言，恰好史達林不希望將這兩種方言正確地統一起來，因為這可能會讓高加索對他來說更加麻煩。此狀態一次解決了該問題。',
 		population: '〜225k',
 		capital: '米高揚-沙哈爾',
-		languages: '卡拉恰巴爾卡爾語（山地突厥語）',
+		languages: '卡拉恰巴爾卡爾語',
 	},
 	circassia: {
 		name: '切爾克西亞',
