@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Lakes from '$lib/components/lakes.svelte';
 	import Rivers from '$lib/components/rivers.svelte';
 	import AdminBorders from '$lib/components/administrative-borders.svelte';
@@ -14,6 +14,7 @@
 	const { locale, isMobile, isNoticeAcknowledged } = data;
 
 	let i18n = $state(data.i18n);
+	let leftMargin = $state<number | null>(null);
 
 	$effect(() => {
 		document.body.classList.remove('dark-theme', 'light-theme');
@@ -22,7 +23,7 @@
 	});
 </script>
 
-<svg viewBox="283 276 1100 600">
+<svg style:margin-left={leftMargin} viewBox="283 276 1100 600">
 	<defs>
 		<pattern patternUnits="objectBoundingBox" id="liberal-russian-flag" width="1" height="1">
 			<image
@@ -348,6 +349,7 @@
 	{locale}
 	{isMobile}
 	changeLocale={async (locale) => (i18n = await fetch('/api/' + locale).then((r) => r.json()))}
+	toggleSidebar={state => state ? leftMargin = null : leftMargin = 0}
 />
 
 <style>

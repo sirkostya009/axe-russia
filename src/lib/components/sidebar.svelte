@@ -9,9 +9,10 @@
 		locale: string;
 		isMobile: boolean;
 		changeLocale(locale: string): void;
+		toggleSidebar(state: boolean): void;
 	}
 
-	let { i18n, locale, isMobile, changeLocale }: Props = $props();
+	let { i18n, locale, isMobile, changeLocale, toggleSidebar }: Props = $props();
 
 	let sideBarOpened = $state(!isMobile);
 
@@ -104,6 +105,15 @@
 					<option value="ru">🇷🇺</option>
 				</select>
 			</label>
+			<!-- <span>
+				<a aria-label="github" href="https://github.com/sirkostya009/axe-russia">
+					<svg width="24" height="24">
+						<path
+							d="M12.21,0C5.46,0,0,5.5,0,12.3c0,5.44,3.5,10.04,8.35,11.67.61.12.83-.26.83-.59,0-.29-.02-1.26-.02-2.28-3.4.73-4.1-1.47-4.1-1.47-.55-1.43-1.35-1.79-1.35-1.79-1.11-.75.08-.75.08-.75,1.23.08,1.88,1.26,1.88,1.26,1.09,1.87,2.85,1.34,3.56,1.02.1-.79.42-1.34.77-1.65-2.71-.29-5.56-1.34-5.56-6.07,0-1.34.48-2.44,1.25-3.3-.12-.31-.55-1.57.12-3.26,0,0,1.03-.33,3.36,1.26,1-.27,2.02-.41,3.05-.41,1.03,0,2.08.14,3.05.41,2.33-1.59,3.36-1.26,3.36-1.26.67,1.69.24,2.95.12,3.26.79.86,1.25,1.96,1.25,3.3,0,4.73-2.85,5.76-5.58,6.07.44.39.83,1.12.83,2.28,0,1.65-.02,2.97-.02,3.38,0,.33.22.71.83.59,4.85-1.63,8.35-6.23,8.35-11.67.02-6.8-5.46-12.3-12.19-12.3Z"
+						/>
+					</svg>
+				</a>
+			</span> -->
 			<label>
 				<select bind:value={mapState.theme}>
 					<option value="auto">System</option>
@@ -124,12 +134,14 @@
 	aria-label="menu"
 	class="toggler"
 	onmousedown={() => {
-		sideBarOpened = !sideBarOpened;
 		popupInfo.info.close();
+		toggleSidebar(!sideBarOpened);
+		sideBarOpened = !sideBarOpened;
 	}}
+	class:hidden-on-pc={!sideBarOpened}
 >
-	<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
-		<path class:close-button={sideBarOpened} />
+	<svg width="24px" height="24px" viewBox="0 0 24 24">
+		<path class="menu-button" class:close-button={sideBarOpened} />
 	</svg>
 </button>
 
@@ -152,7 +164,6 @@
 	}
 
 	.toggler {
-		display: none;
 		appearance: none;
 		position: absolute;
 		border-color: var(--secondary-color);
@@ -165,12 +176,16 @@
 		border-radius: 0 8px 8px 0;
 	}
 
-	path {
-		d: path('M3,19.2l-2.7-2.7L12,4.8l11.8,11.8-2.7,2.7-9-9L3,19.2Z');
+	.hidden-on-pc {
+		left: 0;
 	}
 
-	path.close-button {
-		d: path('M2.8,23.8l-2.3-2.4,9.2-9.5L.4,2.5,2.8.2l9.2,9.5L21.2.2l2.3,2.4-9.2,9.5,9.2,9.5-2.3,2.4-9.2-9.5L2.8,23.8Z');
+	.menu-button {
+		d: path('M.1,2.7L2.8,0l11.7,11.7L2.7,23.5l-2.7-2.7,9-9L.1,2.7Z');
+	}
+
+	.menu-button.close-button {
+		d: path('M14.4,20.8l-2.7,2.7L0,11.8,11.8,0l2.7,2.7L5.5,11.7l8.9,9.1Z');
 	}
 
 	.sidebar form {
@@ -207,10 +222,24 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: center;
 
 		label {
 			width: 30%;
 		}
+	}
+
+	.head-bar label {
+		/* flex-basis: 100%; */
+	}
+
+	.head-bar span {
+		height: 30px;
+		background-color: var(--main-color);
+		border-color: var(--secondary-color);
+		border-radius: 4px;
+		text-align: center;
+		flex-basis: 100%;
 	}
 
 	input[type='checkbox'] {
@@ -253,6 +282,10 @@
 		border-radius: 4px;
 		width: 100%;
 		text-align: center;
+	}
+
+	a[aria-label='github'] svg {
+		fill: var(--github-logo-color);
 	}
 
 	@media (max-width: 1023px) {
@@ -308,11 +341,11 @@
 			top: 8px;
 		}
 
-		path {
+		.menu-button {
 			d: path('M3,19.2l-2.7-2.7L12,4.8l11.8,11.8-2.7,2.7-9-9L3,19.2Z');
 		}
 
-		path.close-button {
+		.menu-button.close-button {
 			d: path('M2.8,23.8l-2.3-2.4,9.2-9.5L.4,2.5,2.8.2l9.2,9.5L21.2.2l2.3,2.4-9.2,9.5,9.2,9.5-2.3,2.4-9.2-9.5L2.8,23.8Z');
 		}
 
@@ -334,6 +367,10 @@
 
 		.toggler svg {
 			fill: var(--text-color);
+		}
+
+		.hidden-on-pc {
+			left: unset;
 		}
 	}
 </style>
