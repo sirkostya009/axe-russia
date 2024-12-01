@@ -7,6 +7,7 @@ export function load({ cookies, request }): {
 	locale: keyof typeof locales;
 	isMobile: boolean;
 	isNoticeAcknowledged: boolean;
+	theme?: string;
 } {
 	const lang = cookies.get('locale') || request.headers.get('Accept-Language');
 	const locale = (regex.exec(lang!)?.[0] || 'en') as keyof typeof locales;
@@ -16,5 +17,6 @@ export function load({ cookies, request }): {
 		i18n: locales[locale] as locales.I18n,
 		isMobile: !!ua?.match(/iPhone|Android|iPad/),
 		isNoticeAcknowledged: cookies.get('notice-acknowledged') === 'true',
+		theme: cookies.get('theme'),
 	};
 }

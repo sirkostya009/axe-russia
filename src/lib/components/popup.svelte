@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { popupInfo } from '$lib/client/popup.actions.svelte';
+	import { popupInfo } from '$lib/popup.actions.svelte';
 	import type { I18n } from '$lib/locales';
 
 	interface Props {

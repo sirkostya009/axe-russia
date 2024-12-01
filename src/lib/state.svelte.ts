@@ -1,4 +1,4 @@
-const __state = $state({
+const state = $state({
 	projectNewRepublic: true,
 	adygeaIndependent: true,
 	altaiIndependent: true,
@@ -60,15 +60,13 @@ const __state = $state({
 	evenkia: false,
 	enets: false,
 	greaterBuryatia: false,
-	theme: 'auto',
 });
 
-export type MapState = typeof __state;
+export type MapState = typeof state;
 
-export const mapState: MapState = new Proxy(__state, {
+export default new Proxy(state, {
 	set(target, p: keyof MapState, newValue) {
 		globalThis?.localStorage?.setItem(p, newValue);
-		// @ts-expect-error
 		target[p] = newValue;
 		return true;
 	},

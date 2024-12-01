@@ -1,26 +1,26 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { popupInfo } from '$lib/client/popup.actions.svelte';
-	import { mapState, type MapState } from '$lib/client/state.svelte';
+	import { popupInfo } from '$lib/popup.actions.svelte';
+	import mapState, { type MapState } from '$lib/state.svelte';
 	import type { I18n } from '$lib/locales';
 
 	interface Props {
 		i18n: I18n;
 		locale: string;
 		isMobile: boolean;
+		theme?: string;
 		changeLocale(locale: string): void;
 		toggleSidebar(state: boolean): void;
 	}
 
-	let { i18n, locale, isMobile, changeLocale, toggleSidebar }: Props = $props();
+	let { i18n, locale, isMobile, theme, changeLocale, toggleSidebar }: Props = $props();
 
 	let sideBarOpened = $state(!isMobile);
 
 	if (browser) {
 		for (const key in localStorage) {
 			if (key in Storage.prototype) continue;
-			// @ts-expect-error
-			mapState[key] = typeof mapState[key] === 'boolean' ? localStorage[key] === 'true' : localStorage[key];
+			mapState[key as keyof MapState] = localStorage[key] === 'true';
 		}
 
 		sideBarOpened = !navigator.userAgent.match(/iPhone|Android|iPad/);
@@ -54,10 +54,10 @@
 				<select
 					name="locale"
 					value={locale}
-					onchange={(e) => {
-						document.cookie = `locale=${e.currentTarget.value}; SameSite=Lax; Max-Age=34559999`;
-						document.documentElement.lang = e.currentTarget.value;
-						changeLocale(kebabToCamelCase(e.currentTarget.value));
+					onchange={({ currentTarget: { value } }) => {
+						document.cookie = `locale=${value}; SameSite=Lax; Max-Age=34559999`;
+						document.documentElement.lang = value;
+						changeLocale(kebabToCamelCase(value));
 
 						/*
 						 * Exports with hyphens are not allowed in JS,
@@ -91,6 +91,7 @@
 					<option value="zh-TW">🇹🇼</option>
 					<option value="zh-CN">🇨🇳</option>
 					<option value="ug">☪️🟦</option>
+					<option value="tr">🇹🇷</option>
 					<option value="hi">🇮🇳</option>
 					<option value="el">🇬🇷</option>
 					<option value="gd">🏴󠁧󠁢󠁳󠁣󠁴󠁿</option>
@@ -104,6 +105,7 @@
 					<option value="be">🇧🇾</option>
 					<option value="ru">🇷🇺</option>
 				</select>
+				{@html `<script>document.querySelector('select[name="locale"]').value = '${locale}';</script>`}
 			</label>
 			<!-- <span>
 				<a aria-label="github" href="https://github.com/sirkostya009/axe-russia">
@@ -115,11 +117,23 @@
 				</a>
 			</span> -->
 			<label>
-				<select bind:value={mapState.theme}>
+				<select
+					name="theme"
+					value={theme}
+					onchange={({ currentTarget: { value } }) => {
+						document.body.classList.remove('dark-theme', 'light-theme');
+						document.cookie = `theme=${value}; SameSite=Lax; Max-Age=34559999`;
+						if (value === 'auto') return;
+						document.body.classList.add(value + '-theme');
+					}}
+				>
 					<option value="auto">System</option>
 					<option value="dark">Dark</option>
 					<option value="light">Light</option>
 				</select>
+				{#if theme}
+					{@html `<script>document.querySelector('select[name="theme"]').value = '${theme}';</script>`}
+				{/if}
 			</label>
 		</section>
 		{@render checkboxSection(i18n.sidebar.exFederalRepublics)}
@@ -128,6 +142,11 @@
 		{@render checkboxSection(i18n.sidebar.miscellaneous)}
 	</form>
 </aside>
+
+{#if theme}
+	<!-- crazy hack to prevent theme from blinking -->
+	{@html `<script>document.body.classList.add('${theme}-theme');</script>`}
+{/if}
 
 <button
 	type="button"
@@ -164,6 +183,7 @@
 	}
 
 	.toggler {
+		/* all: unset; */
 		appearance: none;
 		position: absolute;
 		border-color: var(--secondary-color);

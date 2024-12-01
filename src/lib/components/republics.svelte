@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { popup } from '$lib/client/popup.actions.svelte';
-	import { mapState } from '$lib/client/state.svelte';
+	import { popup } from '$lib/popup.actions.svelte';
+	import mapState from '$lib/state.svelte';
 	import type { I18n } from '$lib/locales';
 
 	const { i18n }: { i18n: I18n } = $props();

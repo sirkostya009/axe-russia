@@ -1,5 +1,5 @@
 <script>
-	import { mapState } from '$lib/client/state.svelte';
+	import mapState from '$lib/state.svelte';
 </script>
 
 <g class="admin-borders" class:hidden={!mapState.showAdministrativeBorders}>

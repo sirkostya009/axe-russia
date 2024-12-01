@@ -1,5 +1,5 @@
 <script>
-	import { mapState } from '$lib/client/state.svelte';
+	import mapState from '$lib/state.svelte';
 </script>
 
 <g id="rivers" class:hidden={!mapState.showRivers}>

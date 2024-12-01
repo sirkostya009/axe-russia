@@ -12,8 +12,7 @@ export interface PopupInfo {
 	info: HTMLDialogElement;
 }
 
-// @ts-expect-error popup and info will almost certainly get hydrated before user interaction
-export const popupInfo = $state<PopupInfo>({});
+export const popupInfo = $state({} as PopupInfo);
 
 type PopupData = Omit<PopupInfo, 'popup' | 'info'>;
 

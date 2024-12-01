@@ -31,5 +31,6 @@ export { default as no } from './no';
 export { default as da } from './da';
 export { default as cs } from './cs';
 export { default as ko } from './ko';
+export { default as tr } from './tr';
 
 export type I18n = (typeof import('./en'))['default'];

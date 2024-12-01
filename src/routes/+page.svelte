@@ -8,19 +8,13 @@
 	import Claims from '$lib/components/claims.svelte';
 	import Popup from '$lib/components/popup.svelte';
 	import Sidebar from '$lib/components/sidebar.svelte';
-	import { mapState } from '$lib/client/state.svelte';
+	import mapState from '$lib/state.svelte.js';
 
 	const { data } = $props();
-	const { locale, isMobile, isNoticeAcknowledged } = data;
+	const { locale, isMobile, isNoticeAcknowledged, theme } = data;
 
 	let i18n = $state(data.i18n);
 	let leftMargin = $state<number | null>(null);
-
-	$effect(() => {
-		document.body.classList.remove('dark-theme', 'light-theme');
-		if (mapState.theme === 'auto') return;
-		document.body.classList.add(mapState.theme + '-theme');
-	});
 </script>
 
 <svg style:margin-left={leftMargin} viewBox="283 276 1100 600">
@@ -348,6 +342,7 @@
 	{i18n}
 	{locale}
 	{isMobile}
+	{theme}
 	changeLocale={async (locale) => (i18n = await fetch('/api/' + locale).then((r) => r.json()))}
 	toggleSidebar={state => state ? leftMargin = null : leftMargin = 0}
 />
