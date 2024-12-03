@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
+	import type { I18n } from '$lib/locales/types';
 	import { popupInfo } from '$lib/popup.actions.svelte';
 	import mapState, { type MapState } from '$lib/state.svelte';
-	import { i18n } from '$lib/i18n.svelte';
 
 	interface Props {
+		i18n: I18n;
 		locale: string;
 		isMobile: boolean;
 		theme?: string;
@@ -12,19 +12,9 @@
 		toggleSidebar(state: boolean): void;
 	}
 
-	let { locale, isMobile, theme, changeLocale, toggleSidebar }: Props = $props();
+	let { i18n, locale, isMobile, theme, changeLocale, toggleSidebar }: Props = $props();
 
 	let sideBarOpened = $state(!isMobile);
-
-	if (browser) {
-		for (const key in localStorage) {
-			if (key in Storage.prototype) continue;
-			mapState[key as keyof MapState] = localStorage[key] === 'true';
-		}
-
-		sideBarOpened = !navigator.userAgent.match(/iPhone|Android|iPad/);
-		document.documentElement.lang = locale;
-	}
 
 	function* keysOf(t: object) {
 		for (const key in t) {
@@ -56,18 +46,7 @@
 					onchange={({ currentTarget: { value } }) => {
 						document.cookie = `locale=${value}; SameSite=Lax; Max-Age=34559999`;
 						document.documentElement.lang = value;
-						changeLocale(kebabToCamelCase(value));
-
-						/*
-						 * Exports with hyphens are not allowed in JS,
-						 * this quirky lil function is needed to make sure
-						 * tags are same as IANA-provided but are also camel case to work.
-						 */
-						function kebabToCamelCase(s: string): string {
-							if (!s.includes('-')) return s;
-							const split = s.split('-');
-							return split[0] + split.slice(1).map(ss => ss[0].toLocaleUpperCase() + ss.substring(1)).join('');
-						}
+						changeLocale(value);
 					}}
 				>
 					<option value="en">🏴󠁧󠁢󠁥󠁮󠁧󠁿</option>
@@ -135,14 +114,14 @@
 				{/if}
 			</label>
 		</section>
-		{@render checkboxSection(i18n.data.sidebar.exFederalRepublics)}
-		{@render checkboxSection(i18n.data.sidebar.republics)}
-		{@render checkboxSection(i18n.data.sidebar.claims)}
-		{@render checkboxSection(i18n.data.sidebar.miscellaneous)}
+		{@render checkboxSection(i18n.sidebar.exFederalRepublics)}
+		{@render checkboxSection(i18n.sidebar.republics)}
+		{@render checkboxSection(i18n.sidebar.claims)}
+		{@render checkboxSection(i18n.sidebar.miscellaneous)}
 	</form>
 </aside>
 
-{#if theme}
+{#if theme && theme !== 'auto'}
 	<!-- crazy hack to prevent theme from blinking -->
 	{@html `<script>document.body.classList.add('${theme}-theme');</script>`}
 {/if}

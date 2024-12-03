@@ -1,3 +1,5 @@
+import { browser } from '$app/environment';
+
 const state = $state({
 	projectNewRepublic: true,
 	adygeaIndependent: true,
@@ -72,3 +74,10 @@ export default new Proxy(state, {
 	},
 	get: (target, p: keyof MapState) => target[p],
 });
+
+if (browser) {
+	for (const key in localStorage) {
+		if (key in Storage.prototype) continue;
+		state[key as keyof MapState] = localStorage[key] === 'true';
+	}
+}

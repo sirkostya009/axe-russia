@@ -1,5 +1,4 @@
 import type { ActionReturn } from 'svelte/action';
-import { i18n } from '$lib/i18n.svelte';
 
 export interface PopupInfo {
 	id: string;
