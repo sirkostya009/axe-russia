@@ -1,13 +1,9 @@
 import type { ActionReturn } from 'svelte/action';
+import { i18n } from '$lib/i18n.svelte';
 
 export interface PopupInfo {
-	name?: string;
-	description?: string;
-	population?: string;
-	capital?: string;
-	languages?: string;
+	id: string;
 	flag?: string;
-	wikiLink?: string;
 	popup: HTMLDialogElement;
 	info: HTMLDialogElement;
 }
@@ -16,10 +12,8 @@ export const popupInfo = $state({} as PopupInfo);
 
 type PopupData = Omit<PopupInfo, 'popup' | 'info'>;
 
-export function popup(
-	node: SVGElement,
-	{ name, description, population, capital, languages, flag, wikiLink }: PopupData,
-): ActionReturn<PopupData> {
+export function popup(node: SVGElement, flag?: string): ActionReturn<PopupData> {
+	const { id } = node;
 	node.addEventListener('mousemove', onmousemove);
 	node.addEventListener('mouseleave', onmouseout);
 	node.addEventListener('blur', onmouseout);
@@ -30,14 +24,6 @@ export function popup(
 		flag = document.querySelector(`#${flag} image`)?.getAttribute('href') || '';
 
 	return {
-		update(newValues: PopupData) {
-			name = newValues.name;
-			description = newValues.description;
-			population = newValues.population;
-			capital = newValues.capital;
-			languages = newValues.languages;
-			wikiLink = newValues.wikiLink;
-		},
 		destroy() {
 			node.removeEventListener('mousemove', onmousemove);
 			node.removeEventListener('mouseleave', onmouseout);
@@ -49,22 +35,13 @@ export function popup(
 	};
 
 	function togglePopup() {
-		popupInfo.name = name;
-		popupInfo.description = description;
-		popupInfo.population = population;
-		popupInfo.capital = capital;
-		popupInfo.languages = languages;
+		popupInfo.id = id;
 		popupInfo.popup.show();
 	}
 
 	function toggleInfo() {
-		popupInfo.name = name;
-		popupInfo.description = description;
-		popupInfo.population = population;
-		popupInfo.capital = capital;
-		popupInfo.languages = languages;
+		popupInfo.id = id;
 		popupInfo.flag = flag;
-		popupInfo.wikiLink = wikiLink;
 		popupInfo.info.showModal();
 	}
 }

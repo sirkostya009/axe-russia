@@ -2,10 +2,9 @@
 	import { browser } from '$app/environment';
 	import { popupInfo } from '$lib/popup.actions.svelte';
 	import mapState, { type MapState } from '$lib/state.svelte';
-	import type { I18n } from '$lib/locales';
+	import { i18n } from '$lib/i18n.svelte';
 
 	interface Props {
-		i18n: I18n;
 		locale: string;
 		isMobile: boolean;
 		theme?: string;
@@ -13,7 +12,7 @@
 		toggleSidebar(state: boolean): void;
 	}
 
-	let { i18n, locale, isMobile, theme, changeLocale, toggleSidebar }: Props = $props();
+	let { locale, isMobile, theme, changeLocale, toggleSidebar }: Props = $props();
 
 	let sideBarOpened = $state(!isMobile);
 
@@ -136,10 +135,10 @@
 				{/if}
 			</label>
 		</section>
-		{@render checkboxSection(i18n.sidebar.exFederalRepublics)}
-		{@render checkboxSection(i18n.sidebar.republics)}
-		{@render checkboxSection(i18n.sidebar.claims)}
-		{@render checkboxSection(i18n.sidebar.miscellaneous)}
+		{@render checkboxSection(i18n.data.sidebar.exFederalRepublics)}
+		{@render checkboxSection(i18n.data.sidebar.republics)}
+		{@render checkboxSection(i18n.data.sidebar.claims)}
+		{@render checkboxSection(i18n.data.sidebar.miscellaneous)}
 	</form>
 </aside>
 

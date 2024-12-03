@@ -1,28 +1,27 @@
 <script lang="ts">
 	import { popupInfo } from '$lib/popup.actions.svelte';
-	import type { I18n } from '$lib/locales';
+	import { i18n } from '$lib/i18n.svelte';
 
 	interface Props {
-		i18n: I18n;
 		isNoticeAcknowledged: boolean;
 	}
 
-	let { i18n, isNoticeAcknowledged }: Props = $props();
+	let { isNoticeAcknowledged }: Props = $props();
 </script>
 
 <dialog bind:this={popupInfo.popup} class="popup">
-	<h1>{popupInfo.name}</h1>
-	{#if popupInfo.capital}
+	<h1>{i18n.data[popupInfo.id]?.name}</h1>
+	{#if i18n.data[popupInfo.id]?.capital}
 		<span>
 			<svg width="24" height="24" viewBox="0 0 24 21.6">
 				<path
 					d="M22.8,4.8h-4.8V1.2c0-.66-.54-1.2-1.2-1.2H7.2c-.66,0-1.2.54-1.2,1.2v8.4H1.2c-.66,0-1.2.54-1.2,1.2v9.6c0,.66.54,1.2,1.2,1.2h21.6c.66,0,1.2-.54,1.2-1.2V6c0-.66-.54-1.2-1.2-1.2ZM4.8,19.2h-2.4v-2.4h2.4v2.4ZM4.8,14.4h-2.4v-2.4h2.4v2.4ZM10.8,19.2h-2.4v-2.4h2.4v2.4ZM10.8,14.4h-2.4v-2.4h2.4v2.4ZM10.8,9.6h-2.4v-2.4h2.4v2.4ZM10.8,4.8h-2.4v-2.4h2.4v2.4ZM15.6,19.2h-2.4v-2.4h2.4v2.4ZM15.6,14.4h-2.4v-2.4h2.4v2.4ZM15.6,9.6h-2.4v-2.4h2.4v2.4ZM15.6,4.8h-2.4v-2.4h2.4v2.4ZM21.6,19.2h-2.4v-2.4h2.4v2.4ZM21.6,14.4h-2.4v-2.4h2.4v2.4ZM21.6,9.6h-2.4v-2.4h2.4v2.4Z"
 				/>
 			</svg>
-			<p>{popupInfo.capital}</p>
+			<p>{i18n.data[popupInfo.id].capital}</p>
 		</span>
 	{/if}
-	{#if popupInfo.population}
+	{#if i18n.data[popupInfo.id]?.population}
 		<span>
 			<svg width="24" height="24" viewBox="0 0 24 18.66">
 				<path
@@ -56,20 +55,20 @@
 					d="M9.91,3.12c-.59.56-.96,1.22-1.05,2.02-.02.2-.02.41,0,.61.02.14,0,.22-.15.29-1.52.64-3.22-.4-3.29-2.01-.05-1.13.72-2.13,1.76-2.36,1.21-.27,2.26.3,2.72,1.45Z"
 				/>
 			</svg>
-			<p>{popupInfo.population}</p>
+			<p>{i18n.data[popupInfo.id].population}</p>
 		</span>
 	{/if}
-	{#if popupInfo.languages}
+	{#if i18n.data[popupInfo.id]?.languages}
 		<span>
 			<svg width="24" height="24" viewBox="0 0 24 24">
 				<path
 					d="M24 23h-2.784l-1.07-3h-4.875l-1.077 3h-2.697l4.941-13h2.604l4.958 13zm-4.573-5.069l-1.705-4.903-1.712 4.903h3.417zm-9.252-10.804c.126-.486.201-.852.271-1.212l-2.199-.428c-.036.185-.102.533-.22 1-.742-.109-1.532-.122-2.332-.041.019-.537.052-1.063.098-1.569h2.456v-2.083h-2.161c.106-.531.198-.849.288-1.149l-2.147-.645c-.158.526-.29 1.042-.422 1.794h-2.451v2.083h2.184c-.058.673-.093 1.371-.103 2.077-2.413.886-3.437 2.575-3.437 4.107 0 1.809 1.427 3.399 3.684 3.194 2.802-.255 4.673-2.371 5.77-4.974 1.134.654 1.608 1.753 1.181 2.771-.396.941-1.561 1.838-3.785 1.792v2.242c2.469.038 4.898-.899 5.85-3.166.93-2.214-.132-4.635-2.525-5.793zm-2.892 1.531c-.349.774-.809 1.543-1.395 2.149-.09-.645-.151-1.352-.184-2.107.533-.07 1.072-.083 1.579-.042zm-3.788.724c.062.947.169 1.818.317 2.596-1.996.365-2.076-1.603-.317-2.596z"
 				/>
 			</svg>
-			<p>{popupInfo.languages}</p>
+			<p>{i18n.data[popupInfo.id].languages}</p>
 		</span>
 	{/if}
-	<h5>{i18n.popup}</h5>
+	<h5>{i18n.data.popup}</h5>
 </dialog>
 
 <dialog bind:this={popupInfo.info} class="info" style:background-image="url({popupInfo.flag})">
@@ -82,21 +81,21 @@
 			</svg>
 		</button>
 	</form>
-	<h1>{popupInfo.name}</h1>
-	{#if popupInfo.description}
-		<p>{popupInfo.description}</p>
+	<h1>{i18n.data[popupInfo.id]?.name}</h1>
+	{#if i18n.data[popupInfo.id]?.description}
+		<p>{i18n.data[popupInfo.id].description}</p>
 	{/if}
-	{#if popupInfo.capital}
+	{#if i18n.data[popupInfo.id]?.capital}
 		<span>
 			<svg width="24" height="24" viewBox="0 0 24 21.6">
 				<path
 					d="M22.8,4.8h-4.8V1.2c0-.66-.54-1.2-1.2-1.2H7.2c-.66,0-1.2.54-1.2,1.2v8.4H1.2c-.66,0-1.2.54-1.2,1.2v9.6c0,.66.54,1.2,1.2,1.2h21.6c.66,0,1.2-.54,1.2-1.2V6c0-.66-.54-1.2-1.2-1.2ZM4.8,19.2h-2.4v-2.4h2.4v2.4ZM4.8,14.4h-2.4v-2.4h2.4v2.4ZM10.8,19.2h-2.4v-2.4h2.4v2.4ZM10.8,14.4h-2.4v-2.4h2.4v2.4ZM10.8,9.6h-2.4v-2.4h2.4v2.4ZM10.8,4.8h-2.4v-2.4h2.4v2.4ZM15.6,19.2h-2.4v-2.4h2.4v2.4ZM15.6,14.4h-2.4v-2.4h2.4v2.4ZM15.6,9.6h-2.4v-2.4h2.4v2.4ZM15.6,4.8h-2.4v-2.4h2.4v2.4ZM21.6,19.2h-2.4v-2.4h2.4v2.4ZM21.6,14.4h-2.4v-2.4h2.4v2.4ZM21.6,9.6h-2.4v-2.4h2.4v2.4Z"
 				/>
 			</svg>
-			<p>{popupInfo.capital}</p>
+			<p>{i18n.data[popupInfo.id].capital}</p>
 		</span>
 	{/if}
-	{#if popupInfo.population}
+	{#if i18n.data[popupInfo.id]?.population}
 		<span>
 			<svg width="24" height="24" viewBox="0 0 24 18.66">
 				<path
@@ -130,20 +129,20 @@
 					d="M9.91,3.12c-.59.56-.96,1.22-1.05,2.02-.02.2-.02.41,0,.61.02.14,0,.22-.15.29-1.52.64-3.22-.4-3.29-2.01-.05-1.13.72-2.13,1.76-2.36,1.21-.27,2.26.3,2.72,1.45Z"
 				/>
 			</svg>
-			<p>{popupInfo.population}</p>
+			<p>{i18n.data[popupInfo.id].population}</p>
 		</span>
 	{/if}
-	{#if popupInfo.languages}
+	{#if i18n.data[popupInfo.id]?.languages}
 		<span>
 			<svg width="24" height="24" viewBox="0 0 24 24">
 				<path
 					d="M24 23h-2.784l-1.07-3h-4.875l-1.077 3h-2.697l4.941-13h2.604l4.958 13zm-4.573-5.069l-1.705-4.903-1.712 4.903h3.417zm-9.252-10.804c.126-.486.201-.852.271-1.212l-2.199-.428c-.036.185-.102.533-.22 1-.742-.109-1.532-.122-2.332-.041.019-.537.052-1.063.098-1.569h2.456v-2.083h-2.161c.106-.531.198-.849.288-1.149l-2.147-.645c-.158.526-.29 1.042-.422 1.794h-2.451v2.083h2.184c-.058.673-.093 1.371-.103 2.077-2.413.886-3.437 2.575-3.437 4.107 0 1.809 1.427 3.399 3.684 3.194 2.802-.255 4.673-2.371 5.77-4.974 1.134.654 1.608 1.753 1.181 2.771-.396.941-1.561 1.838-3.785 1.792v2.242c2.469.038 4.898-.899 5.85-3.166.93-2.214-.132-4.635-2.525-5.793zm-2.892 1.531c-.349.774-.809 1.543-1.395 2.149-.09-.645-.151-1.352-.184-2.107.533-.07 1.072-.083 1.579-.042zm-3.788.724c.062.947.169 1.818.317 2.596-1.996.365-2.076-1.603-.317-2.596z"
 				/>
 			</svg>
-			<p>{popupInfo.languages}</p>
+			<p>{i18n.data[popupInfo.id].languages}</p>
 		</span>
 	{/if}
-	{#if popupInfo.wikiLink}
+	{#if i18n.data[popupInfo.id]?.wikiLink}
 		<span>
 			<svg width="24" height="24" viewBox="0 0 24 15.78">
 				<path
@@ -154,30 +153,27 @@
 				/>
 			</svg>
 			<p>
-				<a target="_blank" href={popupInfo.wikiLink}>{i18n.wikipedia}</a>
+				<a target="_blank" href={i18n.data[popupInfo.id].wikiLink}>{i18n.data.wikipedia}</a>
 			</p>
 		</span>
 	{/if}
 </dialog>
 
 <dialog id="notice" class="notice">
-	<h1>{i18n.notice.title}</h1>
-	<p>{i18n.notice.content}</p>
+	<h1>{i18n.data.notice.title}</h1>
+	<p>{i18n.data.notice.content}</p>
 	<form method="dialog">
 		<button
 			onclick={() => (document.cookie = `notice-acknowledged=true; SameSite=Lax; Max-Age=34559999`)}
 		>
-			{i18n.notice.acknowledged}
+			{i18n.data.notice.acknowledged}
 		</button>
 	</form>
 </dialog>
 
-{@html `<script>
-if (!${isNoticeAcknowledged}) {
-	notice.close();
-	notice.showModal();
-}
-</script>`}
+{#if !isNoticeAcknowledged}
+	{@html `<script>notice.showModal()</script>`}
+{/if}
 
 <style>
 	.popup {
