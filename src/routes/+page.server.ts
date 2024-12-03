@@ -1,14 +1,6 @@
 import type { I18n } from '$lib/locales/types';
 import fs from 'node:fs';
 
-const regex = new RegExp(
-	fs
-		.readdirSync('src/lib/locales/')
-		.map((s) => /^(.{2,5}).ts$/.exec(s)?.[1])
-		.filter(Boolean)
-		.join('|'),
-);
-
 export async function load({ cookies, request }): Promise<{
 	locale: string;
 	i18n: I18n;
@@ -17,7 +9,10 @@ export async function load({ cookies, request }): Promise<{
 	theme?: string;
 }> {
 	const lang = cookies.get('locale') || request.headers.get('Accept-Language');
-	const locale = regex.exec(lang!)?.[0] || 'en';
+	const locale =
+		/be|bg|br|cs|cy|da|de|el|en|es|et|fi|fr|ga|gd|hi|hu|it|jp|kk|ko|lt|lv|nl|no|pl|ro|ru|sk|sv|tr|ug|uk|zh-CN|zh-TW/.exec(
+			lang!,
+		)?.[0] || 'en';
 	const ua = request.headers.get('User-Agent');
 	return {
 		locale,
