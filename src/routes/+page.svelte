@@ -12,12 +12,7 @@
 	import mapState from '$lib/state.svelte';
 	import '../globals.css';
 
-	const { data } = $props();
-	const { locale, isMobile, isNoticeAcknowledged, theme } = data;
-
 	let leftMargin = $state<number | null>(null);
-
-	let i18n = $state(data.i18n);
 </script>
 
 <svg style:margin-left={leftMargin} viewBox="283 178 1100 600">
@@ -35,16 +30,9 @@
 	<Lakes />
 </svg>
 
-<Popup {i18n} {isNoticeAcknowledged} />
+<Popup />
 
-<Sidebar
-	{i18n}
-	{locale}
-	{isMobile}
-	{theme}
-	changeLocale={async (locale) => i18n = (await import(`$lib/locales/${locale}.ts`)).default}
-	toggleSidebar={(state) => (state ? (leftMargin = null) : (leftMargin = 0))}
-/>
+<Sidebar toggleSidebar={(newState) => leftMargin = newState ? null : 0} />
 
 <style>
 	svg {

@@ -68,7 +68,7 @@ export type MapState = typeof state;
 
 export default new Proxy(state, {
 	set(target, p: keyof MapState, newValue) {
-		globalThis?.localStorage?.setItem(p, newValue);
+		localStorage.setItem(p, newValue);
 		target[p] = newValue;
 		return true;
 	},

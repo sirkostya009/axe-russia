@@ -1,25 +1,21 @@
 <script lang="ts">
-	import type { I18n } from '$lib/locales/types';
+	import { invalidateAll } from '$app/navigation';
+	import { page } from '$app/state';
 	import { popupInfo } from '$lib/popup.actions.svelte';
 	import mapState, { type MapState } from '$lib/state.svelte';
 
 	interface Props {
-		i18n: I18n;
-		locale: string;
-		isMobile: boolean;
-		theme?: string;
-		changeLocale(locale: string): void;
 		toggleSidebar(state: boolean): void;
 	}
 
-	let { i18n, locale, isMobile, theme, changeLocale, toggleSidebar }: Props = $props();
+	let { toggleSidebar }: Props = $props();
 
-	let sideBarOpened = $state(!isMobile);
+	let sideBarOpened = $state(!page.data.isMobile);
 
 	function* keysOf(t: object) {
 		for (const key in t) {
 			if (key === 'title' || key === 'locale') continue;
-			yield key as keyof Omit<MapState, 'theme'>;
+			yield key as keyof MapState;
 		}
 	}
 </script>
@@ -42,11 +38,10 @@
 			<label>
 				<select
 					name="locale"
-					value={locale}
 					onchange={({ currentTarget: { value } }) => {
 						document.cookie = `locale=${value}; SameSite=Lax; Max-Age=34559999`;
 						document.documentElement.lang = value;
-						changeLocale(value);
+						invalidateAll();
 					}}
 				>
 					<option value="en">🏴󠁧󠁢󠁥󠁮󠁧󠁿</option>
@@ -83,7 +78,10 @@
 					<option value="be">🇧🇾</option>
 					<option value="ru">🇷🇺</option>
 				</select>
-				{@html `<script>document.querySelector('select[name="locale"]').value = '${locale}';</script>`}
+				{@html `<script>
+				document.querySelector('select[name="locale"]').value = '${page.data.locale}';
+				document.documentElement.lang = '${page.data.locale}';
+				</script>`}
 			</label>
 			<!-- <span>
 				<a aria-label="github" href="https://github.com/sirkostya009/axe-russia">
@@ -97,7 +95,6 @@
 			<label>
 				<select
 					name="theme"
-					value={theme}
 					onchange={({ currentTarget: { value } }) => {
 						document.body.classList.remove('dark-theme', 'light-theme');
 						document.cookie = `theme=${value}; SameSite=Lax; Max-Age=34559999`;
@@ -109,29 +106,28 @@
 					<option value="dark">Dark</option>
 					<option value="light">Light</option>
 				</select>
-				{#if theme}
-					{@html `<script>document.querySelector('select[name="theme"]').value = '${theme}';</script>`}
+				{#if page.data.theme}
+					{@html `<script>
+					document.querySelector('select[name="theme"]').value = '${page.data.theme}';
+					// crazy hack to prevent theme from blinking
+					document.body.classList.add('${page.data.theme}-theme');
+					</script>`}
 				{/if}
 			</label>
 		</section>
-		{@render checkboxSection(i18n.sidebar.exFederalRepublics)}
-		{@render checkboxSection(i18n.sidebar.republics)}
-		{@render checkboxSection(i18n.sidebar.claims)}
-		{@render checkboxSection(i18n.sidebar.miscellaneous)}
+		{@render checkboxSection(page.data.i18n.sidebar.exFederalRepublics)}
+		{@render checkboxSection(page.data.i18n.sidebar.republics)}
+		{@render checkboxSection(page.data.i18n.sidebar.claims)}
+		{@render checkboxSection(page.data.i18n.sidebar.miscellaneous)}
 	</form>
 </aside>
-
-{#if theme && theme !== 'auto'}
-	<!-- crazy hack to prevent theme from blinking -->
-	{@html `<script>document.body.classList.add('${theme}-theme');</script>`}
-{/if}
 
 <button
 	type="button"
 	aria-label="menu"
 	class="toggler"
 	onmousedown={() => {
-		popupInfo.info.close();
+		popupInfo?.info?.close();
 		toggleSidebar(!sideBarOpened);
 		sideBarOpened = !sideBarOpened;
 	}}

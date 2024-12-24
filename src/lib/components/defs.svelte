@@ -450,14 +450,6 @@
 			height="35"
 		></image>
 	</pattern>
-	<pattern patternUnits="objectBoundingBox" id="khanty" width="1" height="1">
-		<image
-			href="https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Khanty-Mansiysky_rayon_%28Yugra%29.svg"
-		></image>
-	</pattern>
-	<pattern patternUnits="objectBoundingBox" id="mansi" width="1" height="1">
-		<image href="https://upload.wikimedia.org/wikipedia/commons/7/70/Flag_of_Yugra.svg"></image>
-	</pattern>
 	<pattern patternUnits="objectBoundingBox" id="nenets-nation-flag" width="1" height="1">
 		<image
 			href="https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Yamal-Nenets_Autonomous_District.svg"
@@ -523,6 +515,7 @@
 		<image
 			href="https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Khanty-Mansiysky_rayon_%28Yugra%29.svg"
 			height="140"
+			y="-2"
 		>
 		</image>
 	</pattern>

@@ -223,7 +223,6 @@ polyline {
 }
 
 @media (max-width: 1024px) {
-
 	body,
 	html {
 		overflow-x: scroll;
@@ -647,4 +646,211 @@ polyline {
 	.flag.karachay-balkar {
 		fill: url(#karachay-balkar-flag);
 	}
+}
+
+#popup {
+	position: absolute;
+	margin: 5px;
+	max-width: 35%;
+	border-color: var(--secondary-color);
+	border-width: 2pt;
+	border-radius: 4pt;
+	background-color: var(--main-color);
+	fill: var(--text-color);
+	flex-direction: column;
+	gap: 10px;
+	font-size: small;
+}
+
+#popup[open] {
+	display: flex;
+}
+
+#popup span {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+}
+
+#popup span p {
+	margin: 0;
+}
+
+#popup h5 {
+	margin: 0;
+	color: var(--secondary-color);
+}
+
+#popup h1 {
+	margin: 0;
+	padding: 0;
+}
+
+#popup:focus {
+	outline: none;
+}
+
+#notice[open] {
+	position: fixed;
+	inset: 0;
+	padding: 10px 20px;
+	border-color: brown;
+	border-width: 1pt;
+	border-radius: 4pt;
+	background-color: var(--main-color);
+	margin: auto;
+	display: flex;
+	max-width: 40%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+#notice[open] * {
+	margin: 0;
+	padding: 0;
+}
+
+#notice[open] p {
+	padding: 5px 0;
+}
+
+#notice[open] h1 {
+	line-height: 1;
+	margin: 0;
+}
+
+#notice p {
+	margin: 10px 0;
+}
+
+#notice[open] button {
+	appearance: none;
+	background-color: var(--secondary-color);
+	padding: 10px;
+	cursor: pointer;
+	border: none;
+	border-radius: 4px;
+}
+
+#info {
+	fill: rgb(230, 230, 230);
+	background-color: rgba(0, 0, 0, 0.5);
+	max-width: 40%;
+	max-height: 90%;
+	overflow: hidden;
+	border-color: var(--secondary-color);
+	background-blend-mode: overlay;
+	border-radius: 4px;
+	border-width: 2pt;
+	padding: 5%;
+	background-origin: border-box;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+#info h1 {
+	font-size: 36pt;
+}
+
+#info * {
+	color: rgb(230, 230, 230);
+}
+
+#info span {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	flex-direction: row;
+}
+
+#info svg {
+	min-width: 24px;
+	min-height: 24px;
+}
+
+#info form button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	appearance: none;
+	width: 40px;
+	height: 40px;
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+	border-radius: 4px;
+	border-top-right-radius: 0;
+}
+
+#info form button svg {
+	width: 18px;
+	height: 18px;
+}
+
+#info form button:hover {
+	background-color: rgb(165, 65, 65);
+}
+
+@media (max-width: 1023px) {
+	#info {
+		max-width: 100%;
+		min-width: 100%;
+		max-height: 100%;
+		min-height: 100%;
+		padding: 0;
+		overflow-y: auto;
+		border: none;
+	}
+
+	#info h1 {
+		margin-top: 20px;
+	}
+
+	#info>* {
+		margin: 0 10px;
+	}
+
+	#info>P {
+		margin-top: 20px;
+	}
+
+	#info form button {
+		position: fixed;
+		top: unset;
+		bottom: 0;
+		border-color: transparent;
+		border-radius: 8px;
+		margin: 0 5px 5px 0;
+		height: var(--toggler-height);
+		width: var(--toggler-height);
+		opacity: 0.8;
+		background-color: var(--secondary-color);
+	}
+
+	#info form button:hover {
+		background-color: unset;
+	}
+
+	#info form button svg {
+		width: unset;
+		height: unset;
+	}
+
+	#notice[open] button {
+		font-size: 15pt;
+		width: fit-content;
+		height: fit-content;
+	}
+
+	#notice[open] {
+		max-width: 95%;
+	}
+}
+
+dialog::backdrop {
+	background-color: rgba(0, 0, 0, 0.5);
 }

@@ -1,5 +1,4 @@
 import type { I18n } from '$lib/locales/types';
-import fs from 'node:fs';
 
 export async function load({ cookies, request }): Promise<{
 	locale: string;
