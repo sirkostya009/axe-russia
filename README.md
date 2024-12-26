@@ -32,10 +32,10 @@ need to pass an additional `--host` argument.
 - ~~carve out territorial claims~~
 - ~~show flags~~
 - ~~dark mode~~
-- more languages, better text
+- ~~more languages, better text~~
 - ~~touch screen issue~~
 - ~~new borders for: altai, buryat, nenets, northern caucasus, kamchatka~~
 - ~~fix international border claims~~
 - add missing `wikiLink`s in locales
 - add an emoji-capable font
-- sidebar button on pc
+- ~~sidebar button on pc~~
