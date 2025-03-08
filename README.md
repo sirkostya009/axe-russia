@@ -1,7 +1,5 @@
 # Map of decomposable Russia
 
-Active WIP.
-
 ## Running
 
 If you're new to Svelte, and don't know how to run this project, don't worry: it's very easy.
