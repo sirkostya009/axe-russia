@@ -83,15 +83,11 @@
 				document.documentElement.lang = '${page.data.locale}';
 				</script>`}
 			</label>
-			<!-- <span>
+			<span>
 				<a aria-label="github" href="https://github.com/sirkostya009/axe-russia">
-					<svg width="24" height="24">
-						<path
-							d="M12.21,0C5.46,0,0,5.5,0,12.3c0,5.44,3.5,10.04,8.35,11.67.61.12.83-.26.83-.59,0-.29-.02-1.26-.02-2.28-3.4.73-4.1-1.47-4.1-1.47-.55-1.43-1.35-1.79-1.35-1.79-1.11-.75.08-.75.08-.75,1.23.08,1.88,1.26,1.88,1.26,1.09,1.87,2.85,1.34,3.56,1.02.1-.79.42-1.34.77-1.65-2.71-.29-5.56-1.34-5.56-6.07,0-1.34.48-2.44,1.25-3.3-.12-.31-.55-1.57.12-3.26,0,0,1.03-.33,3.36,1.26,1-.27,2.02-.41,3.05-.41,1.03,0,2.08.14,3.05.41,2.33-1.59,3.36-1.26,3.36-1.26.67,1.69.24,2.95.12,3.26.79.86,1.25,1.96,1.25,3.3,0,4.73-2.85,5.76-5.58,6.07.44.39.83,1.12.83,2.28,0,1.65-.02,2.97-.02,3.38,0,.33.22.71.83.59,4.85-1.63,8.35-6.23,8.35-11.67.02-6.8-5.46-12.3-12.19-12.3Z"
-						/>
-					</svg>
+					<img alt="GitHub" width="25px" height="25px" src="https://github.githubassets.com/favicons/favicon-dark.svg">
 				</a>
-			</span> -->
+			</span>
 			<label>
 				<select
 					name="theme"
@@ -224,7 +220,7 @@
 	}
 
 	.head-bar label {
-		/* flex-basis: 100%; */
+		flex-basis: 100%;
 	}
 
 	.head-bar span {
@@ -276,10 +272,6 @@
 		border-radius: 4px;
 		width: 100%;
 		text-align: center;
-	}
-
-	a[aria-label='github'] svg {
-		fill: var(--github-logo-color);
 	}
 
 	@media (max-width: 1023px) {
