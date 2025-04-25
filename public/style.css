@@ -54,6 +54,10 @@
 	--chukotka: var(--color-palette-2);
 	--kamchatka: var(--color-palette-6);
 	--karachay-balkar: var(--color-palette-5);
+
+	@media (max-width: 1024px) {
+		--toggler-height: 65px;
+	}
 }
 
 .dark {
@@ -84,48 +88,264 @@ html {
 	overflow-y: hidden;
 	font-family: Ubuntu, Helvetica, 'Noto Sans', system-ui, Roboto, Arial, sans-serif;
 	color: var(--text);
+
+	@media (max-width: 1024px) {
+		font-size: 18pt;
+	}
 }
 
 *::-webkit-scrollbar {
 	background-color: var(--main);
 	width: 8px;
+
+	@media (max-width: 1024px) {
+		width: 12px;
+	}
 }
 
 *::-webkit-scrollbar-thumb {
 	background-color: var(--secondary);
 }
 
-path,
-polygon,
-polyline {
-	stroke-width: 0.5pt;
+.hidden {
+	visibility: hidden;
+}
+
+@keyframes appear {
+	from {
+		translate: calc(-1 * var(--sidebar-width)) 0;
+	}
+	to {
+		translate: 0 0;
+	}
+}
+
+@keyframes hide {
+	from {
+		visibility: visible;
+		translate: 0 0;
+	}
+	to {
+		visibility: hidden;
+		translate: calc(-1 * var(--sidebar-width)) 0;
+	}
 }
 
 @media (max-width: 1024px) {
-	body,
-	html {
-		overflow-x: scroll;
-		font-size: 18pt;
+	@keyframes appear {
+		from {
+			translate: 0 100vh;
+		}
+		to {
+			translate: 0 0;
+		}
 	}
 
-	:root {
-		--sidebar-width: 100px;
+	@keyframes hide {
+		from {
+			visibility: visible;
+			translate: 0 0;
+		}
+		to {
+			visibility: hidden;
+			translate: 0 100vh;
+		}
+	}
+}
+
+#sidebar {
+	background-color: var(--main);
+	min-width: var(--sidebar-width);
+	height: 100%;
+	width: 10%;
+	overflow-y: auto;
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow-x: hidden;
+	animation: appear 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+	&.hidden {
+		animation: hide 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
-	*::-webkit-scrollbar {
-		width: 12px;
+	form {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		padding: 5px 5px;
+
+		section {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	.head-bar {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 10px;
+
+		:nth-child(2) {
+			height: 30px;
+			text-align: center;
+		}
+	}
+
+	h3 {
+		margin: 10px 0;
+	}
+
+	label {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+		cursor: pointer;
+		gap: 5px;
+		user-select: none;
+	}
+
+	input[type='checkbox'] {
+		appearance: none;
+		min-width: 18px;
+		min-height: 18px;
+		border-radius: 4px;
+		position: relative;
+		cursor: pointer;
+		transition: background 0.3s ease;
+		background-color: rgba(255, 255, 255, 0.85);
+
+		&:checked {
+			background-color: var(--secondary);
+
+			&::after {
+				display: block;
+			}
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 10px;
+			height: 6px;
+			border: 2px solid white;
+			border-width: 0 2px 2px 0;
+			transform: rotate(-45deg) scaleX(-1);
+			left: 3px;
+			top: 4px;
+			display: none;
+		}
+	}
+
+	select {
+		appearance: none;
+		height: 30px;
+		background-color: var(--main);
+		border-color: var(--secondary);
+		border-radius: 4px;
+		width: 100%;
+		text-align: center;
+
+		option {
+			padding: 10px;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		&:not(.hidden) ~ #map {
+			margin-left: max(var(--sidebar-width), 10%);
+		}
+
+		&:not(.hidden) ~ #toggler path {
+			d: path('M14.4,20.8l-2.7,2.7L0,11.8,11.8,0l2.7,2.7L5.5,11.7l8.9,9.1Z');
+		}
+
+		&.hidden ~ #toggler {
+			left: 0;
+
+			path {
+				d: path('M.1,2.7L2.8,0l11.7,11.7L2.7,23.5l-2.7-2.7,9-9L.1,2.7Z');
+			}
+		}
+	}
+
+	@media (max-width: 1024px) {
+		width: 100%;
+		height: 100%;
+
+		&:not(.hidden) ~ #toggler path {
+			d: path(
+				'M2.8,23.8l-2.3-2.4,9.2-9.5L.4,2.5,2.8.2l9.2,9.5L21.2.2l2.3,2.4-9.2,9.5,9.2,9.5-2.3,2.4-9.2-9.5L2.8,23.8Z'
+			);
+		}
+
+		&.hidden ~ #toggler path {
+			d: path('M3,19.2l-2.7-2.7L12,4.8l11.8,11.8-2.7,2.7-9-9L3,19.2Z');
+		}
+
+		select {
+			height: 40px;
+		}
+
+		input[type='checkbox'] {
+			width: 30px;
+			height: 30px;
+
+			&::after {
+				width: 16px;
+				height: 10px;
+				left: 6px;
+				top: 8px;
+			}
+		}
+	}
+}
+
+#toggler {
+	transition: left 300ms cubic-bezier(0.4, 0, 0.2, 1);
+	/* all: unset; */
+	appearance: none;
+	position: absolute;
+	border-color: var(--secondary);
+	background-color: var(--main);
+	color: var(--secondary);
+	fill: var(--text);
+	left: var(--sidebar-width);
+	top: calc(50% - 50px);
+	height: 100px;
+	border-radius: 0 8px 8px 0;
+
+	@media (max-width: 1024px) {
+		left: unset;
+		top: unset;
+		display: block;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		height: var(--toggler-height);
+		width: var(--toggler-height);
+		margin: 0 5px 5px 0;
+		border-color: transparent;
+		border-radius: 8px;
+		opacity: 0.8;
+		background-color: var(--secondary);
+
+		svg {
+			fill: var(--text);
+		}
 	}
 }
 
 #map {
 	height: 100dvh;
-	margin-left: max(var(--sidebar-width), 10%);
-	display: block;
-	transition: margin-left 300ms cubic-bezier(0.4, 0, 0.2, 1);
+	overflow-x: scroll;
+
+	@media (min-width: 1024px) {
+		transition: margin-left 300ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
 
 	&.flag {
-		background-repeat: no-repeat;
-
 		.new-republic-of-russia {
 			fill: url(#liberal-russian-flag);
 		}
@@ -253,258 +473,254 @@ polyline {
 			fill: url(#altai-flag);
 		}
 	}
-}
 
-@media (max-width: 1023px) {
-	#map {
-		margin-left: 0;
-	}
-}
-
-.hidden {
-	visibility: hidden;
-}
-
-.admin-borders,
-.admin-borders * {
-	stroke: black;
-	fill: none;
-	stroke-width: 0.33pt;
-}
-
-#rivers path {
-	stroke: var(--water);
-	fill: none;
-}
-
-#lakes path {
-	fill: var(--water);
-	stroke: none;
-}
-
-.foreign-territory,
-.foreign-territory * {
-	fill: var(--land) !important;
-	stroke: none !important;
-	stroke-width: 0;
-}
-
-.foreign-borders * {
-	stroke: var(--foreign-border);
-	stroke-width: 1pt;
-	fill: none;
-}
-
-#republics {
-	fill: var(--russia);
-	stroke: black;
-
-	.new-republic-of-russia {
-		fill: var(--new-russia);
-
-		* {
-			fill: inherit;
-		}
-	}
-
-	.komi-republic {
-		fill: var(--komi);
-	}
-
-	.khakassia-republic {
-		fill: var(--khakassia);
-	}
-
-	.sakha-republic * {
-		fill: var(--sakha);
-	}
-
-	.buryat-republic {
-		fill: var(--buryat);
-	}
-
-	.altai-republic {
-		fill: var(--altai);
-	}
-
-	.tuva-republic {
-		fill: var(--tuva);
-	}
-
-	.bashkortostan-republic {
-		fill: var(--bashkortostan);
-	}
-
-	.mordovia-republic {
-		fill: var(--mordovia);
-	}
-
-	.chuvashia-republic {
-		fill: var(--chuvashia);
-	}
-
-	.mari-el-republic {
-		fill: var(--mari-el);
-	}
-
-	.udmurtia-republic {
-		fill: var(--udmurtia);
-	}
-
-	.tatarstan-republic {
-		fill: var(--tatarstan);
-	}
-
-	.karachay-cherkess-republic {
-		fill: var(--karachay-cherkess);
-	}
-
-	.kabardino-balkar-republic {
-		fill: var(--kabardino-balkar);
-	}
-
-	.alania-republic {
-		fill: var(--alania);
-	}
-
-	.ingushetia-republic {
-		fill: var(--ingushetia);
-	}
-
-	.ichkeria-republic {
-		fill: var(--ichkeria);
-	}
-
-	.kalmykia-republic {
-		fill: var(--kalmykia);
-	}
-
-	.dagestan-republic * {
-		fill: var(--dagestan);
-	}
-
-	.karelia {
-		fill: var(--karelia);
-	}
-
-	.nenets-state * {
-		fill: var(--nenets);
-	}
-
-	.ural-republic * {
-		fill: var(--ural);
-	}
-
-	.siberian-republic * {
-		fill: var(--siberia);
-	}
-
-	.far-eastern-republic * {
-		fill: var(--far-east);
-	}
-
-	.kralovec-republic {
-		fill: var(--kralovec);
-	}
-
-	.adygea-republic {
-		fill: var(--adygea);
-	}
-}
-
-#claims {
-	fill: var(--russia);
-	stroke-width: 1pt;
-
-	.greater-karelia-republic {
-		stroke-width: 0.5pt;
+	.admin-borders,
+	.admin-borders * {
 		stroke: black;
-		fill: var(--karelia);
+		fill: none;
+		stroke-width: 0.33pt;
 	}
 
-	.kralovec-city {
-		stroke-width: 1.5pt;
-		stroke: var(--foreign-border);
+	#rivers path {
+		stroke: var(--water);
+		fill: none;
 	}
 
-	.greater-buryatia {
-		stroke-width: 0.5pt;
-		stroke: black;
-		fill: var(--buryat);
-	}
-
-	.land {
-		fill: var(--land);
+	#lakes path {
+		fill: var(--water);
 		stroke: none;
 	}
 
-	.border {
-		fill: none;
+	.foreign-territory,
+	.foreign-territory * {
+		fill: var(--land) !important;
+		stroke: none !important;
+		stroke-width: 0;
+	}
+
+	.foreign-borders * {
 		stroke: var(--foreign-border);
 		stroke-width: 1pt;
+		fill: none;
 	}
 
-	.foreign-territory.foreign-borders {
-		stroke: var(--foreign-border) !important;
-		stroke-width: 1pt !important;
-	}
-
-	.stroke {
-		stroke-width: 0.5pt;
+	#republics {
+		fill: var(--russia);
 		stroke: black;
+
+		.new-republic-of-russia {
+			fill: var(--new-russia);
+
+			* {
+				fill: inherit;
+			}
+		}
+
+		.komi-republic {
+			fill: var(--komi);
+		}
+
+		.khakassia-republic {
+			fill: var(--khakassia);
+		}
+
+		.sakha-republic * {
+			fill: var(--sakha);
+		}
+
+		.buryat-republic {
+			fill: var(--buryat);
+		}
+
+		.altai-republic {
+			fill: var(--altai);
+		}
+
+		.tuva-republic {
+			fill: var(--tuva);
+		}
+
+		.bashkortostan-republic {
+			fill: var(--bashkortostan);
+		}
+
+		.mordovia-republic {
+			fill: var(--mordovia);
+		}
+
+		.chuvashia-republic {
+			fill: var(--chuvashia);
+		}
+
+		.mari-el-republic {
+			fill: var(--mari-el);
+		}
+
+		.udmurtia-republic {
+			fill: var(--udmurtia);
+		}
+
+		.tatarstan-republic {
+			fill: var(--tatarstan);
+		}
+
+		.karachay-cherkess-republic {
+			fill: var(--karachay-cherkess);
+		}
+
+		.kabardino-balkar-republic {
+			fill: var(--kabardino-balkar);
+		}
+
+		.alania-republic {
+			fill: var(--alania);
+		}
+
+		.ingushetia-republic {
+			fill: var(--ingushetia);
+		}
+
+		.ichkeria-republic {
+			fill: var(--ichkeria);
+		}
+
+		.kalmykia-republic {
+			fill: var(--kalmykia);
+		}
+
+		.dagestan-republic * {
+			fill: var(--dagestan);
+		}
+
+		.karelia {
+			fill: var(--karelia);
+		}
+
+		.nenets-state * {
+			fill: var(--nenets);
+		}
+
+		.ural-republic * {
+			fill: var(--ural);
+		}
+
+		.siberian-republic * {
+			fill: var(--siberia);
+		}
+
+		.far-eastern-republic * {
+			fill: var(--far-east);
+		}
+
+		.kralovec-republic {
+			fill: var(--kralovec);
+		}
+
+		.adygea-republic {
+			fill: var(--adygea);
+		}
 	}
 
-	.nenets-nation {
-		fill: var(--nenets);
-	}
+	#claims {
+		fill: var(--russia);
+		stroke-width: 1pt;
 
-	.circassia {
-		fill: var(--adygea);
-	}
+		.greater-karelia-republic {
+			stroke-width: 0.5pt;
+			stroke: black;
+			fill: var(--karelia);
+		}
 
-	.enets-country {
-		fill: var(--enets);
-	}
+		.kralovec-city {
+			stroke-width: 1.5pt;
+			stroke: var(--foreign-border);
+		}
 
-	.komi-permyak-union {
-		fill: var(--komi);
-	}
+		.greater-buryatia {
+			stroke-width: 0.5pt;
+			stroke: black;
+			fill: var(--buryat);
+		}
 
-	.khanty {
-		fill: var(--khanty);
-	}
+		.land {
+			fill: var(--land);
+			stroke: none;
+		}
 
-	.mansi {
-		fill: var(--mansi);
-	}
+		.border {
+			fill: none;
+			stroke: var(--foreign-border);
+			stroke-width: 1pt;
+		}
 
-	.selkup-territory {
-		fill: var(--selkup);
-	}
+		.foreign-territory.foreign-borders {
+			stroke: var(--foreign-border) !important;
+			stroke-width: 1pt !important;
+		}
 
-	.evenkia {
-		fill: var(--evenki);
-	}
+		.stroke {
+			stroke-width: 0.5pt;
+			stroke: black;
+		}
 
-	.taymyria {
-		fill: var(--taymyria);
-	}
+		.nenets-nation {
+			fill: var(--nenets);
+		}
 
-	.chukotka {
-		fill: var(--chukotka);
-	}
+		.circassia {
+			fill: var(--adygea);
+		}
 
-	.kamchatka {
-		fill: var(--kamchatka);
-	}
+		.enets-country {
+			fill: var(--enets);
+		}
 
-	.altai-mountains {
-		fill: var(--altai);
-	}
+		.komi-permyak-union {
+			fill: var(--komi);
+		}
 
-	.karachay-balkar {
-		fill: var(--karachay-balkar);
+		.khanty {
+			fill: var(--khanty);
+		}
+
+		.mansi {
+			fill: var(--mansi);
+		}
+
+		.selkup-territory {
+			fill: var(--selkup);
+		}
+
+		.evenkia {
+			fill: var(--evenki);
+		}
+
+		.taymyria {
+			fill: var(--taymyria);
+		}
+
+		.chukotka {
+			fill: var(--chukotka);
+		}
+
+		.kamchatka {
+			fill: var(--kamchatka);
+		}
+
+		.altai-mountains {
+			fill: var(--altai);
+		}
+
+		.karachay-balkar {
+			fill: var(--karachay-balkar);
+		}
 	}
+}
+
+path,
+polygon,
+polyline {
+	stroke-width: 0.5pt;
 }
 
 #popup {
@@ -519,79 +735,35 @@ polyline {
 	flex-direction: column;
 	gap: 10px;
 	font-size: small;
-}
 
-#popup[open] {
-	display: flex;
-}
+	&[open] {
+		display: flex;
+	}
 
-#popup span {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 10px;
-}
+	span {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 10px;
 
-#popup span p {
-	margin: 0;
-}
+		p {
+			margin: 0;
+		}
+	}
 
-#popup h5 {
-	margin: 0;
-	color: var(--secondary);
-}
+	h2 {
+		margin: 0;
+		color: var(--secondary);
+	}
 
-#popup h1 {
-	margin: 0;
-	padding: 0;
-}
+	h1 {
+		margin: 0;
+		padding: 0;
+	}
 
-#popup:focus {
-	outline: none;
-}
-
-#notice[open] {
-	position: fixed;
-	inset: 0;
-	padding: 10px 20px;
-	border-color: brown;
-	border-width: 1pt;
-	border-radius: 4pt;
-	background-color: var(--main);
-	margin: auto;
-	display: flex;
-	max-width: 40%;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 10px;
-}
-
-#notice[open] * {
-	margin: 0;
-	padding: 0;
-}
-
-#notice[open] p {
-	padding: 5px 0;
-}
-
-#notice[open] h1 {
-	line-height: 1;
-	margin: 0;
-}
-
-#notice p {
-	margin: 10px 0;
-}
-
-#notice[open] button {
-	appearance: none;
-	background-color: var(--secondary);
-	padding: 10px;
-	cursor: pointer;
-	border: none;
-	border-radius: 4px;
+	&:focus {
+		outline: none;
+	}
 }
 
 #info {
@@ -609,332 +781,96 @@ polyline {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-}
 
-#info h1 {
-	font-size: 36pt;
-}
+	h1 {
+		font-size: 36pt;
+	}
 
-#info * {
-	color: rgb(230, 230, 230);
-}
+	* {
+		color: rgb(230, 230, 230);
+	}
 
-#info span {
-	display: flex;
-	gap: 10px;
-	align-items: center;
-	flex-direction: row;
-}
+	span {
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		flex-direction: row;
+	}
 
-#info svg {
-	min-width: 24px;
-	min-height: 24px;
-}
+	svg {
+		min-width: 24px;
+		min-height: 24px;
+	}
 
-#info form button {
-	position: absolute;
-	top: 0;
-	right: 0;
-	appearance: none;
-	width: 40px;
-	height: 40px;
-	border: none;
-	cursor: pointer;
-	background-color: transparent;
-	border-radius: 4px;
-	border-top-right-radius: 0;
-}
+	form button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		appearance: none;
+		width: 40px;
+		height: 40px;
+		border: none;
+		cursor: pointer;
+		background-color: transparent;
+		border-radius: 4px;
+		border-top-right-radius: 0;
 
-#info form button svg {
-	width: 18px;
-	height: 18px;
-}
+		svg {
+			width: 18px;
+			height: 18px;
+		}
 
-#info form button:hover {
-	background-color: rgb(165, 65, 65);
-}
+		&:hover {
+			background-color: rgb(165, 65, 65);
+		}
+	}
 
-@media (max-width: 1023px) {
-	#info {
+	@media (max-width: 1024px) {
 		max-width: 100%;
 		min-width: 100%;
 		max-height: 100%;
 		min-height: 100%;
 		padding: 0;
 		overflow-y: auto;
+		overflow-x: auto;
 		border: none;
-	}
 
-	#info h1 {
-		margin-top: 20px;
-	}
+		h1 {
+			margin-top: 20px;
+		}
 
-	#info > * {
-		margin: 0 10px;
-	}
+		& > * {
+			margin: 0 10px;
+		}
 
-	#info > P {
-		margin-top: 20px;
-	}
+		& > p {
+			margin-top: 20px;
+		}
 
-	#info form button {
-		position: fixed;
-		top: unset;
-		bottom: 0;
-		border-color: transparent;
-		border-radius: 8px;
-		margin: 0 5px 5px 0;
-		height: var(--toggler-height);
-		width: var(--toggler-height);
-		opacity: 0.8;
-		background-color: var(--secondary);
-	}
+		form button {
+			position: fixed;
+			top: unset;
+			bottom: 0;
+			border-color: transparent;
+			border-radius: 8px;
+			margin: 0 5px 5px 0;
+			height: var(--toggler-height);
+			width: var(--toggler-height);
+			opacity: 0.8;
+			background-color: var(--secondary);
 
-	#info form button:hover {
-		background-color: unset;
-	}
+			&:hover {
+				background-color: unset;
+			}
 
-	#info form button svg {
-		width: unset;
-		height: unset;
-	}
-
-	#notice[open] button {
-		font-size: 15pt;
-		width: fit-content;
-		height: fit-content;
-	}
-
-	#notice[open] {
-		max-width: 95%;
+			svg {
+				width: unset;
+				height: unset;
+			}
+		}
 	}
 }
 
 dialog::backdrop {
 	background-color: rgba(0, 0, 0, 0.5);
-}
-
-@keyframes appear {
-	from {
-		translate: calc(-1 * var(--sidebar-width)) 0;
-	}
-	to {
-		translate: 0 0;
-	}
-}
-
-@keyframes hide {
-	from {
-		visibility: visible;
-		translate: 0 0;
-	}
-	to {
-		visibility: hidden;
-		translate: calc(-1 * var(--sidebar-width)) 0;
-	}
-}
-
-.sidebar {
-	background-color: var(--main);
-	min-width: var(--sidebar-width);
-	width: 10%;
-	height: 100%;
-	overflow: auto;
-	position: absolute;
-	left: 0;
-	top: 0;
-	overflow-x: hidden;
-	animation: appear 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.sidebar.hidden {
-	animation: hide 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.toggler {
-	transition: left 300ms cubic-bezier(0.4, 0, 0.2, 1);
-	/* all: unset; */
-	appearance: none;
-	position: absolute;
-	border-color: var(--secondary);
-	background-color: var(--main);
-	color: var(--secondary);
-	fill: var(--text);
-	left: var(--sidebar-width);
-	top: calc(50% - 50px);
-	height: 100px;
-	border-radius: 0 8px 8px 0;
-}
-
-.menu-button {
-	d: path('M.1,2.7L2.8,0l11.7,11.7L2.7,23.5l-2.7-2.7,9-9L.1,2.7Z');
-}
-
-.menu-button.close-button {
-	d: path('M14.4,20.8l-2.7,2.7L0,11.8,11.8,0l2.7,2.7L5.5,11.7l8.9,9.1Z');
-}
-
-.sidebar form {
-	display: flex;
-	flex-direction: column;
-	gap: 5px;
-	padding: 5px 5px;
-}
-
-h3 {
-	margin: 10px 0;
-}
-
-select option {
-	padding: 10px;
-}
-
-.sidebar form section {
-	display: flex;
-	flex-direction: column;
-}
-
-label {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	width: 100%;
-	cursor: pointer;
-	gap: 5px;
-	user-select: none;
-}
-
-.sidebar form section.head-bar {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	gap: 10px;
-
-	:nth-child(2) {
-		height: 30px;
-		text-align: center;
-	}
-}
-
-input[type='checkbox'] {
-	appearance: none;
-	min-width: 18px;
-	min-height: 18px;
-	border-radius: 4px;
-	position: relative;
-	cursor: pointer;
-	transition: background 0.3s ease;
-	background-color: rgba(255, 255, 255, 0.85);
-}
-
-input[type='checkbox']:checked {
-	background-color: var(--secondary);
-}
-
-input[type='checkbox']::after {
-	content: '';
-	position: absolute;
-	width: 10px;
-	height: 6px;
-	border: 2px solid white;
-	border-width: 0 2px 2px 0;
-	transform: rotate(-45deg) scaleX(-1);
-	left: 3px;
-	top: 4px;
-	display: none;
-}
-
-input[type='checkbox']:checked::after {
-	display: block;
-}
-
-select {
-	appearance: none;
-	height: 30px;
-	background-color: var(--main);
-	border-color: var(--secondary);
-	border-radius: 4px;
-	width: 100%;
-	text-align: center;
-}
-
-@media (max-width: 1023px) {
-	:root {
-		--toggler-height: 65px;
-	}
-
-	.sidebar {
-		width: 100%;
-		height: 100%;
-		animation: appear 0.5s;
-	}
-
-	@keyframes appear {
-		from {
-			translate: 0 100vh;
-		}
-		to {
-			translate: 0 0;
-		}
-	}
-
-	@keyframes hide {
-		from {
-			visibility: visible;
-			translate: 0 0;
-		}
-		to {
-			visibility: hidden;
-			translate: 0 100vh;
-		}
-	}
-
-	.sidebar.hidden {
-		animation: hide 0.5s;
-	}
-
-	select {
-		height: 40px;
-	}
-
-	input[type='checkbox'] {
-		width: 30px;
-		height: 30px;
-	}
-
-	input[type='checkbox']::after {
-		width: 16px;
-		height: 10px;
-		left: 6px;
-		top: 8px;
-	}
-
-	.menu-button {
-		d: path('M3,19.2l-2.7-2.7L12,4.8l11.8,11.8-2.7,2.7-9-9L3,19.2Z');
-	}
-
-	.menu-button.close-button {
-		d: path(
-			'M2.8,23.8l-2.3-2.4,9.2-9.5L.4,2.5,2.8.2l9.2,9.5L21.2.2l2.3,2.4-9.2,9.5,9.2,9.5-2.3,2.4-9.2-9.5L2.8,23.8Z'
-		);
-	}
-
-	.toggler {
-		left: unset;
-		top: unset;
-		display: block;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		height: var(--toggler-height);
-		width: var(--toggler-height);
-		margin: 0 5px 5px 0;
-		border-color: transparent;
-		border-radius: 8px;
-		opacity: 0.8;
-		background-color: var(--secondary);
-	}
-
-	.toggler svg {
-		fill: var(--text);
-	}
 }

@@ -1,49 +1,10 @@
 'use strict';
 
-/** @type {HTMLButtonElement} */
-const toggler = document.querySelector('button.toggler');
-const sidebar = document.querySelector('aside.sidebar');
-
-if (window.matchMedia('(max-width: 1023px)').matches) {
-	/** @this {HTMLButtonElement} */
-	toggler.onclick = function () {
-		this.querySelector('path').classList.toggle('close-button');
-		sidebar.classList.toggle('hidden');
-	};
-} else {
-	const map = document.getElementById('map');
-	toggler.querySelector('path').classList.toggle('close-button');
-	sidebar.classList.toggle('hidden');
-	/** @this {HTMLButtonElement} */
-	toggler.onclick = function () {
-		this.querySelector('path').classList.toggle('close-button');
-		if (sidebar.classList.toggle('hidden')) {
-			map.style.marginLeft = 0;
-			this.style.left = 0;
-		} else {
-			map.style.marginLeft = null;
-			this.style.left = null;
-		}
-	};
-}
-
-/** @type {HTMLDialogElement} */
-const popup = document.getElementById('popup');
-/** @type {HTMLDialogElement} */
-const info = document.getElementById('info');
-
-const wikiLink = info.querySelector('a[i18n]');
-
 /** @param {{}} language */
 function updateLanguage(language, doc = document) {
 	for (let i18n of doc.querySelectorAll('[i18n]')) {
 		let value = language;
-		let attr = i18n.getAttribute('i18n');
-		if (attr.startsWith('#')) {
-			value = window.language;
-			attr = attr.substring(1);
-		}
-		for (let v of attr.split('.')) {
+		for (let v of i18n.getAttribute('i18n').split('.')) {
 			value = value?.[v];
 		}
 		if (value) i18n.textContent = value;
@@ -67,6 +28,27 @@ if ('language' in localStorage) {
 		updateLanguage(window.language);
 	});
 }
+
+const sidebar = document.getElementById('sidebar');
+
+if (window.matchMedia('(min-width: 1024px)').matches) {
+	sidebar.classList.remove('hidden');
+}
+
+const map = document.getElementById('map');
+
+document.getElementById('toggler').onclick = () => {
+	map.style.pointerEvents = 'none';
+	sidebar.classList.toggle('hidden');
+	setTimeout(() => map.style.pointerEvents = null, 300);
+};
+
+/** @type {HTMLDialogElement} */
+const popup = document.getElementById('popup');
+/** @type {HTMLDialogElement} */
+const info = document.getElementById('info');
+/** @type {HTMLAnchorElement} */
+const wikiLink = info.querySelector('a[i18n]');
 
 const closePopup = popup.close.bind(popup);
 
@@ -95,10 +77,13 @@ for (const mapEntity of document.querySelectorAll('[data-popup]')) {
 
 	/** @this {SVGElement} */
 	function toggleinfo() {
+		popup.close();
 		const description = window.language[this.id];
 		updateLanguage(description, info);
-		wikiLink.parentElement.classList.toggle('hidden', 'wikiLink' in description);
-		wikiLink.href = description.wikiLink;
+		if (wikiLink.parentElement.classList.toggle('hidden', 'wikiLink' in description)) {
+			wikiLink.href = description.wikiLink;
+			wikiLink.textContent = window.language.wikipedia;
+		}
 		info.style.backgroundImage = `url(${flag})`;
 		info.showModal();
 	}
@@ -134,7 +119,7 @@ for (let i = 0; i < localStorage.length; ++i) {
 }
 
 /** @param {Event & { target: HTMLInputElement }} e */
-document.querySelector('.sidebar form').onchange = (e) => {
+sidebar.querySelector('form').onchange = (e) => {
 	toggle(e.target.name, e.target.checked);
 	if (e.target.name === 'showFlags') return;
 	localStorage[e.target.name] = e.target.checked;
