@@ -88,7 +88,7 @@ for (const mapEntity of document.querySelectorAll('[data-popup]')) {
 		flag = document.getElementById(flag)?.children[0]?.getAttribute('href');
 	}
 
-	mapEntity.onclick = toggleinfo;
+	mapEntity.onmousedown = toggleinfo;
 	mapEntity.onmouseleave = closePopup;
 	mapEntity.onmouseenter = togglepopup;
 	mapEntity.onmousemove = movepopup;
