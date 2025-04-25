@@ -1,116 +1,98 @@
 :root {
-	color-scheme: light dark;
+	color-scheme: light;
 	--sidebar-width: 200px;
-	--water-color: #c8ebff;
-	--land-color: gainsboro;
-	--russia-color: azure;
-	--foreign-border-color: gray;
-	--color-new-republic-of-russia: #4d4dff;
-	--color-komi-republic: #f96b6b;
-	--color-khakassia-republic: #ff9292;
-	--color-sakha-republic: #5f39ff;
-	--color-buryat-republic: #fff936;
-	--color-altai-republic: #5fd9ff;
-	--color-tuva-republic: #a5a000;
-	--color-bashkortostan-republic: #fffdb3;
-	--color-mordovia-republic: #ff2cfa;
-	--color-chuvashia-republic: #00a82b;
-	--color-mari-el-republic: #40ffe8;
-	--color-udmurtia-republic: #fffc8f;
-	--color-tatarstan-republic: #ffaa39;
-	--color-karachay-cherkess-republic: #6c77ff;
-	--color-kabardino-balkar-republic: #ff333d;
-	--color-alania-republic: #3eb6ff;
-	--color-ingushetia-republic: #b57400;
-	--color-ichkeria-republic: #b50079;
-	--color-kalmykia-republic: #22f;
-	--color-dagestan-republic: #2cff59;
-	--color-karelia: #fffb5c;
-	--color-nenets-state: #a9fff9;
-	--color-ural-republic: #9bff66;
-	--color-siberian-republic: #ccae00;
-	--color-far-eastern-republic: #ff0808;
-	--color-kralovec-republic: #00ff12;
-	--color-adygea-republic: red;
-	--main-color: #dfe7f5;
-	--secondary-color: #99b5e0;
-	--text-color: #243060;
-	--selkup-color: #17a00b;
-	--khanty-color: #891c1c;
-	--mansi-color: #f70000;
-	--enets-color: #a0a0a0;
-	--taymyria-color: #2200e8;
-	--evenki-color: #f140ff;
-	--chukotka-color: #ed0bff;
-	--kamchatka-color: #ffce00;
-	--karachay-balkar-color: #6eff7f;
-	--github-logo-color: #24292f;
+	--main: #eaf0fa;
+	--secondary: #7fa8e0;
+	--text: #1a2233;
+	--github-logo: #24292f;
+
+	--color-palette-1: #4f8cff;
+	--color-palette-2: #ffb347;
+	--color-palette-3: #6edc7b;
+	--color-palette-4: #ff6f91;
+	--color-palette-5: #ffd166;
+	--color-palette-6: #7e6fff;
+
+	--water: #c8ebff;
+	--land: gainsboro;
+	--russia: azure;
+	--foreign-border: gray;
+
+	--new-russia: var(--color-palette-1);
+	--komi: var(--color-palette-2);
+	--khakassia: var(--color-palette-3);
+	--sakha: var(--color-palette-4);
+	--buryat: var(--color-palette-5);
+	--altai: var(--color-palette-2);
+	--tuva: var(--color-palette-4);
+	--bashkortostan: var(--color-palette-2);
+	--mordovia: var(--color-palette-3);
+	--chuvashia: var(--color-palette-4);
+	--mari-el: var(--color-palette-5);
+	--udmurtia: var(--color-palette-6);
+	--tatarstan: var(--color-palette-3);
+	--karachay-cherkess: var(--color-palette-2);
+	--kabardino-balkar: var(--color-palette-3);
+	--alania: var(--color-palette-4);
+	--ingushetia: var(--color-palette-5);
+	--ichkeria: var(--color-palette-6);
+	--kalmykia: var(--color-palette-1);
+	--dagestan: var(--color-palette-2);
+	--karelia: var(--color-palette-3);
+	--nenets: var(--color-palette-4);
+	--ural: var(--color-palette-5);
+	--siberia: var(--color-palette-6);
+	--far-east: var(--color-palette-3);
+	--kralovec: var(--color-palette-2);
+	--adygea: var(--color-palette-3);
+	--selkup: var(--color-palette-4);
+	--khanty: var(--color-palette-3);
+	--mansi: var(--color-palette-6);
+	--enets: var(--color-palette-2);
+	--taymyria: var(--color-palette-1);
+	--evenki: var(--color-palette-2);
+	--chukotka: var(--color-palette-2);
+	--kamchatka: var(--color-palette-6);
+	--karachay-balkar: var(--color-palette-5);
 }
 
 .dark {
-	--water-color: #306481;
-	--land-color: rgb(21, 31, 31);
-	--russia-color: rgb(31, 63, 63);
-	--foreign-border-color: rgb(180, 180, 180);
-	--color-new-republic-of-russia: #4d4dff;
-	--color-komi-republic: #f96b6b;
-	--color-khakassia-republic: #ff9292;
-	--color-sakha-republic: #5f39ff;
-	--color-buryat-republic: #fff936;
-	--color-altai-republic: #5fd9ff;
-	--color-tuva-republic: #a5a000;
-	--color-bashkortostan-republic: #fffdb3;
-	--color-mordovia-republic: #ff2cfa;
-	--color-chuvashia-republic: #00a82b;
-	--color-mari-el-republic: #40ffe8;
-	--color-udmurtia-republic: #fffc8f;
-	--color-tatarstan-republic: #ffaa39;
-	--color-karachay-cherkess-republic: #6c77ff;
-	--color-kabardino-balkar-republic: #ff333d;
-	--color-alania-republic: #3eb6ff;
-	--color-ingushetia-republic: #b57400;
-	--color-ichkeria-republic: #b50079;
-	--color-kalmykia-republic: #22f;
-	--color-dagestan-republic: #2cff59;
-	--color-karelia: #fffb5c;
-	--color-nenets-state: #a9fff9;
-	--color-ural-republic: #9bff66;
-	--color-siberian-republic: #ccae00;
-	--color-far-eastern-republic: #ff0808;
-	--color-kralovec-republic: #00ff12;
-	--color-adygea-republic: red;
-	--main-color: #0e1123;
-	--secondary-color: #253060;
-	--text-color: rgb(230, 230, 230);
-	--selkup-color: #17a00b;
-	--khanty-color: #891c1c;
-	--mansi-color: #f70000;
-	--enets-color: #a0a0a0;
-	--taymyria-color: #2200e8;
-	--evenki-color: #f140ff;
-	--chukotka-color: #ed0bff;
-	--kamchatka-color: #ffce00;
-	--karachay-balkar-color: #6eff7f;
-	--github-logo-color: white;
+	color-scheme: dark;
+	--main: #0e1123;
+	--secondary: #253060;
+	--text: rgb(230, 230, 230);
+	--github-logo: white;
+
+	--color-palette-1: #4671bc;
+	--color-palette-2: #c7a04a;
+	--color-palette-3: #43a36e;
+	--color-palette-4: #bc526b;
+	--color-palette-5: #cbc25a;
+	--color-palette-6: #7269cc;
+
+	--water: #306481;
+	--land: rgb(21, 31, 31);
+	--russia: rgb(31, 63, 63);
+	--foreign-border: rgb(180, 180, 180);
 }
 
 body,
 html {
 	margin: 0;
 	padding: 0;
-	background-color: var(--water-color);
+	background-color: var(--water);
 	overflow-y: hidden;
 	font-family: Ubuntu, Helvetica, 'Noto Sans', system-ui, Roboto, Arial, sans-serif;
-	color: var(--text-color);
+	color: var(--text);
 }
 
 *::-webkit-scrollbar {
-	background-color: var(--main-color);
+	background-color: var(--main);
 	width: 8px;
 }
 
 *::-webkit-scrollbar-thumb {
-	background-color: var(--secondary-color);
+	background-color: var(--secondary);
 }
 
 path,
@@ -142,6 +124,8 @@ polyline {
 	transition: margin-left 300ms cubic-bezier(0.4, 0, 0.2, 1);
 
 	&.flag {
+		background-repeat: no-repeat;
+
 		.new-republic-of-russia {
 			fill: url(#liberal-russian-flag);
 		}
@@ -265,6 +249,9 @@ polyline {
 		.karachay-balkar {
 			fill: url(#karachay-balkar-flag);
 		}
+		.altai-mountains {
+			fill: url(#altai-flag);
+		}
 	}
 }
 
@@ -286,34 +273,34 @@ polyline {
 }
 
 #rivers path {
-	stroke: var(--water-color);
+	stroke: var(--water);
 	fill: none;
 }
 
 #lakes path {
-	fill: var(--water-color);
+	fill: var(--water);
 	stroke: none;
 }
 
 .foreign-territory,
 .foreign-territory * {
-	fill: var(--land-color) !important;
+	fill: var(--land) !important;
 	stroke: none !important;
 	stroke-width: 0;
 }
 
 .foreign-borders * {
-	stroke: var(--foreign-border-color);
+	stroke: var(--foreign-border);
 	stroke-width: 1pt;
 	fill: none;
 }
 
 #republics {
-	fill: var(--russia-color);
+	fill: var(--russia);
 	stroke: black;
 
 	.new-republic-of-russia {
-		fill: var(--color-new-republic-of-russia);
+		fill: var(--new-russia);
 
 		* {
 			fill: inherit;
@@ -321,144 +308,144 @@ polyline {
 	}
 
 	.komi-republic {
-		fill: var(--color-komi-republic);
+		fill: var(--komi);
 	}
 
 	.khakassia-republic {
-		fill: var(--color-khakassia-republic);
+		fill: var(--khakassia);
 	}
 
 	.sakha-republic * {
-		fill: var(--color-sakha-republic);
+		fill: var(--sakha);
 	}
 
 	.buryat-republic {
-		fill: var(--color-buryat-republic);
+		fill: var(--buryat);
 	}
 
 	.altai-republic {
-		fill: var(--color-altai-republic);
+		fill: var(--altai);
 	}
 
 	.tuva-republic {
-		fill: var(--color-tuva-republic);
+		fill: var(--tuva);
 	}
 
 	.bashkortostan-republic {
-		fill: var(--color-bashkortostan-republic);
+		fill: var(--bashkortostan);
 	}
 
 	.mordovia-republic {
-		fill: var(--color-mordovia-republic);
+		fill: var(--mordovia);
 	}
 
 	.chuvashia-republic {
-		fill: var(--color-chuvashia-republic);
+		fill: var(--chuvashia);
 	}
 
 	.mari-el-republic {
-		fill: var(--color-mari-el-republic);
+		fill: var(--mari-el);
 	}
 
 	.udmurtia-republic {
-		fill: var(--color-udmurtia-republic);
+		fill: var(--udmurtia);
 	}
 
 	.tatarstan-republic {
-		fill: var(--color-tatarstan-republic);
+		fill: var(--tatarstan);
 	}
 
 	.karachay-cherkess-republic {
-		fill: var(--color-karachay-cherkess-republic);
+		fill: var(--karachay-cherkess);
 	}
 
 	.kabardino-balkar-republic {
-		fill: var(--color-kabardino-balkar-republic);
+		fill: var(--kabardino-balkar);
 	}
 
 	.alania-republic {
-		fill: var(--color-alania-republic);
+		fill: var(--alania);
 	}
 
 	.ingushetia-republic {
-		fill: var(--color-ingushetia-republic);
+		fill: var(--ingushetia);
 	}
 
 	.ichkeria-republic {
-		fill: var(--color-ichkeria-republic);
+		fill: var(--ichkeria);
 	}
 
 	.kalmykia-republic {
-		fill: var(--color-kalmykia-republic);
+		fill: var(--kalmykia);
 	}
 
 	.dagestan-republic * {
-		fill: var(--color-dagestan-republic);
+		fill: var(--dagestan);
 	}
 
 	.karelia {
-		fill: var(--color-karelia);
+		fill: var(--karelia);
 	}
 
 	.nenets-state * {
-		fill: var(--color-nenets-state);
+		fill: var(--nenets);
 	}
 
 	.ural-republic * {
-		fill: var(--color-ural-republic);
+		fill: var(--ural);
 	}
 
 	.siberian-republic * {
-		fill: var(--color-siberian-republic);
+		fill: var(--siberia);
 	}
 
 	.far-eastern-republic * {
-		fill: var(--color-far-eastern-republic);
+		fill: var(--far-east);
 	}
 
 	.kralovec-republic {
-		fill: var(--color-kralovec-republic);
+		fill: var(--kralovec);
 	}
 
 	.adygea-republic {
-		fill: var(--color-adygea-republic);
+		fill: var(--adygea);
 	}
 }
 
 #claims {
-	fill: var(--russia-color);
+	fill: var(--russia);
 	stroke-width: 1pt;
 
 	.greater-karelia-republic {
 		stroke-width: 0.5pt;
 		stroke: black;
-		fill: var(--color-karelia);
+		fill: var(--karelia);
 	}
 
 	.kralovec-city {
 		stroke-width: 1.5pt;
-		stroke: var(--foreign-border-color);
+		stroke: var(--foreign-border);
 	}
 
 	.greater-buryatia {
 		stroke-width: 0.5pt;
 		stroke: black;
-		fill: var(--color-buryat-republic);
+		fill: var(--buryat);
 	}
 
 	.land {
-		fill: var(--land-color);
+		fill: var(--land);
 		stroke: none;
 	}
 
 	.border {
 		fill: none;
-		stroke: var(--foreign-border-color);
+		stroke: var(--foreign-border);
 		stroke-width: 1pt;
 	}
 
 	.foreign-territory.foreign-borders {
-		stroke: var(--foreign-border-color) !important;
+		stroke: var(--foreign-border) !important;
 		stroke-width: 1pt !important;
 	}
 
@@ -468,59 +455,55 @@ polyline {
 	}
 
 	.nenets-nation {
-		fill: var(--color-nenets-state);
+		fill: var(--nenets);
 	}
 
 	.circassia {
-		fill: var(--color-adygea-republic);
+		fill: var(--adygea);
 	}
 
 	.enets-country {
-		fill: var(--enets-color);
+		fill: var(--enets);
 	}
 
 	.komi-permyak-union {
-		fill: var(--color-komi-republic);
+		fill: var(--komi);
 	}
 
 	.khanty {
-		fill: var(--khanty-color);
+		fill: var(--khanty);
 	}
 
 	.mansi {
-		fill: var(--mansi-color);
+		fill: var(--mansi);
 	}
 
 	.selkup-territory {
-		fill: var(--selkup-color);
+		fill: var(--selkup);
 	}
 
 	.evenkia {
-		fill: var(--evenki-color);
+		fill: var(--evenki);
 	}
 
 	.taymyria {
-		fill: var(--taymyria-color);
+		fill: var(--taymyria);
 	}
 
 	.chukotka {
-		fill: var(--chukotka-color);
+		fill: var(--chukotka);
 	}
 
 	.kamchatka {
-		fill: var(--kamchatka-color);
+		fill: var(--kamchatka);
 	}
 
 	.altai-mountains {
-		fill: var(--color-altai-republic);
-	}
-
-	.altai-mountains {
-		fill: url(#altai-flag);
+		fill: var(--altai);
 	}
 
 	.karachay-balkar {
-		fill: var(--karachay-balkar-color);
+		fill: var(--karachay-balkar);
 	}
 }
 
@@ -528,11 +511,11 @@ polyline {
 	position: absolute;
 	margin: 5px;
 	max-width: 35%;
-	border-color: var(--secondary-color);
+	border-color: var(--secondary);
 	border-width: 2pt;
 	border-radius: 4pt;
-	background-color: var(--main-color);
-	fill: var(--text-color);
+	background-color: var(--main);
+	fill: var(--text);
 	flex-direction: column;
 	gap: 10px;
 	font-size: small;
@@ -555,7 +538,7 @@ polyline {
 
 #popup h5 {
 	margin: 0;
-	color: var(--secondary-color);
+	color: var(--secondary);
 }
 
 #popup h1 {
@@ -574,7 +557,7 @@ polyline {
 	border-color: brown;
 	border-width: 1pt;
 	border-radius: 4pt;
-	background-color: var(--main-color);
+	background-color: var(--main);
 	margin: auto;
 	display: flex;
 	max-width: 40%;
@@ -604,7 +587,7 @@ polyline {
 
 #notice[open] button {
 	appearance: none;
-	background-color: var(--secondary-color);
+	background-color: var(--secondary);
 	padding: 10px;
 	cursor: pointer;
 	border: none;
@@ -617,7 +600,7 @@ polyline {
 	max-width: 40%;
 	max-height: 90%;
 	overflow: hidden;
-	border-color: var(--secondary-color);
+	border-color: var(--secondary);
 	background-blend-mode: overlay;
 	border-radius: 4px;
 	border-width: 2pt;
@@ -704,7 +687,7 @@ polyline {
 		height: var(--toggler-height);
 		width: var(--toggler-height);
 		opacity: 0.8;
-		background-color: var(--secondary-color);
+		background-color: var(--secondary);
 	}
 
 	#info form button:hover {
@@ -752,8 +735,7 @@ dialog::backdrop {
 }
 
 .sidebar {
-	display: none;
-	background-color: var(--main-color);
+	background-color: var(--main);
 	min-width: var(--sidebar-width);
 	width: 10%;
 	height: 100%;
@@ -774,10 +756,10 @@ dialog::backdrop {
 	/* all: unset; */
 	appearance: none;
 	position: absolute;
-	border-color: var(--secondary-color);
-	background-color: var(--main-color);
-	color: var(--secondary-color);
-	fill: var(--text-color);
+	border-color: var(--secondary);
+	background-color: var(--main);
+	color: var(--secondary);
+	fill: var(--text);
 	left: var(--sidebar-width);
 	top: calc(50% - 50px);
 	height: 100px;
@@ -845,7 +827,7 @@ input[type='checkbox'] {
 }
 
 input[type='checkbox']:checked {
-	background-color: var(--secondary-color);
+	background-color: var(--secondary);
 }
 
 input[type='checkbox']::after {
@@ -868,8 +850,8 @@ input[type='checkbox']:checked::after {
 select {
 	appearance: none;
 	height: 30px;
-	background-color: var(--main-color);
-	border-color: var(--secondary-color);
+	background-color: var(--main);
+	border-color: var(--secondary);
 	border-radius: 4px;
 	width: 100%;
 	text-align: center;
@@ -949,10 +931,10 @@ select {
 		border-color: transparent;
 		border-radius: 8px;
 		opacity: 0.8;
-		background-color: var(--secondary-color);
+		background-color: var(--secondary);
 	}
 
 	.toggler svg {
-		fill: var(--text-color);
+		fill: var(--text);
 	}
 }

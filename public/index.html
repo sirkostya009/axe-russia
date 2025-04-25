@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="./favicon.png" />
+		<link rel="icon" href="./favicon.webp" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="robots" content="index, nofollow" />
 		<meta name="color-scheme" content="light dark" />
@@ -11,14 +11,14 @@
 			property="og:description"
 			content="A web page dedicated to dissolution of Russian Neo-Empire"
 		/>
-		<meta property="og:image" content="/open-graph-image.jpg" />
+		<meta property="og:image" content="/open-graph-image.webp" />
 		<meta property="og:url" content="https://axe-russia.vercel.app" />
 		<meta property="og:type" content="website" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta property="twitter:domain" content="axe-russia.vercel.app" />
 		<meta property="twitter:url" content="https://axe-russia.vercel.app" />
 		<meta name="twitter:title" content="Axe Russia" />
-		<meta name="twitter:image" content="/open-graph-image.jpg" />
+		<meta name="twitter:image" content="/open-graph-image.webp" />
 		<meta
 			property="description"
 			content="A web page dedicated to dissolution of Russian Neo-Empire"
@@ -35,7 +35,7 @@
 	</head>
 
 	<body>
-		<svg id="map" class="flag" data-showFlags="flag" viewBox="283 178 1100 600">
+		<svg id="map" data-showFlags="flag" viewBox="283 178 1100 600">
 			<defs>
 				<g id="kurils">
 					<path
@@ -3667,7 +3667,7 @@
 			</g>
 		</svg>
 
-		<aside class="sidebar" style="display: block">
+		<aside class="sidebar hidden">
 			<form>
 				<section class="head-bar">
 					<label>
@@ -3989,17 +3989,17 @@
 				<section>
 					<h3 i18n="sidebar.miscellaneous.title"></h3>
 					<label
-						><input name="showAdministrativeBorders" type="checkbox" /><span
+						><input name="showAdministrativeBorders" checked type="checkbox" /><span
 							i18n="sidebar.miscellaneous.showAdministrativeBorders"
 						></span
 					></label>
 					<label
-						><input name="showFlags" checked type="checkbox" /><span
+						><input name="showFlags" type="checkbox" /><span
 							i18n="sidebar.miscellaneous.showFlags"
 						></span
 					></label>
 					<label
-						><input name="showLakes" type="checkbox" /><span
+						><input name="showLakes" checked type="checkbox" /><span
 							i18n="sidebar.miscellaneous.showLakes"
 						></span
 					></label>
@@ -4009,7 +4009,7 @@
 						></span
 					></label>
 					<label
-						><input name="showRivers" type="checkbox" /><span
+						><input name="showRivers" checked type="checkbox" /><span
 							i18n="sidebar.miscellaneous.showRivers"
 						></span
 					></label>
@@ -4019,7 +4019,7 @@
 
 		<button type="button" aria-label="menu" class="toggler">
 			<svg width="24px" height="24px" viewBox="0 0 24 24">
-				<path class="menu-button close-button" />
+				<path class="menu-button" />
 			</svg>
 		</button>
 

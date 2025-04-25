@@ -5,8 +5,6 @@ const toggler = document.querySelector('button.toggler');
 const sidebar = document.querySelector('aside.sidebar');
 
 if (window.matchMedia('(max-width: 1023px)').matches) {
-	toggler.querySelector('path').classList.toggle('close-button');
-	sidebar.classList.toggle('hidden');
 	/** @this {HTMLButtonElement} */
 	toggler.onclick = function () {
 		this.querySelector('path').classList.toggle('close-button');
@@ -14,6 +12,8 @@ if (window.matchMedia('(max-width: 1023px)').matches) {
 	};
 } else {
 	const map = document.getElementById('map');
+	toggler.querySelector('path').classList.toggle('close-button');
+	sidebar.classList.toggle('hidden');
 	/** @this {HTMLButtonElement} */
 	toggler.onclick = function () {
 		this.querySelector('path').classList.toggle('close-button');
@@ -124,43 +124,31 @@ document.querySelector('select[name="theme"]').onchange = function (e) {
 	else localStorage.theme = this.value;
 };
 
-const toggles = new Proxy(
-	{},
-	{
-		get(target, p) {
-			if (!(p in target)) {
-				target[p] = proc(p);
-			}
-			return target[p];
-
-			function proc(p) {
-				p = p.toLowerCase();
-				return (selected) => {
-					for (const el of document.querySelectorAll(`[data-${p}]`)) {
-						const attr = el.getAttribute(`data-` + p);
-
-						for (const notation of attr.split(',')) {
-							const negated = notation.startsWith('!');
-
-							el.classList.toggle(negated ? notation.substring(1) : notation, negated ^ selected);
-						}
-					}
-				};
-			}
-		},
-	},
-);
-
 for (let i = 0; i < localStorage.length; ++i) {
 	const name = localStorage.key(i);
 	if (!name || name in Storage || ['language'].includes(name)) continue;
+	if (name === 'showFlags') { localStorage[name] = 'false'; continue; }
 
 	document.querySelector(`input[name="${name}"]`).checked = localStorage[name] === 'true';
-	toggles[name](localStorage[name] === 'true');
+	toggle(name, localStorage[name] === 'true');
 }
 
 /** @param {Event & { target: HTMLInputElement }} e */
 document.querySelector('.sidebar form').onchange = (e) => {
-	toggles[e.target.name](e.target.checked);
+	toggle(e.target.name, e.target.checked);
+	if (e.target.name === 'showFlags') return;
 	localStorage[e.target.name] = e.target.checked;
 };
+
+function toggle(p, checked) {
+	p = p.toLowerCase();
+	for (const el of document.querySelectorAll(`[data-${p}]`)) {
+		const attr = el.getAttribute(`data-` + p);
+
+		for (const notation of attr.split(',')) {
+			const negated = notation.startsWith('!');
+
+			el.classList.toggle(negated ? notation.substring(1) : notation, negated ^ checked);
+		}
+	}
+}
