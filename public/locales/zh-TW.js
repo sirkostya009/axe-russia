@@ -1,0 +1,473 @@
+export default {
+	newRepublicOfRussia: {
+		name: '新俄羅斯共和國',
+		description:
+			'理論上的共和國，涵蓋俄羅斯聯邦歐洲部分的領土。與烏拉爾、西伯利亞和遠東等殖民地不同，這個俄羅斯國家將被視為聯邦的直接繼承者和唯一「真正的」俄羅斯。從政治上講，它仍然具有很強的區域意義，因為儘管資源容量大大縮減，但仍然存在相當數量的自然和金融資源。',
+		population: '約100-1.1億',
+		capital: '聖彼得堡或莫斯科',
+		languages: '俄文',
+	},
+	komiRepublic: {
+		name: '科米',
+		description:
+			'芬蘭-烏戈爾部落分佈在俄羅斯北部的三個不同地區。由於莫斯科持續、有系統地鎮壓和消滅土著人民，這個共和國的土著人口以及許多其他聯邦共和國的土著人口正在慢慢滅絕。',
+		population: '約80萬，其中大多數為俄羅斯族和科米族。',
+		capital: '瑟克特夫卡爾',
+		languages: '科米語，俄語',
+	},
+	khakassiaRepublic: {
+		name: '哈卡斯',
+		description:
+			'另一個共和國，其人口在自己的國家已成為微不足道的少數。現在的哈卡斯民族是5個相關民族的組合。',
+		population: '約有 50 萬人，其中卡卡斯人約佔 12%。',
+		capital: '阿班',
+		languages: '哈卡斯人',
+	},
+	sakhaRepublic: {
+		name: '薩哈共和國（雅庫特）',
+		description: '俄羅斯聯邦最大的共和國，以其惡劣的氣候和非常豐富的自然資源（即鑽石）而聞名。',
+		population: '約99.6萬人，其中雅庫特人佔人口近50%。',
+		capital: '德奧庫斯凱',
+		languages: '薩哈（雅庫特）',
+	},
+	buryatRepublic: {
+		name: '布里亞特',
+		description:
+			'布里亞特人是蒙古民族，其共和國與蒙古接壤。他們在莫斯科的清洗統治下也遭受了巨大的痛苦，因為人口減少並在自己的家鄉成為少數。',
+		population: '978,588',
+		capital: '烏蘭烏德',
+		languages: '布里亞特語',
+	},
+	altaiRepublic: {
+		name: '阿爾泰語',
+		description: '阿爾泰山地區，居住著同名的突厥族群。',
+		population: '221,600',
+		capital: '科特-阿爾泰',
+		languages: '阿爾泰語',
+	},
+	tuvaRepublic: {
+		name: '吐瓦魯人',
+		description:
+			'位於西伯利亞南部的蒙古共和國，以薩滿傳統聞名。根據 2021 年人口普查，這將是少數保留國家形象的共和國之一，人口占總人口的 88%。',
+		population: '〜309,000',
+		capital: '克孜勒',
+		languages: '吐瓦魯人',
+	},
+	bashkortostanRepublic: {
+		name: '巴什科爾托斯坦',
+		description:
+			'烏拉山脈以西的一個共和國，實際上是三個主要民族的家園：殖民者 - 俄羅斯人、土著 - 巴什基爾人和鄰國 - 韃靼人。',
+		population: '約400萬',
+		capital: '烏法',
+		languages: '巴什基爾語',
+	},
+	mordoviaRepublic: {
+		name: '莫爾多維亞',
+		description:
+			'由莫克沙（Moksha）和埃茲裡亞（Ezrya）兩個民族組成的共和國，俄羅斯人統稱為「莫德文」。有傳言說，在過去，斯拉夫部落會同化莫克尚人和其他當地的芬蘭-烏戈爾部落，盜用他們的文化，形成今天所謂的俄羅斯文化。',
+		population: '〜800,000',
+		capital: '薩蘭斯克',
+		languages: '莫爾文',
+	},
+	chuvashiaRepublic: {
+		name: '楚瓦什語',
+		description: '伏爾加共和國是突厥族的家。',
+		population: '約 125 萬',
+		capital: '舒帕什卡',
+		languages: '楚瓦什語',
+	},
+	mariElRepublic: {
+		name: '馬里埃爾',
+		description: '馬里人約佔共和國人口的 40%。',
+		population: '〜700,000',
+		capital: '喬許卡爾奧拉',
+		languages: '馬裡',
+	},
+	udmurtiaRepublic: {
+		name: '烏德穆爾特亞',
+		description: '伏爾加河地區的另一個共和國，芬蘭-烏戈爾族烏德穆爾特人和突厥別塞米亞人的家。',
+		population: '約 150 萬',
+		capital: '伊茲卡爾',
+		languages: '烏德穆爾特',
+	},
+	tatarstanRepublic: {
+		name: '韃靼斯坦',
+		description:
+			'以韃靼人聞名的共和國，位於伏爾加河和卡馬河的交匯處。 1992年，蘇聯解體後，韃靼斯坦政府舉行了一次全民公投，實際上是詢問人們是否希望自己的國家獨立，大多數人投票贊成。莫斯科帝國政府自然不會放過一個「野蠻」的封臣。',
+		population: '約 390 萬',
+		capital: '喀山',
+		languages: '韃靼人',
+	},
+	karachayCherkessRepublic: {
+		name: '卡拉恰伊-切爾克斯',
+		description:
+			'高加索地區是多個民族的家園。這個國家代表突厥語族和高加索語族，分別是卡拉恰伊（巴爾卡爾）和切爾克斯（阿迪格）。',
+		population: '〜469,000',
+		capital: '巴塔爾帕欣斯克',
+		languages: 'Qaraçay-Malqar、切爾克斯語（Adyghe）',
+	},
+	kabardinoBalkarRepublic: {
+		name: '卡巴爾達-巴爾卡爾',
+		description:
+			'這個共和國與卡拉恰伊-切爾克斯共和國有許多共同點：史達林也險惡地接納了兩個不同的民族，以分裂和征服它們。它也由與卡拉恰伊-切爾克斯共和國[幾乎]相同的兩個民族組成。',
+		population: '〜860,000',
+		capital: '納爾希克/納爾奇克',
+		languages: 'Qaraçay-Malqar、切爾克斯語（Aydghe）',
+	},
+	alaniaRepublic: {
+		name: '北奧塞梯（阿拉尼亞）',
+		description:
+			'一個容納伊朗族群的國家。歷史上曾跨越當今切爾克斯、山地突厥、車臣和印古什人民的領土。',
+		population: '〜687,000',
+		capital: '佐吉考/佐吉吉烏',
+		languages: '奧塞梯',
+	},
+	ingushetiaRepublic: {
+		name: '印古什',
+		description:
+			'北高加索地區的一個共和國，印古什人的家園。這個共和國曾經與車臣人民聯姻，直到後者宣布獨立並與俄羅斯發動了長達十年的戰爭。',
+		population: '〜500,000',
+		capital: '馬加斯或納茲蘭',
+		languages: '印古什語',
+	},
+	ichkeriaRepublic: {
+		name: '克氏菌屬',
+		description:
+			'一個代表車臣的歷史共和國，以其 20 世紀 90 年代從俄羅斯獨立的鬥爭而聞名。伊奇克里亞車臣共和國於1991年宣布獨立，引發了兩場毀滅性的戰爭，最終因拉姆讚的背叛而輸給了俄羅斯。',
+		population: '約 150 萬',
+		capital: '索爾扎-加拉',
+		languages: '車臣',
+	},
+	kalmykiaRepublic: {
+		name: '卡爾梅克共和國',
+		description:
+			'位於達吉斯坦北部的共和國，是蒙古族的家園，以其獨特的佛教文化而聞名——歐洲大陸唯一的佛教文化。',
+		population: '〜280,000',
+		capital: '艾爾斯特',
+		languages: '卡爾梅克人',
+	},
+	dagestanRepublic: {
+		name: '達吉斯坦',
+		description:
+			'北高加索共和國，以其種族多樣性而聞名，有 30 多個不同的民族，包括阿瓦爾人、達爾金人和庫梅克人。這個國家經歷了重大衝突，但在俄羅斯境內仍然具有文化活力和政治重要性。',
+		population: '約300萬',
+		capital: '馬哈奇卡拉/安吉',
+		languages: 'Aghul、Avar、Dargwa、Lezgin、Nogai 等',
+	},
+	karelia: {
+		name: '卡累利阿',
+		description:
+			'由現已遭受種族滅絕的芬蘭-烏戈爾人組成的共和國。這是少數幾個獨立受到很大問號的共和國之一。由於卡累利阿人這個國家的命名來源與俄羅斯人具有相同的表型，莫斯科很容易同化整個民族，並消除被同化的民族的認同。',
+		population: '〜533,000',
+		capital: '安尼斯利納',
+		languages: '卡累利阿語、俄語',
+	},
+	nenetsState: {
+		name: '涅涅茨州',
+		description: '北極地區的一個共和國，涅涅茨人的家園，分佈在三個不同的聯邦區。',
+		population: '〜42,000',
+		capital: '納里安-馬爾',
+		languages: '涅涅茨人',
+	},
+	uralRepublic: {
+		name: '烏拉爾共和國',
+		description:
+			'理論上的共和國將涵蓋現代烏拉爾聯邦區的領土。烏拉爾地區自然資源豐富，民族成分多元。從歷史上看，烏拉山脈一直是俄羅斯重要的文化和經濟邊界，該州是西伯利亞其他地區和俄羅斯/歐洲之間的「牆」。',
+		population: '約1200萬',
+		capital: '葉卡捷琳堡',
+		languages: '俄文',
+	},
+	siberianRepublic: {
+		name: '西伯利亞共和國（西伯利亞）',
+		description:
+			'一個在現代西伯利亞聯邦區境內行政上精心策劃的理論上的共和國。就像烏拉爾和遠東一樣，這將是一個後俄羅斯殖民國家，必須獨立制定外交政策並管理內部動盪。',
+		population: '約 3900 萬俄羅斯人',
+		capital: '新西伯利亞',
+		languages: '俄語，以及各種西伯利亞本土語言',
+	},
+	farEasternRepublic: {
+		name: '遠東共和國',
+		description:
+			'理論上的共和國涵蓋了當時的前遠東聯邦區的領土，這片土地將由另一個後殖民政府統治。該地區歷史上曾居住過許多不同的民族，從中俄戰爭之前的中國人、日俄戰爭之前的日本人/阿伊努人，到遠東土地上的土著居民。',
+		population: '約800萬',
+		capital: '海參崴',
+		languages: '俄文',
+	},
+	kralovecRepublic: {
+		name: '克拉洛韋茨',
+		description:
+			'另一個類似烏拉爾、西伯利亞和遠東共和國的俄羅斯殖民地。由於距離歐洲更近，並且通過俄羅斯之前的吞併而成為歐洲歷史的一部分，該地區很可能被用來進行一項實驗：俄羅斯人真的可以歐洲化嗎？',
+		population: '約 100 萬',
+		capital: '克拉洛韋茨',
+		languages: '俄文',
+	},
+	adygeaRepublic: {
+		name: '阿迪格',
+		description:
+			'北高加索地區的共和國，是切爾卡斯人（自稱阿迪格人）的家園，由於俄羅斯的征服和隨後 19 世紀該地區的種族滅絕，該民族現已大部分滅絕。',
+		population: '〜500,000',
+		capital: '米耶奎/加基瓦',
+		languages: '切爾克斯語（阿迪格語）',
+	},
+	greaterKarelia: {
+		name: '大卡累利阿',
+		description:
+			'理論上的共和國，涵蓋曾經居住著芬蘭-烏戈爾部落的廣大領土，即維普西人、卡累利阿人和薩米人。',
+		capital: '安尼斯利納',
+		languages: '卡累利阿語、俄語',
+	},
+	polishPrussia: {
+		name: '波蘭普魯士',
+		description: '加里寧格勒州分裂期間普魯士的一部分被波蘭吞併。',
+		languages: '拋光',
+	},
+	lithuaniaMinoris: {
+		name: '立陶宛小國',
+		description: '這片歷史悠久的土地曾經是立陶宛人的故鄉。',
+		languages: '立陶宛語',
+	},
+	kralovecCity: {
+		name: '克拉洛維克自由市',
+		description:
+			'位於波羅的海沿岸的俄羅斯城邦飛地。州人口很可能會被驅逐到城市。這個國家可能會最快實現歐洲化並成為俄羅斯模式國家，因為來自周邊政治參與者的壓力將迫使地方政府機構投資於更好的機構、小額甚至無稅收和包容性法律。',
+		population: '約 100 萬',
+		capital: '克拉洛韋茨',
+		languages: '俄文',
+	},
+	petsamo: {
+		name: '佩察莫',
+		description:
+			'這片領土曾經是芬蘭的狹長地帶，現在被俄羅斯佔領，它將解鎖芬蘭進入北冰洋的通道，為該地區增添一個新的參與者。',
+		population: '〜38,000',
+		languages: '芬蘭',
+	},
+	salla: { name: '莎拉', population: '〜38,000', languages: '芬蘭' },
+	abrene: {
+		name: '阿布倫',
+		description: '1945 年從拉脫維亞手中奪走的現代俄羅斯普斯科夫州地區。',
+		languages: '拉脫維亞語',
+	},
+	petseri: {
+		name: '佩採裡',
+		description: '現今俄羅斯普斯科夫州的地區，1945 年從愛沙尼亞手中奪走。',
+		languages: '愛沙尼亞語',
+	},
+	narvaClaim: {
+		name: '賈尼林 (納爾瓦)',
+		description: '納爾瓦河以東的愛沙尼亞郊區，於 1945 年割讓給俄羅斯聯邦。',
+		population: '〜10,000',
+		languages: '愛沙尼亞語',
+	},
+	smolensk: {
+		name: '白俄羅斯歷史與民族領土',
+		description:
+			'白俄羅斯國可能聲稱擁有主權的白俄羅斯民族土地。該地區包括斯摩稜斯克市，該市曾經是白俄羅斯人口占多數的城市。',
+		population: '〜600,000',
+		languages: '白俄羅斯語、俄語',
+	},
+	sudzha: {
+		name: '蘇札',
+		description:
+			'烏克蘭蘇維埃社會主義共和國於 1924 年聲稱擁有這片土地，但從未給予它。當時這片土地上居住著許多烏克蘭人。',
+		population: '〜5,000',
+		languages: '烏克蘭',
+	},
+	tahanrih: {
+		name: '塔漢里赫',
+		description:
+			'1924 年被俄羅斯蘇維埃社會主義共和國徵用之前，該土地由烏克蘭蘇維埃社會主義共和國控制。',
+		population: '〜500,000',
+	},
+	starodub: {
+		name: '斯塔羅杜布',
+		description: '被蘇聯軍隊佔領後從烏克蘭吞併的地區。',
+		population: '〜250,000',
+	},
+	sloboda: {
+		name: '斯洛博達',
+		description:
+			'1924 年，烏克蘭蘇維埃社會主義共和國聲稱對這片土地擁有主權，這片土地居住著許多烏克蘭人，並且從未交給合法所有者控制',
+		population: '〜500,000',
+	},
+	nenetsNation: {
+		name: '涅涅茨民族',
+		description: '一個由涅涅茨人本土土地組成的理論上的國家。從北歐一直延伸到泰米爾半島。',
+		population: '約 100 萬：90% 是俄羅斯族移民',
+		capital: '薩列哈德',
+		languages: '涅涅茨人、俄語',
+	},
+	selkupia: {
+		name: '塞爾庫皮亞',
+		description: '人口稀少的土地，是烏拉爾人的家。',
+		population: '〜3,600',
+		capital: '尼亞裡·馬什',
+		languages: '塞爾庫普語，俄語',
+	},
+	khanty: {
+		name: '漢蒂亞',
+		description: '烏戈爾民族的家園，與匈牙利人關係密切，因為他們也曾經來自格拉。',
+		population: '約 150 萬，約 2 萬漢特',
+		capital: '蘇爾古特',
+		languages: '漢特語、俄語',
+	},
+	mansi: {
+		name: '曼西亞',
+		description: '另一個講烏戈爾語的民族的家園，與匈牙利人關係密切，位於歷史悠久的尤格拉土地上。',
+		population: '總計約 200k，曼西約 11k',
+		capital: '烏雷',
+		languages: '曼西語，俄語',
+	},
+	komiPermyakUnion: {
+		name: '科米-彼爾米亞克聯邦州',
+		description: '人們相信科米語和彼爾米亞克語是同一種語言。因此，將彼爾米亞克與科米合併才有意義。',
+		population: '～90萬',
+		capital: '庫德姆卡爾',
+		languages: '俄羅斯科米彼爾米亞克語',
+	},
+	karachayBalkar: {
+		name: '卡拉恰伊-巴爾卡爾共和國',
+		description:
+			'卡拉恰伊-巴爾卡爾語只是同名語言（也稱為山地突厥語）的兩種方言，恰好史達林不希望將這兩種方言正確地統一起來，因為這可能會讓高加索對他來說更加麻煩。此狀態一次解決了該問題。',
+		population: '〜225k',
+		capital: '米高揚-沙哈爾',
+		languages: '卡拉恰巴爾卡爾語',
+	},
+	circassia: {
+		name: '切爾克西亞',
+		description: '切爾克西亞這個古老的國家在 19 世紀被俄羅斯人從地球表面清除後重新復興並統一。',
+		population: '約 80 萬切爾克斯人',
+		capital: '邁科普',
+		languages: '切爾克斯（阿迪格）',
+	},
+	altaiMountains: {
+		name: '阿爾泰共和國',
+		description:
+			'古老的阿爾泰共和國，邊界延伸到整個阿爾泰山脈。毗鄰的阿爾泰邊疆區很可能會更名為巴爾瑙爾州。',
+		population: '〜230k',
+		capital: '科特-阿爾泰',
+		languages: '阿爾泰語',
+	},
+	chukotka: {
+		name: '楚科奇共和國',
+		description:
+			'位於楚科奇半島的一個共和國，由多個民族組成，其中主要是楚科奇人——土生土長的土著人民。',
+		population: '〜40k',
+		capital: '阿納德爾',
+		languages: '楚科奇語',
+	},
+	kamchatka: {
+		name: '堪察加半島',
+		description: '構成前堪察加邊疆區行政區的州，科里亞克人的家。',
+		population: '〜291,000',
+		capital: '堪察加彼得巴甫洛夫斯克',
+		languages: '科里亞克語、凱雷克語、阿柳托爾語、伊捷爾門語、俄語',
+	},
+	taymyria: {
+		name: '泰米利亞',
+		description:
+			'泰米利亞因其所在地泰米利亞半島而得名，居住著塞莫耶德族和通古斯族群——恩加納桑族和多爾加涅茨族，後者與薩罕人關係密切。',
+		population: '〜35k',
+		capital: '卡坦加',
+		languages: '恩加納桑 (Nganasan)、多爾加內茨 (Dolganets)、俄語',
+	},
+	evenkia: {
+		name: '艾文基亞',
+		description: '該國原產於通古斯民族埃文克人。',
+		population: '〜11k',
+		capital: '圖拉',
+		languages: '鄂溫克語，俄語',
+	},
+	enetsCountry: {
+		name: '埃內茨鄉村',
+		description: '埃尼茨人是瀕臨滅絕的薩摩耶德人，居住在這裡的人口略少於 200 人。',
+		population: '<30k，少於 185 個 Enets 樣本',
+		capital: '杜金卡',
+		languages: '俄涅茨語',
+	},
+	greaterBuryatia: {
+		name: '大布里亞特',
+		description: '布里亞特共和國，但與烏斯季奧爾達和阿金布里亞特接壤。',
+		capital: '烏蘭烏德',
+		languages: '布里亞特語',
+	},
+	sidebar: {
+		exFederalRepublics: {
+			title: '俄羅斯殖民地',
+			projectFarEast: '遠東計劃',
+			projectKralovec: '克拉洛維克計劃',
+			projectNewRepublic: '新共和計劃',
+			projectSiberianRepublic: '西伯利亞共和國計劃',
+			projectUralRepublic: '烏拉爾共和國計劃',
+		},
+		republics: {
+			title: '共和國',
+			adygeaIndependent: '阿迪格',
+			altaiIndependent: '阿爾泰語',
+			bashkortostanIndependent: '巴什科爾托斯坦',
+			buryatiaIndependent: '布里亞特',
+			chuvashIndependent: '楚瓦什語',
+			dagestanIndependent: '達吉斯坦',
+			ichkeriaIndependent: '克氏菌屬',
+			ingushetiaIndependent: '印古什',
+			kabardinoBalkarIndependent: '卡巴爾達-巴爾卡爾',
+			kalmykiaIndependent: '卡爾梅克共和國',
+			karachayCherkessiaIndependent: '卡拉恰伊-切爾克斯',
+			kareliaIndependent: '卡累利阿',
+			khakassiaIndependent: '哈卡斯',
+			komiIndependent: '科米',
+			mariElIndependent: '馬里埃爾',
+			mordoviaIndependent: '莫爾多維亞',
+			northOssetiaAlaniaIndependent: '北奧塞梯-阿拉尼亞',
+			sakhaIndependent: '薩哈',
+			tatarstanIndependent: '韃靼斯坦',
+			tuvaIndependent: '吐瓦魯人',
+			udmurtIndependent: '烏德穆爾特',
+		},
+		claims: {
+			title: '索賠',
+			altaiExtended: '阿爾泰山聲稱',
+			belarusClaim: '白俄羅斯民族領土',
+			chukotka: '楚科奇共和國',
+			circassia: '切爾克西亞',
+			enets: '埃內茨州',
+			estonianClaim: '愛沙尼亞的主張',
+			evenkia: '艾文基亞',
+			franzJosefLand: '法蘭士約瑟夫地群島',
+			greaterBuryatia: '大布里亞特',
+			greaterKarelia: '大卡累利阿',
+			finishIsles: '芬蘭灣群島',
+			kamchatka: '堪察加共和國',
+			karachayBalkar: '卡拉恰伊-巴爾卡爾共和國',
+			khanty: '漢特國',
+			komiPermyakUnion: '科米-彼爾米亞克聯盟',
+			kurilIslands: '千島群島',
+			latvianClaim: '拉脫維亞的主張',
+			lithuaniaMinor: '小立陶宛',
+			mansi: '曼西鄉村',
+			nenetsNation: '涅涅茨民族',
+			nenetsIndependence: '涅涅茨州',
+			petsamo: '佩察莫',
+			polishPrussia: '波蘭普魯士',
+			taymyria: '泰米爾共和國',
+			salla: '莎拉',
+			selkupTerritory: '塞爾庫普領地',
+			sloboda: '斯洛博達',
+			starodub: '斯塔羅杜布',
+			sudzha: '蘇札',
+			tahanrih: '塔漢里赫',
+		},
+		miscellaneous: {
+			title: '各種各樣的',
+			showAdministrativeBorders: '顯示行政邊界',
+			showFlags: '顯示標誌（測試版）',
+			showLakes: '顯示湖泊',
+			nationalBorders: '顯示國界',
+			showRivers: '顯示河流',
+		},
+	},
+	popup: '點擊看更多',
+	wikipedia: '維基百科',
+	auto: '系統',
+	dark: '深色',
+	light: '淺色',
+};
