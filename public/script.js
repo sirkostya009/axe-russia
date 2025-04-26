@@ -1,54 +1,54 @@
 'use strict';
 
 /** @param {{}} language */
-function updateLanguage(language, doc = document) {
-	for (let i18n of doc.querySelectorAll('[i18n]')) {
+function updateLanguage(language, element) {
+	for (let i18n of element.querySelectorAll("[i18n]")) {
 		let value = language;
-		for (let v of i18n.getAttribute('i18n').split('.')) {
+		for (let v of i18n.getAttribute("i18n").split(".")) {
 			value = value?.[v];
 		}
 		if (value) i18n.textContent = value;
 	}
 }
 
-if ('language' in localStorage) {
+const sidebar = document.getElementById("sidebar");
+
+if ("language" in localStorage) {
 	window.language = JSON.parse(localStorage.language);
 	document.documentElement.lang = window.language.lang;
-	updateLanguage(window.language);
+	updateLanguage(window.language, sidebar);
 } else {
 	import(
 		`./locales/${
 			/be|bg|br|cs|cy|da|de|el|en|es|et|fi|fr|ga|gd|hi|hu|it|jp|kk|ko|lt|lv|nl|no|pl|ro|ru|sk|sv|tr|ug|uk|zh-CN|zh-TW/.exec(
-				navigator.language,
-			) || 'en'
+				navigator.language
+			) || "en"
 		}.js`
 	).then(({ default: l }) => {
 		window.language = l;
 		localStorage.language = JSON.stringify(window.language);
-		updateLanguage(window.language);
+		updateLanguage(window.language, sidebar);
 	});
 }
 
-const sidebar = document.getElementById('sidebar');
-
-if (window.matchMedia('(min-width: 1024px)').matches) {
-	sidebar.classList.remove('hidden');
+if (window.matchMedia("(min-width: 1024px)").matches) {
+	sidebar.classList.remove("hidden");
 }
 
-const map = document.getElementById('map');
+const map = document.getElementById("map");
 
-document.getElementById('toggler').onclick = () => {
-	map.style.pointerEvents = 'none';
-	sidebar.classList.toggle('hidden');
-	setTimeout(() => map.style.pointerEvents = null, 300);
+document.getElementById("toggler").onclick = () => {
+	map.style.pointerEvents = "none";
+	sidebar.classList.toggle("hidden");
+	setTimeout(() => (map.style.pointerEvents = null), 300);
 };
 
 /** @type {HTMLDialogElement} */
-const popup = document.getElementById('popup');
+const popup = document.getElementById("popup");
 /** @type {HTMLDialogElement} */
-const info = document.getElementById('info');
+const info = document.getElementById("info");
 /** @type {HTMLAnchorElement} */
-const wikiLink = info.querySelector('a[i18n]');
+const wikiLink = info.querySelector("a[i18n]");
 
 const closePopup = popup.close.bind(popup);
 
@@ -60,14 +60,14 @@ function togglepopup() {
 
 /** @this {SVGElement} */
 function movepopup({ x, y }) {
-	popup.style.left = x + window.scrollX + 'px';
-	popup.style.top = y + window.scrollY + 'px';
+	popup.style.left = x + window.scrollX + "px";
+	popup.style.top = y + window.scrollY + "px";
 }
 
-for (const mapEntity of document.querySelectorAll('[data-popup]')) {
-	let flag = mapEntity.getAttribute('data-popup');
-	if (flag && !flag.startsWith('https')) {
-		flag = document.getElementById(flag)?.children[0]?.getAttribute('href');
+for (const mapEntity of document.querySelectorAll("[data-popup]")) {
+	let flag = mapEntity.getAttribute("data-popup");
+	if (flag && !flag.startsWith("https")) {
+		flag = document.getElementById(flag)?.children[0]?.getAttribute("href");
 	}
 
 	mapEntity.onmousedown = toggleinfo;
@@ -80,7 +80,7 @@ for (const mapEntity of document.querySelectorAll('[data-popup]')) {
 		popup.close();
 		const description = window.language[this.id];
 		updateLanguage(description, info);
-		if (wikiLink.parentElement.classList.toggle('hidden', 'wikiLink' in description)) {
+		if (wikiLink.parentElement.classList.toggle("hidden", "wikiLink" in description)) {
 			wikiLink.href = description.wikiLink;
 			wikiLink.textContent = window.language.wikipedia;
 		}
@@ -93,7 +93,7 @@ for (const mapEntity of document.querySelectorAll('[data-popup]')) {
 document.querySelector('select[name="locale"]').onchange = async function (e) {
 	e.stopPropagation();
 	window.language = (await import(`./locales/${this.value}.js`)).default;
-	updateLanguage(window.language);
+	updateLanguage(window.language, sidebar);
 	localStorage.language = JSON.stringify(window.language);
 };
 

@@ -473,247 +473,247 @@ html {
 			fill: url(#altai-flag);
 		}
 	}
+}
 
-	.admin-borders,
-	.admin-borders * {
+.admin-borders,
+.admin-borders * {
+	stroke: black;
+	fill: none;
+	stroke-width: 0.33pt;
+}
+
+#rivers path {
+	stroke: var(--water);
+	fill: none;
+}
+
+#lakes path {
+	fill: var(--water);
+	stroke: none;
+}
+
+.foreign-territory,
+.foreign-territory * {
+	fill: var(--land) !important;
+	stroke: none !important;
+	stroke-width: 0;
+}
+
+.foreign-borders * {
+	stroke: var(--foreign-border);
+	stroke-width: 1pt;
+	fill: none;
+}
+
+#republics {
+	fill: var(--russia);
+	stroke: black;
+
+	.new-republic-of-russia {
+		fill: var(--new-russia);
+
+		* {
+			fill: inherit;
+		}
+	}
+
+	.komi-republic {
+		fill: var(--komi);
+	}
+
+	.khakassia-republic {
+		fill: var(--khakassia);
+	}
+
+	.sakha-republic * {
+		fill: var(--sakha);
+	}
+
+	.buryat-republic {
+		fill: var(--buryat);
+	}
+
+	.altai-republic {
+		fill: var(--altai);
+	}
+
+	.tuva-republic {
+		fill: var(--tuva);
+	}
+
+	.bashkortostan-republic {
+		fill: var(--bashkortostan);
+	}
+
+	.mordovia-republic {
+		fill: var(--mordovia);
+	}
+
+	.chuvashia-republic {
+		fill: var(--chuvashia);
+	}
+
+	.mari-el-republic {
+		fill: var(--mari-el);
+	}
+
+	.udmurtia-republic {
+		fill: var(--udmurtia);
+	}
+
+	.tatarstan-republic {
+		fill: var(--tatarstan);
+	}
+
+	.karachay-cherkess-republic {
+		fill: var(--karachay-cherkess);
+	}
+
+	.kabardino-balkar-republic {
+		fill: var(--kabardino-balkar);
+	}
+
+	.alania-republic {
+		fill: var(--alania);
+	}
+
+	.ingushetia-republic {
+		fill: var(--ingushetia);
+	}
+
+	.ichkeria-republic {
+		fill: var(--ichkeria);
+	}
+
+	.kalmykia-republic {
+		fill: var(--kalmykia);
+	}
+
+	.dagestan-republic * {
+		fill: var(--dagestan);
+	}
+
+	.karelia {
+		fill: var(--karelia);
+	}
+
+	.nenets-state * {
+		fill: var(--nenets);
+	}
+
+	.ural-republic * {
+		fill: var(--ural);
+	}
+
+	.siberian-republic * {
+		fill: var(--siberia);
+	}
+
+	.far-eastern-republic * {
+		fill: var(--far-east);
+	}
+
+	.kralovec-republic {
+		fill: var(--kralovec);
+	}
+
+	.adygea-republic {
+		fill: var(--adygea);
+	}
+}
+
+#claims {
+	fill: var(--russia);
+	stroke-width: 1pt;
+
+	.greater-karelia-republic {
+		stroke-width: 0.5pt;
 		stroke: black;
-		fill: none;
-		stroke-width: 0.33pt;
+		fill: var(--karelia);
 	}
 
-	#rivers path {
-		stroke: var(--water);
-		fill: none;
+	.kralovec-city {
+		stroke-width: 1.5pt;
+		stroke: var(--foreign-border);
 	}
 
-	#lakes path {
-		fill: var(--water);
+	.greater-buryatia {
+		stroke-width: 0.5pt;
+		stroke: black;
+		fill: var(--buryat);
+	}
+
+	.land {
+		fill: var(--land);
 		stroke: none;
 	}
 
-	.foreign-territory,
-	.foreign-territory * {
-		fill: var(--land) !important;
-		stroke: none !important;
-		stroke-width: 0;
-	}
-
-	.foreign-borders * {
+	.border {
+		fill: none;
 		stroke: var(--foreign-border);
 		stroke-width: 1pt;
-		fill: none;
 	}
 
-	#republics {
-		fill: var(--russia);
+	.foreign-territory.foreign-borders {
+		stroke: var(--foreign-border) !important;
+		stroke-width: 1pt !important;
+	}
+
+	.stroke {
+		stroke-width: 0.5pt;
 		stroke: black;
-
-		.new-republic-of-russia {
-			fill: var(--new-russia);
-
-			* {
-				fill: inherit;
-			}
-		}
-
-		.komi-republic {
-			fill: var(--komi);
-		}
-
-		.khakassia-republic {
-			fill: var(--khakassia);
-		}
-
-		.sakha-republic * {
-			fill: var(--sakha);
-		}
-
-		.buryat-republic {
-			fill: var(--buryat);
-		}
-
-		.altai-republic {
-			fill: var(--altai);
-		}
-
-		.tuva-republic {
-			fill: var(--tuva);
-		}
-
-		.bashkortostan-republic {
-			fill: var(--bashkortostan);
-		}
-
-		.mordovia-republic {
-			fill: var(--mordovia);
-		}
-
-		.chuvashia-republic {
-			fill: var(--chuvashia);
-		}
-
-		.mari-el-republic {
-			fill: var(--mari-el);
-		}
-
-		.udmurtia-republic {
-			fill: var(--udmurtia);
-		}
-
-		.tatarstan-republic {
-			fill: var(--tatarstan);
-		}
-
-		.karachay-cherkess-republic {
-			fill: var(--karachay-cherkess);
-		}
-
-		.kabardino-balkar-republic {
-			fill: var(--kabardino-balkar);
-		}
-
-		.alania-republic {
-			fill: var(--alania);
-		}
-
-		.ingushetia-republic {
-			fill: var(--ingushetia);
-		}
-
-		.ichkeria-republic {
-			fill: var(--ichkeria);
-		}
-
-		.kalmykia-republic {
-			fill: var(--kalmykia);
-		}
-
-		.dagestan-republic * {
-			fill: var(--dagestan);
-		}
-
-		.karelia {
-			fill: var(--karelia);
-		}
-
-		.nenets-state * {
-			fill: var(--nenets);
-		}
-
-		.ural-republic * {
-			fill: var(--ural);
-		}
-
-		.siberian-republic * {
-			fill: var(--siberia);
-		}
-
-		.far-eastern-republic * {
-			fill: var(--far-east);
-		}
-
-		.kralovec-republic {
-			fill: var(--kralovec);
-		}
-
-		.adygea-republic {
-			fill: var(--adygea);
-		}
 	}
 
-	#claims {
-		fill: var(--russia);
-		stroke-width: 1pt;
+	.nenets-nation {
+		fill: var(--nenets);
+	}
 
-		.greater-karelia-republic {
-			stroke-width: 0.5pt;
-			stroke: black;
-			fill: var(--karelia);
-		}
+	.circassia {
+		fill: var(--adygea);
+	}
 
-		.kralovec-city {
-			stroke-width: 1.5pt;
-			stroke: var(--foreign-border);
-		}
+	.enets-country {
+		fill: var(--enets);
+	}
 
-		.greater-buryatia {
-			stroke-width: 0.5pt;
-			stroke: black;
-			fill: var(--buryat);
-		}
+	.komi-permyak-union {
+		fill: var(--komi);
+	}
 
-		.land {
-			fill: var(--land);
-			stroke: none;
-		}
+	.khanty {
+		fill: var(--khanty);
+	}
 
-		.border {
-			fill: none;
-			stroke: var(--foreign-border);
-			stroke-width: 1pt;
-		}
+	.mansi {
+		fill: var(--mansi);
+	}
 
-		.foreign-territory.foreign-borders {
-			stroke: var(--foreign-border) !important;
-			stroke-width: 1pt !important;
-		}
+	.selkup-territory {
+		fill: var(--selkup);
+	}
 
-		.stroke {
-			stroke-width: 0.5pt;
-			stroke: black;
-		}
+	.evenkia {
+		fill: var(--evenki);
+	}
 
-		.nenets-nation {
-			fill: var(--nenets);
-		}
+	.taymyria {
+		fill: var(--taymyria);
+	}
 
-		.circassia {
-			fill: var(--adygea);
-		}
+	.chukotka {
+		fill: var(--chukotka);
+	}
 
-		.enets-country {
-			fill: var(--enets);
-		}
+	.kamchatka {
+		fill: var(--kamchatka);
+	}
 
-		.komi-permyak-union {
-			fill: var(--komi);
-		}
+	.altai-mountains {
+		fill: var(--altai);
+	}
 
-		.khanty {
-			fill: var(--khanty);
-		}
-
-		.mansi {
-			fill: var(--mansi);
-		}
-
-		.selkup-territory {
-			fill: var(--selkup);
-		}
-
-		.evenkia {
-			fill: var(--evenki);
-		}
-
-		.taymyria {
-			fill: var(--taymyria);
-		}
-
-		.chukotka {
-			fill: var(--chukotka);
-		}
-
-		.kamchatka {
-			fill: var(--kamchatka);
-		}
-
-		.altai-mountains {
-			fill: var(--altai);
-		}
-
-		.karachay-balkar {
-			fill: var(--karachay-balkar);
-		}
+	.karachay-balkar {
+		fill: var(--karachay-balkar);
 	}
 }
 
