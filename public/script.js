@@ -1,7 +1,7 @@
 'use strict';
 
 /** @param {{}} language */
-function updateLanguage(language, element) {
+function updateLanguage(language, element = document) {
 	for (let i18n of element.querySelectorAll("[i18n]")) {
 		let value = language;
 		for (let v of i18n.getAttribute("i18n").split(".")) {
@@ -16,7 +16,7 @@ const sidebar = document.getElementById("sidebar");
 if ("language" in localStorage) {
 	window.language = JSON.parse(localStorage.language);
 	document.documentElement.lang = window.language.lang;
-	updateLanguage(window.language, sidebar);
+	updateLanguage(window.language);
 } else {
 	import(
 		`./locales/${
@@ -27,7 +27,7 @@ if ("language" in localStorage) {
 	).then(({ default: l }) => {
 		window.language = l;
 		localStorage.language = JSON.stringify(window.language);
-		updateLanguage(window.language, sidebar);
+		updateLanguage(window.language);
 	});
 }
 
@@ -54,7 +54,11 @@ const closePopup = popup.close.bind(popup);
 
 /** @this {SVGElement} */
 function togglepopup() {
-	updateLanguage(window.language[this.id], popup);
+	const description = window.language[this.id];
+	updateLanguage(description, popup);
+	popup.querySelector('[i18n="capital"]').parentElement.style.display = "capital" in description ? null : "none";
+	popup.querySelector('[i18n="population"]').parentElement.style.display =
+		"population" in description ? null : "none";
 	popup.show();
 }
 
@@ -77,13 +81,15 @@ for (const mapEntity of document.querySelectorAll("[data-popup]")) {
 
 	/** @this {SVGElement} */
 	function toggleinfo() {
-		popup.close();
 		const description = window.language[this.id];
 		updateLanguage(description, info);
-		if (wikiLink.parentElement.classList.toggle("hidden", "wikiLink" in description)) {
+		if (!wikiLink.parentElement.classList.toggle("hidden", !description.wikiLink)) {
+			wikiLink.innerHTML = `<p>${window.language.wikipedia}</p>`;
 			wikiLink.href = description.wikiLink;
-			wikiLink.textContent = window.language.wikipedia;
 		}
+		info.querySelector('[i18n="capital"]').parentElement.style.display = "capital" in description ? null : "none";
+		info.querySelector('[i18n="population"]').parentElement.style.display =
+			"population" in description ? null : "none";
 		info.style.backgroundImage = `url(${flag})`;
 		info.showModal();
 	}

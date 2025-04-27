@@ -510,7 +510,7 @@ export default {
 			kamchatka: 'Kamchatka Republic',
 			karachayBalkar: 'Karachay-Balkar Republic',
 			khanty: 'Khanty Country',
-			komiPermyakUnion: 'Komy-Permyak Union',
+			komiPermyakUnion: 'Komi-Permyak Union',
 			kurilIslands: 'Kuril Islands',
 			latvianClaim: 'Latvian claim',
 			lithuaniaMinor: 'Lithuania Minor',

@@ -25,18 +25,18 @@
 	--buryat: var(--color-palette-5);
 	--altai: var(--color-palette-2);
 	--tuva: var(--color-palette-4);
-	--bashkortostan: var(--color-palette-2);
+	--bashkortostan: var(--color-palette-3);
 	--mordovia: var(--color-palette-3);
-	--chuvashia: var(--color-palette-4);
+	--chuvashia: var(--color-palette-6);
 	--mari-el: var(--color-palette-5);
-	--udmurtia: var(--color-palette-6);
-	--tatarstan: var(--color-palette-3);
+	--udmurtia: var(--color-palette-4);
+	--tatarstan: var(--color-palette-2);
 	--karachay-cherkess: var(--color-palette-2);
 	--kabardino-balkar: var(--color-palette-3);
 	--alania: var(--color-palette-4);
 	--ingushetia: var(--color-palette-5);
 	--ichkeria: var(--color-palette-6);
-	--kalmykia: var(--color-palette-1);
+	--kalmykia: var(--color-palette-4);
 	--dagestan: var(--color-palette-2);
 	--karelia: var(--color-palette-3);
 	--nenets: var(--color-palette-4);
@@ -45,11 +45,11 @@
 	--far-east: var(--color-palette-3);
 	--kralovec: var(--color-palette-2);
 	--adygea: var(--color-palette-3);
-	--selkup: var(--color-palette-4);
+	--selkup: var(--color-palette-1);
 	--khanty: var(--color-palette-3);
 	--mansi: var(--color-palette-6);
 	--enets: var(--color-palette-2);
-	--taymyria: var(--color-palette-1);
+	--taymyria: var(--color-palette-2);
 	--evenki: var(--color-palette-2);
 	--chukotka: var(--color-palette-2);
 	--kamchatka: var(--color-palette-6);
@@ -751,9 +751,10 @@ polyline {
 		}
 	}
 
-	h2 {
+	h2,h5 {
 		margin: 0;
 		color: var(--secondary);
+		margin: 0;
 	}
 
 	h1 {
@@ -763,6 +764,12 @@ polyline {
 
 	&:focus {
 		outline: none;
+	}
+
+	@media (max-width: 1024px) {
+		&[open] {
+			display: none;
+		}
 	}
 }
 
