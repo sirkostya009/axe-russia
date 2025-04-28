@@ -56,9 +56,8 @@ const closePopup = popup.close.bind(popup);
 function togglepopup() {
 	const description = window.language[this.id];
 	updateLanguage(description, popup);
-	popup.querySelector('[i18n="capital"]').parentElement.style.display = "capital" in description ? null : "none";
-	popup.querySelector('[i18n="population"]').parentElement.style.display =
-		"population" in description ? null : "none";
+	toggleElement(popup, "capital", description);
+	toggleElement(popup, "population", description);
 	popup.show();
 }
 
@@ -87,12 +86,16 @@ for (const mapEntity of document.querySelectorAll("[data-popup]")) {
 			wikiLink.innerHTML = `<p>${window.language.wikipedia}</p>`;
 			wikiLink.href = description.wikiLink;
 		}
-		info.querySelector('[i18n="capital"]').parentElement.style.display = "capital" in description ? null : "none";
-		info.querySelector('[i18n="population"]').parentElement.style.display =
-			"population" in description ? null : "none";
+		toggleElement(info, "description", description);
+		toggleElement(info, "capital", description);
+		toggleElement(info, "population", description);
 		info.style.backgroundImage = `url(${flag})`;
 		info.showModal();
 	}
+}
+
+function toggleElement(dialog, key, obj) {
+	dialog.querySelector(`[i18n="${key}"]`).parentElement.style.display = key in obj ? null : "none";
 }
 
 /** @this {HTMLSelectElement} */
